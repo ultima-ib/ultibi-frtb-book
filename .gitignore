@@ -10,7 +10,7 @@ venv/
 .venv/
 /__pycache__
 book/
-frtb_userguide/data/
+data/
 .ipynb*/
 
 # Byte-compiled / optimized / DLL files
