@@ -13,6 +13,7 @@
   - [Filters](./filters.md)
 - [FRTB SA - What If](./whatif.md)
   - [Overrides](./override.md)
-  - [Add Row](./add_row.md)
+  - [Add Trades/Books](./add_row.md)
   - [Calc Params](./calc_params.md)
+- [FRTB SA - Personalised Parameter Sets](./whatif.md)
 - [Performance](./performance.md)

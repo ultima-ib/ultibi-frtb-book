@@ -26,7 +26,7 @@ Now we are good to form the request which we need. Say, we want to understand th
 {{#include ./examples/frtb_calculate.py:8:27}}
 ```
 
-This has two parameters which we haven't talked about yet: hide_zeros and calc_params. hide_zeros simply removes rows where each measure is 0, and calc_params and few others we will talk about in [analysis](./whatif.md) chapter.
+This has two parameters which we haven't talked about yet: `hide_zeros` and `calc_params`. `hide_zeros` simply removes rows where each measure is 0, and `calc_params` allows you to override default parameters such as `jurisdiction`, `reporting_ccy`, `girr_delta_rho_diff_curve_base` (and many many others. We will talk about in [analysis](./whatif.md) chapter).
 
 Valide that you've formed a legitimate request (ie no compulsory field is missing, datatypes are correct etc):
 
