@@ -10,4 +10,6 @@ This user guide is a walk through of **[ultima](https://ultimabi.uk/)** applied 
 
 - **[Ultima](https://ultimabi.uk/)** is very flexible and allows you to override any of the prescribed parameters (such as `girr_delta_rho_infl_base`) via `calc_params` argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can **stress test** against changes in the values of the prescribed (aka hard coded by ISDA) parameters.
 
--
+- Everything you need for analysis: Filtering, Overriding, Adding Trades and so on.
+
+- Blazingly fast.
