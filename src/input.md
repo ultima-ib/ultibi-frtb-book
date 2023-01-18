@@ -22,4 +22,8 @@ print(ds.frame())
 
 ## Validate
 
-If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, coming soon, calling .validate() on your dataset will return Ok if you've got all the columns in the correct format or Error if something is missing.
+If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call .validate() on your dataset. It checks if every required column for every availiable calculation is present. Note: If you **can** guarantee your particular calculation would not require the missing columns you can proceed at your own risk!
+
+```python
+{{#include ./examples/frtb_validate.py}}
+```

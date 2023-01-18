@@ -14,6 +14,5 @@
 - [FRTB SA - What If](./whatif.md)
   - [Overrides](./override.md)
   - [Add Trades/Books](./add_row.md)
-  - [Calc Params](./calc_params.md)
-- [FRTB SA - Personalised Parameter Sets](./whatif.md)
+  - [Calc Params and Params Sets](./calc_params.md)
 - [Performance](./performance.md)
