@@ -2,7 +2,7 @@
 
 **[Ultima](https://ultimabi.uk/)** is a service which allows you to define, compute and breakdown the key performance metrics of your business.
 
-This user guide is a walk through of `ultibi`, a python library by **[Ultima](https://ultimabi.uk/)**, applied to a very specific case - **[Fundamental Review of the Trading Book's Standardised Approach](https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book)**. For a more general usecase refer to the general user guide. Here we will focus on FRTB only.
+This user guide is a walk through of `ultibi`, a python library by **Ultima**, applied to a very specific case - **[Fundamental Review of the Trading Book's Standardised Approach](https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book)**. For a more general usecase refer to the general user guide. Here we will focus on FRTB only.
 
 # Why to use `ultibi`
 

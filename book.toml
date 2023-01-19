@@ -4,6 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Python FRTB User Guide"
+description = "ultibi python developer's frtb user guide. Filtering, overriding, what if."
 
 [output.html]
 default-theme   = "Ayu"

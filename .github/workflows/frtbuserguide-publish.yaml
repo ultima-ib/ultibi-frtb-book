@@ -10,22 +10,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup Python
-        uses: actions/setup-python@v2
+      - uses: actions-rs/toolchain@v1
         with:
-          python-version: 3.9
+          toolchain: stable
 
-      - name: Install dependencies
+      - name: Install static-sitemap-cli
+        run: npm install static-sitemap-cli
+
+      - name: Install mdbook
+        uses: baptiste0928/cargo-install@v1
+        with:
+          crate: mdbook
+          version: 0.4
+
+      - name: Build book
         run: |
-          sudo apt-get update
-          sudo apt-get install --no-install-recommends -y graphviz make wget
-          python -m pip install ghp-import
-          sudo wget https://github.com/rust-lang/mdBook/releases/download/v0.4.25/mdbook-v0.4.25-x86_64-unknown-linux-gnu.tar.gz -O - | sudo tar -xzf - -C /usr/bin/
-  
-      - name: Deploy docs
+          mdbook build
+
+      - name: Generate sitemap
         run: |
-          mkdir -p docs
-          mdbook build --dest-dir ./docs .
-          ghp-import --no-jekyll docs
-          git push -qf https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git gh-pages
+          cd book
+          npx sscli --base https://ultibi-frtb-book.github.io
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: book
