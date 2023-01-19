@@ -5,7 +5,7 @@ ds = ul.FRTBDataSet.from_config_path("datasource_config.toml")
 ds.prepare()
 added_rows = dict(
     prepare=True,
-    rows = [
+    rows=[
         {
             "SensitivitySpot": "1000000",
             "PnL_Up": "0",
@@ -20,9 +20,9 @@ added_rows = dict(
             "BucketCRR2": "7",
             "CreditQuality": "",
             "CoveredBondReducedWeight": "",
-            "Group": "Ultima"
+            "Group": "Ultima",
         }
-    ]
+    ],
 )
 
 added_rows_json = json.dumps(added_rows)
@@ -33,7 +33,7 @@ request1 = dict(
         ["Commodity DeltaCharge Medium", "scalar"],
         ["Commodity DeltaCharge High", "scalar"],
     ],
-    add_row = added_rows, 
+    add_row=added_rows,
     groupby=["Group"],
     hide_zeros=True,
 )
