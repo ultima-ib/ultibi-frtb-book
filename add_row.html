@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">2.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">2.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">3.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">3.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">3.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">3.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">4.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">4.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html" class="active"><strong aria-hidden="true">4.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">4.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">5.</strong> Performance</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">2.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">2.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">3.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">3.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">3.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">3.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">4.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">4.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html" class="active"><strong aria-hidden="true">4.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">4.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">5.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">6.</strong> Contacts and Feedback</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,9 +146,68 @@
                     <main>
                         <h1 id="add-rows"><a class="header" href="#add-rows">Add Rows</a></h1>
 <p><code>ultibi</code>'s request suppors adding rows(in our case Trades). This is a perfect functionality to have in your toolset, especially for a super quick What If analysis.</p>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <p>An example of a request with <code>add_row</code> looks like this:</p>
-<pre><code class="language-python">
+<pre><code class="language-python">import ultibi as ul
+import json
+
+ds = ul.FRTBDataSet.from_config_path(&quot;datasource_config.toml&quot;)
+ds.prepare()
+added_rows = dict(
+    prepare=True,
+    rows=[
+        {
+            &quot;SensitivitySpot&quot;: &quot;1000000&quot;,
+            &quot;PnL_Up&quot;: &quot;0&quot;,
+            &quot;PnL_Down&quot;: &quot;0&quot;,
+            &quot;COB&quot;: &quot;&quot;,
+            &quot;MaturityDate&quot;: &quot;&quot;,
+            &quot;RiskClass&quot;: &quot;Commodity&quot;,
+            &quot;RiskFactor&quot;: &quot;XAU&quot;,
+            &quot;RiskCategory&quot;: &quot;Delta&quot;,
+            &quot;RiskFactorType&quot;: &quot;&quot;,
+            &quot;BucketBCBS&quot;: &quot;7&quot;,
+            &quot;BucketCRR2&quot;: &quot;7&quot;,
+            &quot;CreditQuality&quot;: &quot;&quot;,
+            &quot;CoveredBondReducedWeight&quot;: &quot;&quot;,
+            &quot;Group&quot;: &quot;Ultima&quot;,
+        }
+    ],
+)
+
+added_rows_json = json.dumps(added_rows)
+
+request1 = dict(
+    measures=[
+        [&quot;Commodity DeltaCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge High&quot;, &quot;scalar&quot;],
+    ],
+    add_row=added_rows,
+    groupby=[&quot;Group&quot;],
+    hide_zeros=True,
+)
+
+result1 = ds.execute(request1)
+
+# print(result1) #&lt;-- uncomment to see
+
+request2 = dict(
+    measures=[
+        [&quot;Commodity DeltaCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge High&quot;, &quot;scalar&quot;],
+    ],
+    groupby=[&quot;Group&quot;],
+    hide_zeros=True,
+)
+
+result2 = ds.execute(request2)
+print(result1)
+print(result2)
 </code></pre>
+<h2 id="explanation"><a class="header" href="#explanation">Explanation</a></h2>
+<p>If you set <code>prepare</code> to true be prepared to provide all the required columns to assign weights.</p>
 
                     </main>
 

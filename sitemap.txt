@@ -3,6 +3,7 @@ https://ultibi-frtb-book.github.io/add_row
 https://ultibi-frtb-book.github.io/calc_params
 https://ultibi-frtb-book.github.io/calculate
 https://ultibi-frtb-book.github.io/capital
+https://ultibi-frtb-book.github.io/feedback
 https://ultibi-frtb-book.github.io/filters
 https://ultibi-frtb-book.github.io/format
 https://ultibi-frtb-book.github.io/input

@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">2.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">2.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">3.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">3.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">3.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">3.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">4.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">4.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">4.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html" class="active"><strong aria-hidden="true">4.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">5.</strong> Performance</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">2.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">2.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">3.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">3.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">3.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">3.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">4.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">4.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">4.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html" class="active"><strong aria-hidden="true">4.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">5.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">6.</strong> Contacts and Feedback</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,7 +167,10 @@
 <p><code>reporting_ccy</code> - used for <strong>FX</strong>. Only those <strong>FX</strong> delta/curvature sensitivites where RiskFactor is XXXCCY (where CCY is the reporting_ccy) will be used for calculation. (eg if reporting_ccy is USD, GBPUSD will be used, but GBPEUR will not - this applies for Delta and Curvature calculations only).</p>
 </li>
 <li>
-<p>You have to be very careful with the way to provide a <code>calc_param</code> in your request, especially for vectors and matrixes. use <code>json.dumps</code>. Follow examples below. 'v' is always 1.</p>
+<p>For gamma correlation matrixes the diagonal has to be 0.</p>
+</li>
+<li>
+<p>You have to be very careful with the way to provide a <code>calc_param</code> in your request, especially for vectors and matrixes. <strong>Use <code>json.dumps</code> for calc_params</strong>. Follow examples below. 'v' is always 1.</p>
 </li>
 </ol>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
@@ -181,7 +184,7 @@ for calc_param in ds.calc_params:
     if &quot;com_delta_&quot; in calc_param[&quot;name&quot;]:
         # print(calc_param) #&lt;-- uncomment to see
         pass
-
+# fmt: off
 com_delta_diff_cty_rho_per_bucket_base = json.dumps(
     [1.55, 1.95, 1.4, 1.8, 1.6, 1.65, 1.55, 1.45, 1.15, 1.4, 1.15]
 )
@@ -190,131 +193,21 @@ com_delta_gamma_low = json.dumps(
         &quot;v&quot;: 1,
         &quot;dim&quot;: [11, 11],
         &quot;data&quot;: [
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            1.2,
-            0.0,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            1.2,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
+            0.0,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,0.0,
+            1.2,0.0,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,0.0,
+            1.2,1.2,0.0,1.2,1.2,1.2,1.2,1.2,1.2,1.2,0.0,
+            1.2,1.2,1.2,0.0,1.2,1.2,1.2,1.2,1.2,1.2,0.0,
+            1.2,1.2,1.2,1.2,0.0,1.2,1.2,1.2,1.2,1.2,0.0,
+            1.2,1.2,1.2,1.2,1.2,0.0,1.2,1.2,1.2,1.2,0.0,
+            1.2,1.2,1.2,1.2,1.2,1.2,0.0,1.2,1.2,1.2,0.0,
+            1.2,1.2,1.2,1.2,1.2,1.2,1.2,0.0,1.2,1.2,0.0,
+            1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,0.0,1.2,0.0,
+            1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,0.0,0.0,
+            0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
         ],
     }
 )
-
+# fmt: on
 calc_params = dict(
     com_delta_diff_cty_rho_per_bucket_base=com_delta_diff_cty_rho_per_bucket_base,
     com_delta_gamma_low=com_delta_gamma_low,
