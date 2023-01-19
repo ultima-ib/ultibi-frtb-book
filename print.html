@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Python FRTB User Guide</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="ultibi python developer&#x27;s frtb user guide. Filtering, overriding, what if.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="tabbed-code-blocks.css">
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">2.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">2.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">3.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">3.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">3.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">3.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">4.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">4.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">4.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">4.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">5.</strong> Performance</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Python FRTB User Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p><strong><a href="https://ultimabi.uk/">Ultima</a></strong> is a service which allows you to define, compute and breakdown the key performance metrics of your business.</p>
+<p>This user guide is a walk through of <code>ultibi</code>, a python library by <strong>Ultima</strong>, applied to a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a more general usecase refer to the general user guide. Here we will focus on FRTB only.</p>
+<h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
+<ul>
+<li>
+<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> and aims to be fully compliant(although not certified). <strong><a href="https://ultimabi.uk/">ultibi</a></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
+</li>
+<li>
+<p><code>ultibi</code> is very flexible and allows you to override any of the prescribed parameters (such as <code>girr_delta_rho_infl_base_low</code>) via <code>calc_params</code> argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can <strong>stress test</strong> against changes in the values of the prescribed (aka hard coded by ISDA) parameters.</p>
+</li>
+<li>
+<p>Everything you need for analysis: <a href="./filters.html">Filtering</a>, <a href="./override.html">Overriding</a>, <a href="./add_row.html">Adding Trades</a> and so on.</p>
+</li>
+<li>
+<p>Blazingly <a href="./performace.html">fast</a>.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<p>If you are downloading from a software repository</p>
+<pre><code class="language-console">pip install ultibi
+</code></pre>
+<p>or if you have a .whl file</p>
+<pre><code class="language-console">pip install *.whl
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---input-format"><a class="header" href="#frtb-sa---input-format">FRTB SA - Input format</a></h1>
+<p>Any calculation/function needs inputs. In case of FRTB SA the <strong>input is your portfolio sensitivities at trade level</strong>. Currently expected format for the sensitivities is like this: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv">Delta.csv</a>. This format is very similar to the industry standard <a href="https://www.isda.org/a/aBzTE/The-Future-of-Risk-Capital-and-Margin.pdf">CRIF</a>. Coming soon full CRIF support. As you can see, this file is your Sensitivities at Trade-RiskFactor-Tenor level.</p>
+<p>In our examples we will also be using the optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal.</p>
+<p>Finally, we need <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv">TradeAttributes.csv</a>. It is similar to our Delta Sensis but The infor here is at Trade level only. Ie Notional, Product/Derivative Type, RRAO Flags etc etc.</p>
+<h1 id="defenitions"><a class="header" href="#defenitions">Defenitions</a></h1>
+<p>Note that the <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> actually well defines what a &quot;RiskFactor&quot; is and the formulas for &quot;Sensitivities&quot;. See paragraphs <code>21.8-21.19</code> and <code>21.19-21.26</code> respectively.</p>
+<h1 id="expected-columns"><a class="header" href="#expected-columns">Expected Columns</a></h1>
+<p>Table below will outline which columns are expected, the useage and meaning behind them.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="ultima-dataset"><a class="header" href="#ultima-dataset">Ultima DataSet</a></h2>
+<p>First step is to create a DataSet from your portfolio data. Think of a DataSet as a DataFrame with some special pre defined functions (eg &quot;FX Delta Capital Charge&quot;).</p>
+<h2 id="from-frame"><a class="header" href="#from-frame">From Frame</a></h2>
+<p>In order to use our library you need to convert your portfolio into <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported. Note polars also supports <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="input.html#data-source-config">config</a>.</p>
+<pre><code class="language-python">import polars as pl
+import ultibi as ul
+
+# Note: sometimes Polars needs abit of help to determine the correct datatype for your
+# columns. This is because Polars scans first N rows to determine correct dtype
+exposures = pl.read_csv(&quot;./data/frtb/Delta.csv&quot;, dtypes={&quot;SensitivitySpot&quot;: pl.Float64})
+# Feel free to join other attributes such as Hierarchy here ...
+ds = ul.FRTBDataSet.from_frame(exposures)
+print(ds.frame())
+</code></pre>
+<h2 id="data-source-config"><a class="header" href="#data-source-config">Data Source Config</a></h2>
+<p>In principle, you are free to enrich this structure with as many columns as you want (for example Desk, Legal Entity etc). You can either do this manually or use <code>from_config</code>. Check out an example with explanations of each field: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml">datasource_config.toml</a>.</p>
+<pre><code class="language-python"># You can also set up a config and we will take care of
+# castings, joins etc
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
+
+print(ds.frame())
+</code></pre>
+<h2 id="validate"><a class="header" href="#validate">Validate</a></h2>
+<p>If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call .validate() on your dataset. It checks if every required column for every availiable calculation is present. Note: If you <strong>can</strong> guarantee your particular calculation would not require the missing columns you can proceed at your own risk!</p>
+<pre><code class="language-python">import ultibi as ul
+
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
+try:
+    ds.validate()
+except ul.NoDataError as e:
+    print(
+        &quot;One of key columns is missing. Be carefull if you wish to proceed &quot;
+        &quot;without it. Error: &quot;,
+        e,
+    )
+print(&quot;Complete&quot;)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---capital"><a class="header" href="#frtb-sa---capital">FRTB SA - Capital</a></h1>
+<p>This chapter shows how to calculate your capital</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prepare"><a class="header" href="#prepare">Prepare</a></h1>
+<p>First, lets save the original table. You can get your data like this:</p>
+<pre><code class="language-python">original = ds.frame()  # keep the old value for comparison
+</code></pre>
+<h2 id="assign-weights"><a class="header" href="#assign-weights">Assign Weights</a></h2>
+<p>First part of the calculation(assuming you've got your exposures/sensitivities) is to assign weights to them as per the regulation. <strong><code>ultibi</code> assigns weights (and few other parameters) to your exposures as per the regulation</strong>. Make sure you <strong>assign weights before doing any computations</strong>:</p>
+<pre><code class="language-python"># Prepare assigns weights and other columns to the FRTBDataSet.
+# If you call it twice you will get an error
+ds.prepare()
+print(ds.frame())
+</code></pre>
+<p>You will get an error if you try to assign twice. Now, let's see what happened. We will need a little helper function:</p>
+<pre><code class="language-python"># Let's see what happened
+def diff(df1: pl.DataFrame, df2: pl.DataFrame) -&gt; pl.DataFrame:
+    &quot;&quot;&quot;Columns in df1 which are not in df2
+
+    Args:
+        df1 (pl.DataFrame): First to compare
+        df2 (pl.DataFrame): Second to compare
+
+    Returns:
+        pl.DataFrame: _description_
+    &quot;&quot;&quot;
+    return df1.select([c for c in df1 if c.name not in df2])
+print(diff(ds.frame(), original))
+</code></pre>
+<p>At the time of writing this returns 6 new columns(names of the columns might change slightly but the meaning will always be the same):</p>
+<div class="table-wrapper"><table><thead><tr><th>Column Name</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>SensWeights</td><td>List of weights, one for each tenor. Eg [1,1,1,1,1] for any Vega risk.</td></tr>
+<tr><td>CurvatureRiskWeight</td><td>Simply max of SensWeights if PnL Up or Down was provided, otherwise NULL. This is how we identify Curvature eligible trades.</td></tr>
+<tr><td>SensWeightsCRR2</td><td>Same as SensWeights but under CRR2 rules.</td></tr>
+<tr><td>CurvatureRiskWeightCRR2</td><td>Same logic as BCBS</td></tr>
+<tr><td>ScaleFactor</td><td>DRC scailing: yearfrac between COB and MaturityDate</td></tr>
+<tr><td>SeniorityRank</td><td>Mapping used internaly for DRC offsetting</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="calculation"><a class="header" href="#calculation">Calculation</a></h1>
+<h2 id="before-you-run"><a class="header" href="#before-you-run">Before you run</a></h2>
+<p>Before you specify what you want to calculate <strong>make sure the measure/risk metric you are interested in is present in the dataset</strong>:</p>
+<pre><code class="language-python">print( ds.measures )
+</code></pre>
+<p>What you get there is a <code>dict</code>. The <strong>keys</strong> are measures' name. For example <code>SensitivitySpot</code> or <code>FX DeltaCharge Low</code>. The <strong>items</strong> indicate if there is any <em>restriction on aggregation method</em>, where <code>scalar</code> is a special method described below. If <code>None</code>, you are free to use any of the availiable:</p>
+<pre><code class="language-python">print( ul.aggregation_ops() )
+</code></pre>
+<p>For example, <code>SensitivitySpot</code> can be aggregated any way you want for a given level, say Desk. In other wards, for a given Desk you can find the mean, max, min or sum (etc etc) of <code>SensitivitySpot</code>. On the other hand, you can not find mean, max, min (etc etc) of <code>FX DeltaCharge Low</code>. This wouldn't make sence since <code>FX DeltaCharge Low</code> is simply a single number defined by the regulation. Hence we call such aggregation method <code>scalar</code>.</p>
+<p>Also, make sure that columns which appear in measures, grouby and filters are present as well.</p>
+<h2 id="run"><a class="header" href="#run">Run</a></h2>
+<p>Now we are good to form the request which we need. Say, we want to understand the <code>DRC</code> capital charge and all intermediate results, for every combination of <code>Desk</code> - <code>BucketBCBS</code>.</p>
+<pre><code class="language-python"># What do we want to calculate?
+request = dict(
+    measures=[
+        [&quot;DRC nonSec GrossJTD&quot;, &quot;sum&quot;],
+        [&quot;DRC nonSec GrossJTD Scaled&quot;, &quot;sum&quot;],
+        [&quot;DRC nonSec CapitalCharge&quot;, &quot;scalar&quot;],
+        [&quot;DRC nonSec NetLongJTD&quot;, &quot;scalar&quot;],
+        [&quot;DRC nonSec NetShortJTD&quot;, &quot;scalar&quot;],
+        [&quot;DRC nonSec NetLongJTD Weighted&quot;, &quot;scalar&quot;],
+        [&quot;DRC nonSec NetAbsShortJTD Weighted&quot;, &quot;scalar&quot;],
+        [&quot;DRC nonSec HBR&quot;, &quot;scalar&quot;],
+    ],
+    groupby=[&quot;Desk&quot;, &quot;BucketBCBS&quot;],
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+        &quot;drc_offset&quot;: &quot;true&quot;,
+    },
+)
+</code></pre>
+<p>This has two parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="./whatif.html">analysis</a> chapter).</p>
+<p>Valide that you've formed a legitimate request (ie no compulsory field is missing, datatypes are correct etc):</p>
+<pre><code class="language-python">aggrequest = ul.AggRequest(request)
+print(request)
+</code></pre>
+<p>Finally, let's execute it:</p>
+<pre><code class="language-python">result = ul.execute_agg(aggrequest, ds)
+print(result)
+</code></pre>
+<p>Or, if you want to do it in one go:</p>
+<pre><code class="language-python">result = ds.execute(request)
+print(result)
+print(&quot;Type: &quot;, type(result))
+</code></pre>
+<p>Notice the returned object is a polars DataFrame. You can then do whatever you want with it. Print (to set how many columns you want to print make sure to use polars <a href="https://pola-rs.github.io/polars/py-polars/html/reference/config.html">config</a>), or any on the <a href="https://pola-rs.github.io/polars/py-polars/html/reference/io.html">I/O</a>: save to csv, parquet, database etc.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="filtering"><a class="header" href="#filtering">Filtering</a></h1>
+<p>Often, one would want <strong>filter</strong> their data. May be you are just interested in number of one particular subset (eg a Book). Or, if you are investigating an issue, this can be very useful to narrow down the potential underlying root cause.</p>
+<p>Note: you specify type of filter with <code>&quot;op&quot;</code> argument.</p>
+<h3 id="equal-eq"><a class="header" href="#equal-eq">Equal (Eq)</a></h3>
+<p>In this example we breakdown by <code>Country</code> and <code>RiskClass</code>. We also filter on <code>Desk == FXOptions</code>.</p>
+<pre><code class="language-python">import ultibi as ul
+import polars as pl
+
+pl.Config.set_tbl_rows(100)
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
+ds.prepare()
+
+request = dict(
+    measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
+    groupby=[&quot;Country&quot;, &quot;RiskClass&quot;],
+    filters=[[{&quot;op&quot;: &quot;Eq&quot;, &quot;field&quot;: &quot;Desk&quot;, &quot;value&quot;: &quot;FXOptions&quot;}]],
+    hide_zeros=True,
+    totals=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+        &quot;drc_offset&quot;: &quot;true&quot;,
+    },
+)
+result = ds.execute(request)
+print(result)
+</code></pre>
+<h3 id="not-equial-neq"><a class="header" href="#not-equial-neq">Not Equial (Neq)</a></h3>
+<p>In this example we breakdown by <code>Country</code> and <code>RiskClass</code>. We also filter on <code>Desk != FXOptions</code>.</p>
+<pre><code class="language-python">request = dict(
+    measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
+    groupby=[&quot;Country&quot;, &quot;RiskClass&quot;],
+    filters=[[{&quot;op&quot;: &quot;Neq&quot;, &quot;field&quot;: &quot;Desk&quot;, &quot;value&quot;: &quot;FXOptions&quot;}]],
+    hide_zeros=True,
+    totals=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+        &quot;drc_offset&quot;: &quot;true&quot;,
+    },
+)
+result = ds.execute(request)
+print(result)
+</code></pre>
+<h3 id="in-in"><a class="header" href="#in-in">In (In)</a></h3>
+<p><code>In</code> is similar to <code>Eq</code>, but instead of one value you can provide multiple. In this example we filter on <code>Desk</code> to be <code>FXOptions</code> or <code>Rates</code>.</p>
+<pre><code class="language-python">
+request = dict(
+    measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
+    groupby=[&quot;Country&quot;, &quot;RiskClass&quot;],
+    filters=[[{&quot;op&quot;: &quot;In&quot;, &quot;field&quot;: &quot;Desk&quot;, &quot;value&quot;: [&quot;FXOptions&quot;, &quot;Rates&quot;]}]],
+    hide_zeros=True,
+    totals=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+        &quot;drc_offset&quot;: &quot;true&quot;,
+    },
+)
+result = ds.execute(request)
+
+print(result)
+</code></pre>
+<h3 id="not-in-notin"><a class="header" href="#not-in-notin">Not In (NotIn)</a></h3>
+<p><code>NotIn</code> is similar to <code>Neq</code>, but instead of saying that column value should not be equal to A, you can say that it should not be equal neither to A not to B. In this example we filter on <code>Desk</code> not being one of <code>FXOptions</code> or <code>Rates</code>.</p>
+<pre><code class="language-python">
+request = dict(
+    measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
+    groupby=[&quot;Country&quot;, &quot;RiskClass&quot;],
+    filters=[[{&quot;op&quot;: &quot;NotIn&quot;, &quot;field&quot;: &quot;Desk&quot;, &quot;value&quot;: [&quot;FXOptions&quot;, &quot;Rates&quot;]}]],
+    hide_zeros=True,
+    totals=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+        &quot;drc_offset&quot;: &quot;true&quot;,
+    },
+)
+result = ds.execute(request)
+
+print(result)
+</code></pre>
+<h3 id="combining-filters"><a class="header" href="#combining-filters">Combining Filters</a></h3>
+<p>You can combine filters as much as you want. In all the previous examples notice that <code>filter</code>. Is a nested list, ie a list of lists. <strong>It is important to keep in mind that inner filters of each list will be joined as <code>OR</code>, while outer filters will be joined as <code>AND</code></strong>. For example, here we want <code>LegalEntity</code> to be equal to <code>EMEA</code> OR <code>Country</code> to be <code>UK</code>, AND we also want <code>RiskClass either FX or Equity</code>.</p>
+<pre><code class="language-python">
+request = dict(
+    measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
+    groupby=[&quot;Country&quot;, &quot;RiskClass&quot;],
+    filters=[
+        [
+            {&quot;op&quot;: &quot;Eq&quot;, &quot;field&quot;: &quot;LegalEntity&quot;, &quot;value&quot;: &quot;EMEA&quot;},
+            {&quot;op&quot;: &quot;Eq&quot;, &quot;field&quot;: &quot;Country&quot;, &quot;value&quot;: &quot;UK&quot;},
+        ],
+        [{&quot;op&quot;: &quot;In&quot;, &quot;field&quot;: &quot;RiskClass&quot;, &quot;value&quot;: [&quot;FX&quot;, &quot;Equity&quot;]}],
+    ],
+    hide_zeros=True,
+    totals=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+        &quot;drc_offset&quot;: &quot;true&quot;,
+    },
+)
+result = ds.execute(request)
+print(result)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---what-if"><a class="header" href="#frtb-sa---what-if">FRTB SA - What If</a></h1>
+<p>This chapter demonstrates all the rich feature selection <code>ultibi</code> offers for your analysis. For instance, you can <strong>override</strong> risk weights, inner/across bucket correlation parameters, trade attributes.</p>
+<p>You can instantly <strong>add trades</strong> to your portfolio to analyse the impact it has on the cpaital charge.</p>
+<p>We also provide a wide range of optional <strong>calculation parameters</strong>(such as jurisdiction, etc) which you could chose when performing calculation.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="overrides"><a class="header" href="#overrides">Overrides</a></h1>
+<p>You can temporarily override any value in your dataset. This can be very useful to perform analysis. An override consists of three fields:</p>
+<ol>
+<li>The <strong>Field</strong> (ie the column where you seek to override values).
+Note: at the time of writing you can only override <strong>bool, str, number, list of numbers</strong> types of columns.</li>
+<li>The New <strong>Value</strong>.</li>
+<li>The <strong><a href="./filters.html">Filters</a></strong>. ie when to override the existing with the new value.</li>
+</ol>
+<p>Let's do a couple of examples. Notice that under <a href="https://www.bis.org/bcbs/publ/d457.pdf">BCBS</a> <em>page <code>59</code> table <code>2</code></em>. the default risk weight is almost the same as under <a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108763">CRR2</a>. Assuming that AA is Credit Quality Step 1, if we change the risk weight to <code>0.005</code> we would expect to get the same outcome. Let's test this out:</p>
+<pre><code class="language-python">
+request = dict(
+    filters=[],
+    groupby=[&quot;RiskClass&quot;, &quot;Desk&quot;],
+    overrides=[
+        {
+            &quot;field&quot;: &quot;SensWeights&quot;,
+            &quot;value&quot;: &quot;[0.005]&quot;,
+            &quot;filters&quot;: [
+                [{&quot;op&quot;: &quot;Eq&quot;, &quot;field&quot;: &quot;RiskClass&quot;, &quot;value&quot;: &quot;DRC_nonSec&quot;}],
+                [{&quot;op&quot;: &quot;Eq&quot;, &quot;field&quot;: &quot;CreditQuality&quot;, &quot;value&quot;: &quot;AA&quot;}],
+            ],
+        }
+    ],
+    measures=[[&quot;DRC nonSec CapitalCharge&quot;, &quot;scalar&quot;]],
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        &quot;drc_offset&quot;: &quot;false&quot;,
+    },
+)
+result = ds.execute(request)
+
+request = dict(
+print(result)
+</code></pre>
+<p>Note that SensWeights is a list of numbers column (because of multiple tenors) and therefore we write it as a list <code>[0.005]</code>.</p>
+<p>Let's compare this to a run <strong>without overrides</strong> but with <strong><code>jurisdiction</code> == <code>CRR2</code></strong>:</p>
+<pre><code class="language-python">request = dict(
+    filters=[],
+    groupby=[&quot;RiskClass&quot;, &quot;Desk&quot;],
+    measures=[[&quot;DRC nonSec CapitalCharge&quot;, &quot;scalar&quot;]],
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;CRR2&quot;,
+        &quot;drc_offset&quot;: &quot;false&quot;,
+    },
+)
+result = ds.execute(request)
+print(result)
+</code></pre>
+<p>Results should match!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="add-rows"><a class="header" href="#add-rows">Add Rows</a></h1>
+<p><code>ultibi</code>'s request suppors adding rows(in our case Trades). This is a perfect functionality to have in your toolset, especially for a super quick What If analysis.</p>
+<p>An example of a request with <code>add_row</code> looks like this:</p>
+<pre><code class="language-python">
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="calc-params"><a class="header" href="#calc-params">Calc Params</a></h1>
+<p>ultibi allows you to override parameters of the regulation, which in turn allows you to define your own parameter sets. For example if a regulatory set is not yet supported - just override parameters which are different in <code>&quot;calc_params&quot;</code> part of your request.</p>
+<h2 id="what-you-can-override"><a class="header" href="#what-you-can-override">What you can override</a></h2>
+<p>Use <code>.calc_params</code> attribute to get the list of overridable parameters.</p>
+<pre><code class="language-python">for calc_param in dataset.calc_params:
+    print(calc_param[&quot;name&quot;], &quot; - &quot;, calc_param[&quot;hint&quot;])
+</code></pre>
+<h2 id="explanation"><a class="header" href="#explanation">Explanation</a></h2>
+<p>Most of these are self explanatory. However, one needs to understand what exactly some of those do:</p>
+<ol>
+<li>
+<p>Some calc_params <strong>end</strong> with <strong>_base</strong> and some with <strong>_low/_medium/_high</strong>. Those which end with <strong>_base</strong> (eg. <code>com_delta_rho_diff_loc_base</code>) are <em>components of an actual rho</em>. For example <code>com_delta_rho_diff_loc_base</code> is (a float) and is part of three components which are multiplied to produce a commodity inner bucket rho as per <code>21.83.3</code>. This has one important implication. <strong>Low/High function as per paragraph <code>21.6</code> in the <a href="https://www.bis.org/bcbs/publ/d457.pdf">text</a> will be applied after this multiplication.</strong> On the other hand, those calc_params which end with <strong>_low/_medium/_high</strong> (eg <code>girr_delta_gamma_low</code>) will be used as they are.</p>
+</li>
+<li>
+<p>Those calc_params (eg <code>com_delta_diff_cty_rho_per_bucket_base</code>) which are lists are usually per bucket, where index of the item indicates the number of the bucket.</p>
+</li>
+<li>
+<p><code>jurisdiction</code> - currently <code>BCBS</code> or <code>CRR2</code> - points to which parameter set (rhos, gammas etc) to be used by default. Also for <strong>FX</strong> if <code>reporting_ccy</code> is not provided</p>
+</li>
+<li>
+<p><code>reporting_ccy</code> - used for <strong>FX</strong>. Only those <strong>FX</strong> delta/curvature sensitivites where RiskFactor is XXXCCY (where CCY is the reporting_ccy) will be used for calculation. (eg if reporting_ccy is USD, GBPUSD will be used, but GBPEUR will not - this applies for Delta and Curvature calculations only).</p>
+</li>
+<li>
+<p>You have to be very careful with the way to provide a <code>calc_param</code> in your request, especially for vectors and matrixes. use <code>json.dumps</code>. Follow examples below. 'v' is always 1.</p>
+</li>
+</ol>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<p>A request with <code>calc_params</code> looks like this. This is an arbitrary example just for illustrative purposes:</p>
+<pre><code class="language-python">import ultibi as ul
+import json
+
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
+ds.prepare()
+for calc_param in ds.calc_params:
+    if &quot;com_delta_&quot; in calc_param[&quot;name&quot;]:
+        # print(calc_param) #&lt;-- uncomment to see
+        pass
+
+com_delta_diff_cty_rho_per_bucket_base = json.dumps(
+    [1.55, 1.95, 1.4, 1.8, 1.6, 1.65, 1.55, 1.45, 1.15, 1.4, 1.15]
+)
+com_delta_gamma_low = json.dumps(
+    {
+        &quot;v&quot;: 1,
+        &quot;dim&quot;: [11, 11],
+        &quot;data&quot;: [
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            1.2,
+            0.0,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            1.2,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+        ],
+    }
+)
+
+calc_params = dict(
+    com_delta_diff_cty_rho_per_bucket_base=com_delta_diff_cty_rho_per_bucket_base,
+    com_delta_gamma_low=com_delta_gamma_low,
+)
+print(calc_params)
+
+request1 = dict(
+    measures=[
+        [&quot;Commodity DeltaCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge High&quot;, &quot;scalar&quot;],
+    ],
+    groupby=[&quot;Group&quot;],
+    hide_zeros=True,
+    calc_params=calc_params,
+)
+
+result1 = ds.execute(request1)
+
+# print(result1) #&lt;-- uncomment to see
+
+request2 = dict(
+    measures=[
+        [&quot;Commodity DeltaCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;Commodity DeltaCharge High&quot;, &quot;scalar&quot;],
+    ],
+    groupby=[&quot;Group&quot;],
+    hide_zeros=True,
+)
+
+result2 = ds.execute(request2)
+
+# print(result2) #&lt;-- uncomment to see
+print(result1)
+print(result2)
+</code></pre>
+<h2 id="if-a-parameters-could-not-get-parsed"><a class="header" href="#if-a-parameters-could-not-get-parsed">If a parameters could not get parsed</a></h2>
+<p>Currently, if your passed calc_param could not get parsed into a correct value (eg you provided float instead of a vector) - it will <strong>silently</strong> fall back to the defaulted value of the <code>jurisdiction</code>. <strong>This will be changed in the next release to return an error to avoid ambiguity</strong>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="performance"><a class="header" href="#performance">Performance</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="tabbed-code-blocks.js"></script>
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </body>
+</html>
