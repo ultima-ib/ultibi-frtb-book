@@ -23,7 +23,9 @@ Most of these are self explanatory. However, one needs to understand what exactl
 
 1. `reporting_ccy` - used for **FX**. Only those **FX** delta/curvature sensitivites where RiskFactor is XXXCCY (where CCY is the reporting_ccy) will be used for calculation. (eg if reporting_ccy is USD, GBPUSD will be used, but GBPEUR will not - this applies for Delta and Curvature calculations only).
 
-1. You have to be very careful with the way to provide a `calc_param` in your request, especially for vectors and matrixes. use `json.dumps`. Follow examples below. 'v' is always 1.
+1. For gamma correlation matrixes the diagonal has to be 0.
+
+1. You have to be very careful with the way to provide a `calc_param` in your request, especially for vectors and matrixes. **Use `json.dumps` for calc_params**. Follow examples below. 'v' is always 1.
 
 ## Examples
 

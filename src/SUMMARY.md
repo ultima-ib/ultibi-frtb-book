@@ -16,3 +16,4 @@
   - [Add Trades/Books](./add_row.md)
   - [Calc Params and Params Sets](./calc_params.md)
 - [Performance](./performance.md)
+- [Contacts and Feedback](./feedback.md)
