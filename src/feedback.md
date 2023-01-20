@@ -1,6 +1,7 @@
 # Contacts and Feedback
 
-**`ultibi`** was created by **[Ultima](https://ultimabi.uk/)**
+**`ultibi`** was created by **[Ultima](https://ultimabi.uk/#)**
+
 Get in touch:
 
 - **[LinkedIn](https://www.linkedin.com/company/91718551)**
