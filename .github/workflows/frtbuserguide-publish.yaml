@@ -30,7 +30,7 @@ jobs:
       - name: Generate sitemap
         run: |
           cd book
-          npx sscli --base https://ultibi-frtb-book.github.io
+          npx sscli --base https://ultimabi.uk/ultibi-frtb-book/
           
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
