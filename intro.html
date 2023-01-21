@@ -145,12 +145,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><strong>Ultima</strong> is a service which allows you to define, compute and breakdown the key performance metrics of your business.</p>
-<p>This user guide is a walk through of <strong><code>ultibi</code></strong>, a python library by <strong>Ultima</strong>, applied to a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a more general usecase refer to the general user guide. Here we will focus on FRTB only.</p>
+<p><strong><code>ultibi</code></strong> is a free python library by <strong>Ultima</strong>. </p>
+<p>This user guide's primary focus is a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a more general usecase refer to the general user guide(TBA). Here we will focus on FRTB only. In general <strong><code>ultibi</code></strong> is a python interface of <strong>Ultima</strong>, a service which allows you to define, compute and breakdown the key performance metrics of your business.</p>
 <h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
 <ul>
 <li>
 <p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
+</li>
+<li>
+<p>You can breakdown and drillthrough your computation </p>
 </li>
 <li>
 <p><code>ultibi</code> is very flexible and allows you to override any of the prescribed parameters (such as <code>girr_delta_rho_infl_base_low</code>) via <code>calc_params</code> argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can <strong>stress test</strong> against changes in the values of the prescribed (aka hard coded by ISDA) parameters.</p>
@@ -162,6 +165,350 @@
 <p>Blazingly <a href="./performace.html">fast</a>.</p>
 </li>
 </ul>
+<h3 id="supported-measures"><a class="header" href="#supported-measures">Supported measures</a></h3>
+<p>CSR Sec CTP CVRdown</p>
+<p>CSR Sec CTP CVRup</p>
+<p>CSR Sec CTP Curvature Kb High</p>
+<p>CSR Sec CTP Curvature Kb Low</p>
+<p>CSR Sec CTP Curvature Kb Medium</p>
+<p>CSR Sec CTP Curvature KbMinus High</p>
+<p>CSR Sec CTP Curvature KbMinus Low</p>
+<p>CSR Sec CTP Curvature KbMinus Medium</p>
+<p>CSR Sec CTP Curvature KbPlus High</p>
+<p>CSR Sec CTP Curvature KbPlus Low</p>
+<p>CSR Sec CTP Curvature KbPlus Medium</p>
+<p>CSR Sec CTP Curvature Sb High</p>
+<p>CSR Sec CTP Curvature Sb Low</p>
+<p>CSR Sec CTP Curvature Sb Medium</p>
+<p>CSR Sec CTP CurvatureCharge High</p>
+<p>CSR Sec CTP CurvatureCharge Low</p>
+<p>CSR Sec CTP CurvatureCharge MAX</p>
+<p>CSR Sec CTP CurvatureCharge Medium</p>
+<p>CSR Sec CTP CurvatureDelta</p>
+<p>CSR Sec CTP CurvatureDelta_Weighted</p>
+<p>CSR Sec CTP DeltaCharge High</p>
+<p>CSR Sec CTP DeltaCharge Low</p>
+<p>CSR Sec CTP DeltaCharge MAX</p>
+<p>CSR Sec CTP DeltaCharge Medium</p>
+<p>CSR Sec CTP DeltaKb High</p>
+<p>CSR Sec CTP DeltaKb Low</p>
+<p>CSR Sec CTP DeltaKb Medium</p>
+<p>CSR Sec CTP DeltaSb</p>
+<p>CSR Sec CTP DeltaSens</p>
+<p>CSR Sec CTP DeltaSens Weighted</p>
+<p>CSR Sec CTP PnLdown</p>
+<p>CSR Sec CTP PnLup</p>
+<p>CSR Sec CTP VegaCharge High</p>
+<p>CSR Sec CTP VegaCharge Low</p>
+<p>CSR Sec CTP VegaCharge MAX</p>
+<p>CSR Sec CTP VegaCharge Medium</p>
+<p>CSR Sec CTP VegaKb High</p>
+<p>CSR Sec CTP VegaKb Low</p>
+<p>CSR Sec CTP VegaKb Medium</p>
+<p>CSR Sec CTP VegaSb</p>
+<p>CSR Sec CTP VegaSens</p>
+<p>CSR Sec CTP VegaSens Weighted</p>
+<p>CSR Sec nonCTP CVRdown</p>
+<p>CSR Sec nonCTP CVRup</p>
+<p>CSR Sec nonCTP Curvature Kb High</p>
+<p>CSR Sec nonCTP Curvature Kb Low</p>
+<p>CSR Sec nonCTP Curvature Kb Medium</p>
+<p>CSR Sec nonCTP Curvature KbMinus High</p>
+<p>CSR Sec nonCTP Curvature KbMinus Low</p>
+<p>CSR Sec nonCTP Curvature KbMinus Medium</p>
+<p>CSR Sec nonCTP Curvature KbPlus High</p>
+<p>CSR Sec nonCTP Curvature KbPlus Low</p>
+<p>CSR Sec nonCTP Curvature KbPlus Medium</p>
+<p>CSR Sec nonCTP Curvature Sb High</p>
+<p>CSR Sec nonCTP Curvature Sb Low</p>
+<p>CSR Sec nonCTP Curvature Sb Medium</p>
+<p>CSR Sec nonCTP CurvatureCharge High</p>
+<p>CSR Sec nonCTP CurvatureCharge Low</p>
+<p>CSR Sec nonCTP CurvatureCharge MAX</p>
+<p>CSR Sec nonCTP CurvatureCharge Medium</p>
+<p>CSR Sec nonCTP CurvatureDelta</p>
+<p>CSR Sec nonCTP CurvatureDelta Weighted</p>
+<p>CSR Sec nonCTP DeltaCharge High</p>
+<p>CSR Sec nonCTP DeltaCharge Low</p>
+<p>CSR Sec nonCTP DeltaCharge MAX</p>
+<p>CSR Sec nonCTP DeltaCharge Medium</p>
+<p>CSR Sec nonCTP DeltaKb High</p>
+<p>CSR Sec nonCTP DeltaKb Low</p>
+<p>CSR Sec nonCTP DeltaKb Medium</p>
+<p>CSR Sec nonCTP DeltaSb</p>
+<p>CSR Sec nonCTP DeltaSens</p>
+<p>CSR Sec nonCTP DeltaSens Weighted</p>
+<p>CSR Sec nonCTP PnLdown</p>
+<p>CSR Sec nonCTP PnLup</p>
+<p>CSR Sec nonCTP TotalCharge High</p>
+<p>CSR Sec nonCTP TotalCharge Low</p>
+<p>CSR Sec nonCTP TotalCharge MAX</p>
+<p>CSR Sec nonCTP TotalCharge Medium</p>
+<p>CSR Sec nonCTP VegaCharge High</p>
+<p>CSR Sec nonCTP VegaCharge Low</p>
+<p>CSR Sec nonCTP VegaCharge MAX</p>
+<p>CSR Sec nonCTP VegaCharge Medium</p>
+<p>CSR Sec nonCTP VegaKb High</p>
+<p>CSR Sec nonCTP VegaKb Low</p>
+<p>CSR Sec nonCTP VegaKb Medium</p>
+<p>CSR Sec nonCTP VegaSb</p>
+<p>CSR Sec nonCTP VegaSens</p>
+<p>CSR Sec nonCTP VegaSens Weighted</p>
+<p>CSR nonSec CVRdown</p>
+<p>CSR nonSec CVRup</p>
+<p>CSR nonSec Curvature Kb High</p>
+<p>CSR nonSec Curvature Kb Low</p>
+<p>CSR nonSec Curvature Kb Medium</p>
+<p>CSR nonSec Curvature KbMinus High</p>
+<p>CSR nonSec Curvature KbMinus Low</p>
+<p>CSR nonSec Curvature KbMinus Medium</p>
+<p>CSR nonSec Curvature KbPlus High</p>
+<p>CSR nonSec Curvature KbPlus Low</p>
+<p>CSR nonSec Curvature KbPlus Medium</p>
+<p>CSR nonSec Curvature Sb High</p>
+<p>CSR nonSec Curvature Sb Low</p>
+<p>CSR nonSec Curvature Sb Medium</p>
+<p>CSR nonSec CurvatureCharge High</p>
+<p>CSR nonSec CurvatureCharge Low</p>
+<p>CSR nonSec CurvatureCharge MAX</p>
+<p>CSR nonSec CurvatureCharge Medium</p>
+<p>CSR nonSec CurvatureDelta</p>
+<p>CSR nonSec CurvatureDeltaWeighted</p>
+<p>CSR nonSec DeltaCharge High</p>
+<p>CSR nonSec DeltaCharge Low</p>
+<p>CSR nonSec DeltaCharge MAX</p>
+<p>CSR nonSec DeltaCharge Medium</p>
+<p>CSR nonSec DeltaKb High</p>
+<p>CSR nonSec DeltaKb Low</p>
+<p>CSR nonSec DeltaKb Medium</p>
+<p>CSR nonSec DeltaSb</p>
+<p>CSR nonSec DeltaSens</p>
+<p>CSR nonSec DeltaSens Weighted</p>
+<p>CSR nonSec PnLdown</p>
+<p>CSR nonSec PnLup</p>
+<p>CSR nonSec TotalCharge High</p>
+<p>CSR nonSec TotalCharge Low</p>
+<p>CSR nonSec TotalCharge MAX</p>
+<p>CSR nonSec TotalCharge Medium</p>
+<p>CSR nonSec VegaCharge High</p>
+<p>CSR nonSec VegaCharge Low</p>
+<p>CSR nonSec VegaCharge MAX</p>
+<p>CSR nonSec VegaCharge Medium</p>
+<p>CSR nonSec VegaKb High</p>
+<p>CSR nonSec VegaKb Low</p>
+<p>CSR nonSec VegaKb Medium</p>
+<p>CSR nonSec VegaSb</p>
+<p>CSR nonSec VegaSens</p>
+<p>CSR nonSec VegaSens Weighted</p>
+<p>CSR_secCTP_TotalCharge_High</p>
+<p>CSR_secCTP_TotalCharge_Low</p>
+<p>CSR_secCTP_TotalCharge_Medium</p>
+<p>Commodity CVRdown</p>
+<p>Commodity CVRup</p>
+<p>Commodity Curvature Kb High</p>
+<p>Commodity Curvature Kb Low</p>
+<p>Commodity Curvature Kb Medium</p>
+<p>Commodity Curvature KbMinus High</p>
+<p>Commodity Curvature KbMinus Low</p>
+<p>Commodity Curvature KbMinus Medium</p>
+<p>Commodity Curvature KbPlus High</p>
+<p>Commodity Curvature KbPlus Low</p>
+<p>Commodity Curvature KbPlus Medium</p>
+<p>Commodity Curvature Sb High</p>
+<p>Commodity Curvature Sb Low</p>
+<p>Commodity Curvature Sb Medium</p>
+<p>Commodity CurvatureCharge High</p>
+<p>Commodity CurvatureCharge Low</p>
+<p>Commodity CurvatureCharge MAX</p>
+<p>Commodity CurvatureCharge Medium</p>
+<p>Commodity CurvatureDelta</p>
+<p>Commodity CurvatureDelta Weighted</p>
+<p>Commodity DeltaCharge High</p>
+<p>Commodity DeltaCharge Low</p>
+<p>Commodity DeltaCharge MAX</p>
+<p>Commodity DeltaCharge Medium</p>
+<p>Commodity DeltaKb High</p>
+<p>Commodity DeltaKb Low</p>
+<p>Commodity DeltaKb Medium</p>
+<p>Commodity DeltaSb</p>
+<p>Commodity DeltaSens</p>
+<p>Commodity DeltaSens Weighted</p>
+<p>Commodity PnLdown</p>
+<p>Commodity PnLup</p>
+<p>Commodity TotalCharge High</p>
+<p>Commodity TotalCharge Low</p>
+<p>Commodity TotalCharge MAX</p>
+<p>Commodity TotalCharge Medium</p>
+<p>Commodity VegaCharge High</p>
+<p>Commodity VegaCharge Low</p>
+<p>Commodity VegaCharge MAX</p>
+<p>Commodity VegaCharge Medium</p>
+<p>Commodity VegaKb High</p>
+<p>Commodity VegaKb Low</p>
+<p>Commodity VegaKb Medium</p>
+<p>Commodity VegaSb</p>
+<p>Commodity VegaSens</p>
+<p>Commodity VegaSens Weighted</p>
+<p>DRC Charge</p>
+<p>DRC Sec nonCTP CapitalCharge</p>
+<p>DRC Sec nonCTP GrossJTD</p>
+<p>DRC Sec nonCTP GrossJTD Scaled</p>
+<p>DRC Sec nonCTP HBR</p>
+<p>DRC Sec nonCTP NetLongJTD</p>
+<p>DRC Sec nonCTP NetLongJTD Weighted</p>
+<p>DRC Sec nonCTP NetShortJTD</p>
+<p>DRC Sec nonCTP NetShortJTD Weighted</p>
+<p>DRC nonSec CapitalCharge</p>
+<p>DRC nonSec GrossJTD</p>
+<p>DRC nonSec GrossJTD Scaled</p>
+<p>DRC nonSec HBR</p>
+<p>DRC nonSec NetAbsShortJTD Weighted</p>
+<p>DRC nonSec NetLongJTD</p>
+<p>DRC nonSec NetLongJTD Weighted</p>
+<p>DRC nonSec NetShortJTD</p>
+<p>EQ CVRdown</p>
+<p>EQ CVRup</p>
+<p>EQ Curvature Kb High</p>
+<p>EQ Curvature Kb Low</p>
+<p>EQ Curvature Kb Medium</p>
+<p>EQ Curvature KbMinus High</p>
+<p>EQ Curvature KbMinus Low</p>
+<p>EQ Curvature KbMinus Medium</p>
+<p>EQ Curvature KbPlus High</p>
+<p>EQ Curvature KbPlus Low</p>
+<p>EQ Curvature KbPlus Medium</p>
+<p>EQ Curvature Sb High</p>
+<p>EQ Curvature Sb Low</p>
+<p>EQ Curvature Sb Medium</p>
+<p>EQ CurvatureCharge High</p>
+<p>EQ CurvatureCharge Low</p>
+<p>EQ CurvatureCharge MAX</p>
+<p>EQ CurvatureCharge Medium</p>
+<p>EQ CurvatureDelta</p>
+<p>EQ CurvatureDelta_Weighted</p>
+<p>EQ DeltaCharge High</p>
+<p>EQ DeltaCharge Low</p>
+<p>EQ DeltaCharge MAX</p>
+<p>EQ DeltaCharge Medium</p>
+<p>EQ DeltaKb High</p>
+<p>EQ DeltaKb Low</p>
+<p>EQ DeltaKb Medium</p>
+<p>EQ DeltaSb</p>
+<p>EQ DeltaSens</p>
+<p>EQ DeltaSens Weighted</p>
+<p>EQ PnLdown</p>
+<p>EQ PnLup</p>
+<p>EQ TotalCharge High</p>
+<p>EQ TotalCharge Low</p>
+<p>EQ TotalCharge Medium</p>
+<p>EQ VegaCharge High</p>
+<p>EQ VegaCharge Low</p>
+<p>EQ VegaCharge MAX</p>
+<p>EQ VegaCharge Medium</p>
+<p>EQ VegaKb High</p>
+<p>EQ VegaKb Low</p>
+<p>EQ VegaKb Medium</p>
+<p>EQ VegaSb</p>
+<p>EQ VegaSens</p>
+<p>EQ VegaSens Weighted</p>
+<p>Exotic RRAO Charge</p>
+<p>Exotic RRAO Notional</p>
+<p>FX CVRdown</p>
+<p>FX CVRup</p>
+<p>FX Curvature Kb</p>
+<p>FX Curvature KbMinus</p>
+<p>FX Curvature KbPlus</p>
+<p>FX Curvature Sb</p>
+<p>FX CurvatureCharge High</p>
+<p>FX CurvatureCharge Low</p>
+<p>FX CurvatureCharge MAX</p>
+<p>FX CurvatureCharge Medium</p>
+<p>FX CurvatureDelta</p>
+<p>FX CurvatureDelta Weighted</p>
+<p>FX DeltaCharge High</p>
+<p>FX DeltaCharge Low</p>
+<p>FX DeltaCharge MAX</p>
+<p>FX DeltaCharge Medium</p>
+<p>FX DeltaKb</p>
+<p>FX DeltaSb</p>
+<p>FX DeltaSens</p>
+<p>FX DeltaSens Weighted</p>
+<p>FX PnLdown</p>
+<p>FX PnLup</p>
+<p>FX TotalCharge High</p>
+<p>FX TotalCharge Low</p>
+<p>FX TotalCharge Medium</p>
+<p>FX VegaCharge High</p>
+<p>FX VegaCharge Low</p>
+<p>FX VegaCharge MAX</p>
+<p>FX VegaCharge Medium</p>
+<p>FX VegaKb High</p>
+<p>FX VegaKb Low</p>
+<p>FX VegaKb Medium</p>
+<p>FX VegaSb</p>
+<p>FX VegaSens</p>
+<p>FX VegaSens Weighted</p>
+<p>GIRR CVRdown</p>
+<p>GIRR CVRup</p>
+<p>GIRR Curvature Kb</p>
+<p>GIRR Curvature KbMinus</p>
+<p>GIRR Curvature KbPlus</p>
+<p>GIRR Curvature Sb</p>
+<p>GIRR CurvatureCharge High</p>
+<p>GIRR CurvatureCharge Low</p>
+<p>GIRR CurvatureCharge MAX</p>
+<p>GIRR CurvatureCharge Medium</p>
+<p>GIRR CurvatureDelta</p>
+<p>GIRR CurvatureDelta Weighted</p>
+<p>GIRR DeltaCharge High</p>
+<p>GIRR DeltaCharge Low</p>
+<p>GIRR DeltaCharge MAX</p>
+<p>GIRR DeltaCharge Medium</p>
+<p>GIRR DeltaKb High</p>
+<p>GIRR DeltaKb Low</p>
+<p>GIRR DeltaKb Medium</p>
+<p>GIRR DeltaSb</p>
+<p>GIRR DeltaSens</p>
+<p>GIRR DeltaSens Weighted</p>
+<p>GIRR PnLdown</p>
+<p>GIRR PnLup</p>
+<p>GIRR TotalCharge High</p>
+<p>GIRR TotalCharge Low</p>
+<p>GIRR TotalCharge Medium</p>
+<p>GIRR VegaCharge High</p>
+<p>GIRR VegaCharge Low</p>
+<p>GIRR VegaCharge MAX</p>
+<p>GIRR VegaCharge Medium</p>
+<p>GIRR VegaKb High</p>
+<p>GIRR VegaKb Low</p>
+<p>GIRR VegaKb Medium</p>
+<p>GIRR VegaSb</p>
+<p>GIRR VegaSens</p>
+<p>GIRR VegaSens Weighted</p>
+<p>GrossJTD</p>
+<p>Notional</p>
+<p>Other RRAO Charge</p>
+<p>Other RRAO Notional</p>
+<p>PnL_Down</p>
+<p>PnL_Up</p>
+<p>RRAO Charge</p>
+<p>RiskWeights</p>
+<p>SA Charge</p>
+<p>SBM Charge</p>
+<p>SBM Charge High</p>
+<p>SBM Charge Low</p>
+<p>SBM Charge Medium</p>
+<p>SensitivitySpot</p>
+<p>Sensitivity_025Y</p>
+<p>Sensitivity_05Y</p>
+<p>Sensitivity_10Y</p>
+<p>Sensitivity_15Y</p>
+<p>Sensitivity_1Y</p>
+<p>Sensitivity_20Y</p>
+<p>Sensitivity_2Y</p>
+<p>Sensitivity_30Y</p>
+<p>Sensitivity_3Y</p>
+<p>Sensitivity_5Y</p>
 
                     </main>
 

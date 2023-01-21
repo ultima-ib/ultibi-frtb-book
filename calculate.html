@@ -149,10 +149,10 @@
 <p>Before you specify what you want to calculate <strong>make sure the measure/risk metric you are interested in is present in the dataset</strong>:</p>
 <pre><code class="language-python">print( ds.measures )
 </code></pre>
-<p>What you get there is a <code>dict</code>. The <strong>keys</strong> are measures' name. For example <code>SensitivitySpot</code> or <code>FX DeltaCharge Low</code>. The <strong>items</strong> indicate if there is any <em>restriction on aggregation method</em>, where <code>scalar</code> is a special method described below. If <code>None</code>, you are free to use any of the availiable:</p>
+<p>What you get there is a <code>dict</code>. The <strong>keys</strong> are measures' name. For example <code>SensitivitySpot</code> or <code>FX DeltaCharge Low</code>. The <strong>items</strong> indicate if there is any <em>restriction on aggregation method</em>, where <code>scalar</code> is a special method explained below. If <code>None</code>, you are free to use any of the availiable:</p>
 <pre><code class="language-python">print( ul.aggregation_ops() )
 </code></pre>
-<p>For example, <code>SensitivitySpot</code> can be aggregated any way you want for a given level, say Desk. In other wards, for a given Desk you can find the mean, max, min or sum (etc etc) of <code>SensitivitySpot</code>. On the other hand, you can not find mean, max, min (etc etc) of <code>FX DeltaCharge Low</code>. This wouldn't make sence since <code>FX DeltaCharge Low</code> is simply a single number defined by the regulation. Hence we call such aggregation method <code>scalar</code>.</p>
+<p>Note that any numeric column automatically considered a measure (eg <code>SensitivitySpot</code>). These measures can be aggregated any way you want for a given level, say Desk. In other words, for a given Desk you can find the mean, max, min or sum (etc etc) of <code>SensitivitySpot</code>. On the other hand, you can <strong>not</strong> find mean, max, min (etc etc) of <code>FX DeltaCharge Low</code>. This wouldn't make sence since <code>FX DeltaCharge Low</code> is simply a single number defined by the regulation. Hence we call such aggregation method <strong><code>scalar</code></strong> and we <strong>restrict</strong> you to use only this method.</p>
 <p>Also, make sure that columns which appear in measures, grouby and filters are present as well.</p>
 <h2 id="run"><a class="header" href="#run">Run</a></h2>
 <p>Now we are good to form the request which we need. Say, we want to understand the <code>DRC</code> capital charge and all intermediate results, for every combination of <code>Desk</code> - <code>BucketBCBS</code>.</p>
@@ -177,7 +177,7 @@ request = dict(
     },
 )
 </code></pre>
-<p>This has two parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="./whatif.html">analysis</a> chapter).</p>
+<p>Note: if you don't care about level of aggregation and just want a total say DRC Capital Charge for your portfolio, just provide an extra column to your portfolio, name it <code>&quot;Total&quot;</code>(for exmaple) and set all values in the columns as <code>&quot;Total&quot;</code>. Then do <code>groupby=[&quot;Total&quot;]</code>. Above request has two <strong>optional</strong> parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows <strong>from the result</strong> where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="./whatif.html">analysis</a> chapter) etc.</p>
 <p>Valide that you've formed a legitimate request (ie no compulsory field is missing, datatypes are correct etc):</p>
 <pre><code class="language-python">aggrequest = ul.AggRequest(request)
 print(request)

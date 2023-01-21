@@ -146,13 +146,210 @@
                     <main>
                         <h1 id="frtb-sa---input-format"><a class="header" href="#frtb-sa---input-format">FRTB SA - Input format</a></h1>
 <p>Any calculation/function needs inputs. In case of FRTB SA the <strong>input is your portfolio sensitivities at trade level</strong>. Currently expected format for the sensitivities is like this: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv">Delta.csv</a>. This format is very similar to the industry standard <a href="https://www.isda.org/a/aBzTE/The-Future-of-Risk-Capital-and-Margin.pdf">CRIF</a>. Coming soon full CRIF support. As you can see, this file is your Sensitivities at Trade-RiskFactor-Tenor level.</p>
-<p>In our examples we will also be using the optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal.</p>
-<p>Finally, we need <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv">TradeAttributes.csv</a>. It is similar to our Delta Sensis but The infor here is at Trade level only. Ie Notional, Product/Derivative Type, RRAO Flags etc etc.</p>
+<p>In our examples we will also be using an optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal structure (eg which Desk or Legal Entity).</p>
+<p>Finally, we need <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv">TradeAttributes.csv</a>. It is similar to our Delta Sensis but the data here is at Trade level only. Ie Notional, Product/Derivative Type, RRAO Flags etc etc.</p>
 <h1 id="defenitions"><a class="header" href="#defenitions">Defenitions</a></h1>
 <p>Note that the <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> actually well defines what a &quot;RiskFactor&quot; is and the formulas for &quot;Sensitivities&quot;. See paragraphs <code>21.8-21.19</code> and <code>21.19-21.26</code> respectively.</p>
-<h1 id="expected-columns"><a class="header" href="#expected-columns">Expected Columns</a></h1>
-<p>Table below will outline which columns are expected, the useage and meaning behind them.</p>
-
+<h3 id="expected-columns-explanation---risk"><a class="header" href="#expected-columns-explanation---risk">Expected Columns Explanation - Risk</a></h3>
+<p>Table below will outline which columns are expected, the useage and meaning behind them. This table might get outdated. Always check <code>Delta.csv</code>.</p>
+<div class="table-wrapper"><table><thead><tr><th>ColumnName</th><th>Expected for Weights Assignments</th><th>Expected for Calculation (past weights/scailing assignments)</th><th>Restrictions on values</th><th>Where used</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>COB</td><td>Y</td><td>N</td><td>N</td><td>Used with MaturityDate to assign DRC Scailing Factor</td><td></td></tr>
+<tr><td>TradeId</td><td>N</td><td>Y</td><td>N</td><td>RRAO</td><td></td></tr>
+<tr><td>RiskCategory</td><td>Y</td><td>Y</td><td>Delta or Vega</td><td>All Risk Calculations</td><td>Note: Curvature goes under Delta</td></tr>
+<tr><td>RiskClass</td><td>Y</td><td>Y</td><td>DRC_Sec_nonCTP/DRC_nonSec/CSR_Sec_nonCTP/Commodity/CSR_Sec_CTP/CSR_nonSec/Equity/FX/GIRR</td><td>All Risk Calculations(except RRAO)</td><td></td></tr>
+<tr><td>RiskFactor</td><td>Y</td><td>Y</td><td></td><td>All Risk Calculations(except RRAO)</td><td>Different meaning depending on RiskClass. See Delta.csv for correct value for your particular RiskClass. Note: for FX convention used XXXCCY where CCY is your reporting currency. Parameter reporting_ccy will filter out all lines where CCY doesn't match it's value. For jurisdiction BCBS XXXUSD only will be used (unless overriden with reporting_ccy), and similarly XXXEUR for CRR2.</td></tr>
+<tr><td>RiskFactorType</td><td>Y</td><td>Y</td><td>See Delta.csv</td><td>All Risk Calculations(except RRAO)</td><td>Note: Different meaning depending on RiskClass. See Delta.csv for correct value for your particular RiskClass.</td></tr>
+<tr><td>CreditQuality</td><td></td><td>N</td><td></td><td>DRC nonSec and DRC Sec nonCTP</td><td>For DRC Sec nonCTP Joined with RiskFactorType with _ and then assigned via the table below. For DRC nonSec see respective table</td></tr>
+<tr><td>MaturityDate</td><td>Y</td><td>N</td><td></td><td>Used with COB to assign DRC Scailing Factor</td><td></td></tr>
+<tr><td>Tranche</td><td></td><td>Y</td><td></td><td>DRC_Sec_nonCTP</td><td></td></tr>
+<tr><td>CommodityLocation</td><td></td><td>Y</td><td></td><td>Commodity Delta</td><td></td></tr>
+<tr><td>GirrVegaUnderlyingMaturity</td><td></td><td>Y</td><td></td><td>GIRR Vega</td><td></td></tr>
+<tr><td>BucketBCBS</td><td></td><td>Y</td><td>See Delta.csv</td><td>All Risk Calculations(except RRAO)</td><td>Be careful, refer to Delta.csv Note: For FX if not provided will be derived using RiskFactor</td></tr>
+<tr><td>BucketCRR2</td><td></td><td>Y(if opt in CRR2)</td><td>See Delta.csv</td><td></td><td>Note: Present because some CSR buckets are different between BCBS and CRR2</td></tr>
+<tr><td>GrossJTD</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>PnL_Up</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>PnL_Down</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>SensitivitySpot</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_025Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_05Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_1Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_2Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_3Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_5Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_10Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_15Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_20Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_30Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>CoveredBondReducedWeight</td><td>Y(if you opted in via config)</td><td>N</td><td></td><td>Y or N</td><td></td></tr>
+<tr><td>FxCurvDivEligibility</td><td></td><td>Y</td><td></td><td>Y or N</td><td></td></tr>
+</tbody></table>
+</div>
+<h3 id="expected-columns-explanation---trade-attributes"><a class="header" href="#expected-columns-explanation---trade-attributes">Expected Columns Explanation - Trade attributes</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>ColumnName</th><th>Expected for Weights Assignments</th><th>Expected for Calculation (past weights/scailing assignments)</th><th>Restrictions on values</th><th>Where used</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>TradeId</td><td>N</td><td>Y</td><td>N</td><td>RRAO</td><td></td></tr>
+<tr><td>BookId</td><td>N</td><td>N</td><td></td><td></td><td>Not required. We use it to join hms.csv</td></tr>
+<tr><td>EXOTIC_RRAO</td><td>N</td><td>Y</td><td></td><td>RRAO</td><td></td></tr>
+<tr><td>OTHER_RRAO</td><td>N</td><td>Y</td><td></td><td>RRAO</td><td></td></tr>
+<tr><td>Notional</td><td>N</td><td>Y</td><td></td><td>RRAO</td><td></td></tr>
+</tbody></table>
+</div>
+<h3 id="drc-sec-nonctp---creditqiality_riskfactortype-weights"><a class="header" href="#drc-sec-nonctp---creditqiality_riskfactortype-weights">DRC Sec nonCTP - CreditQiality+_+RiskFactorType Weights</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>CreditQuality+_+RiskFactorType</th><th>DRC Sec  nonCTP Weight</th></tr></thead><tbody>
+<tr><td>AAA_SENIOR</td><td>1.2</td></tr>
+<tr><td>AA+_SENIOR</td><td>1.2</td></tr>
+<tr><td>AA_SENIOR</td><td>2</td></tr>
+<tr><td>AA-_SENIOR</td><td>2.4</td></tr>
+<tr><td>A+_SENIOR</td><td>3.2</td></tr>
+<tr><td>A_SENIOR</td><td>4</td></tr>
+<tr><td>A-_SENIOR</td><td>4.8</td></tr>
+<tr><td>BBB+_SENIOR</td><td>6</td></tr>
+<tr><td>BBB_SENIOR</td><td>7.2</td></tr>
+<tr><td>BBB-_SENIOR</td><td>9.6</td></tr>
+<tr><td>BB+_SENIOR</td><td>11.2</td></tr>
+<tr><td>BB_SENIOR</td><td>12.8</td></tr>
+<tr><td>BB-_SENIOR</td><td>16</td></tr>
+<tr><td>B+_SENIOR</td><td>20</td></tr>
+<tr><td>B_SENIOR</td><td>24.8</td></tr>
+<tr><td>B-_SENIOR</td><td>30.4</td></tr>
+<tr><td>CCC+_SENIOR</td><td>36.8</td></tr>
+<tr><td>CCC_SENIOR</td><td>36.8</td></tr>
+<tr><td>CCC-_SENIOR</td><td>36.8</td></tr>
+<tr><td>D_SENIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_SENIOR</td><td>100</td></tr>
+<tr><td>OTHER_SENIOR</td><td>100</td></tr>
+<tr><td>AAA_JUNIOR</td><td>1.2</td></tr>
+<tr><td>AA+_JUNIOR</td><td>1.2</td></tr>
+<tr><td>AA_JUNIOR</td><td>2.4</td></tr>
+<tr><td>AA-_JUNIOR</td><td>3.2</td></tr>
+<tr><td>A+_JUNIOR</td><td>4.8</td></tr>
+<tr><td>A_JUNIOR</td><td>6.4</td></tr>
+<tr><td>A-_JUNIOR</td><td>9.6</td></tr>
+<tr><td>BBB+_JUNIOR</td><td>13.6</td></tr>
+<tr><td>BBB_JUNIOR</td><td>17.6</td></tr>
+<tr><td>BBB-_JUNIOR</td><td>26.4</td></tr>
+<tr><td>BB+_JUNIOR</td><td>37.6</td></tr>
+<tr><td>BB_JUNIOR</td><td>49.6</td></tr>
+<tr><td>BB-_JUNIOR</td><td>60</td></tr>
+<tr><td>B+_JUNIOR  </td><td>72</td></tr>
+<tr><td>B_JUNIOR</td><td>84</td></tr>
+<tr><td>B-_JUNIOR</td><td>90.4</td></tr>
+<tr><td>CCC+_JUNIOR</td><td>100</td></tr>
+<tr><td>CCC_JUNIOR</td><td>100</td></tr>
+<tr><td>CCC-_JUNIOR</td><td>100</td></tr>
+<tr><td>D_JUNIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_JUNIOR</td><td>100</td></tr>
+<tr><td>OTHER_JUNIOR</td><td>100</td></tr>
+<tr><td>A-1_JUNIOR</td><td>1.2</td></tr>
+<tr><td>A-1_SENIOR</td><td>1.2</td></tr>
+<tr><td>P-1_JUNIOR</td><td>1.2</td></tr>
+<tr><td>P-1_SENIOR</td><td>1.2</td></tr>
+<tr><td>A-2_JUNIOR</td><td>4</td></tr>
+<tr><td>A-2_SENIOR</td><td>4</td></tr>
+<tr><td>P-2_JUNIOR</td><td>4</td></tr>
+<tr><td>P-2_SENIOR</td><td>4</td></tr>
+<tr><td>A-3_JUNIOR</td><td>8</td></tr>
+<tr><td>A-3_SENIOR</td><td>8</td></tr>
+<tr><td>P-3_JUNIOR</td><td>8</td></tr>
+<tr><td>P-3_SENIOR</td><td>8</td></tr>
+<tr><td>UNDERATD_JUNIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_SENIOR</td><td>100</td></tr>
+<tr><td>AAA_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>AA+_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>AA_NONSENIOR</td><td>2.4</td></tr>
+<tr><td>AA-_NONSENIOR</td><td>3.2</td></tr>
+<tr><td>A+_NONSENIOR</td><td>4.8</td></tr>
+<tr><td>A_NONSENIOR</td><td>6.4</td></tr>
+<tr><td>A-_NONSENIOR</td><td>9.6</td></tr>
+<tr><td>BBB+_NONSENIOR</td><td>13.6</td></tr>
+<tr><td>BBB_NONSENIOR</td><td>17.6</td></tr>
+<tr><td>BBB-_NONSENIOR</td><td>26.4</td></tr>
+<tr><td>BB+_NONSENIOR</td><td>37.6</td></tr>
+<tr><td>BB_NONSENIOR</td><td>49.6</td></tr>
+<tr><td>BB-_NONSENIOR</td><td>60</td></tr>
+<tr><td>B+_NONSENIOR</td><td>72</td></tr>
+<tr><td>B_NONSENIOR</td><td>84</td></tr>
+<tr><td>B-_NONSENIOR</td><td>90.4</td></tr>
+<tr><td>CCC+_NONSENIOR</td><td>100</td></tr>
+<tr><td>CCC_NONSENIOR</td><td>100</td></tr>
+<tr><td>CCC-_NONSENIOR</td><td>100</td></tr>
+<tr><td>D_NONSENIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_NONSENIOR</td><td>100</td></tr>
+<tr><td>OTHER_NONSENIOR</td><td>100</td></tr>
+<tr><td>A-1_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>P-1_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>A-2_NONSENIOR</td><td>4</td></tr>
+<tr><td>P-2_NONSENIOR</td><td>4</td></tr>
+<tr><td>A-3_NONSENIOR</td><td>8</td></tr>
+<tr><td>P-3_NONSENIOR</td><td>8</td></tr>
+<tr><td>UNDERATD_NONSENIOR</td><td>100</td></tr>
+<tr><td>D_NONSENIOR</td><td>100</td></tr>
+<tr><td>AAA_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>AA+_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>AA_SUBORDINATE</td><td>2.4</td></tr>
+<tr><td>AA-_SUBORDINATE</td><td>3.2</td></tr>
+<tr><td>A+_SUBORDINATE</td><td>4.8</td></tr>
+<tr><td>A_SUBORDINATE</td><td>6.4</td></tr>
+<tr><td>A-_SUBORDINATE</td><td>9.6</td></tr>
+<tr><td>BBB+_SUBORDINATE</td><td>13.6</td></tr>
+<tr><td>BBB_SUBORDINATE</td><td>17.6</td></tr>
+<tr><td>BBB-_SUBORDINATE</td><td>26.4</td></tr>
+<tr><td>BB+_SUBORDINATE</td><td>37.6</td></tr>
+<tr><td>BB_SUBORDINATE</td><td>49.6</td></tr>
+<tr><td>BB-_SUBORDINATE</td><td>60</td></tr>
+<tr><td>B+_SUBORDINATE</td><td>72</td></tr>
+<tr><td>B_SUBORDINATE</td><td>84</td></tr>
+<tr><td>B-_SUBORDINATE</td><td>90.4</td></tr>
+<tr><td>CC+_SUBORDINATE</td><td>100</td></tr>
+<tr><td>CC_SUBORDINATE</td><td>100</td></tr>
+<tr><td>CC-_SUBORDINATE</td><td>100</td></tr>
+<tr><td>D_SUBORDINATE</td><td>100</td></tr>
+<tr><td>UNDERATD_SUBORDINATE</td><td>100</td></tr>
+<tr><td>OTHER_SUBORDINATE</td><td>100</td></tr>
+<tr><td>A-1_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>P-1_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>A-2_SUBORDINATE</td><td>4</td></tr>
+<tr><td>P-2_SUBORDINATE</td><td>4</td></tr>
+<tr><td>A-3_SUBORDINATE</td><td>8</td></tr>
+<tr><td>P-3_SUBORDINATE</td><td>8</td></tr>
+<tr><td>UNDERATD_SUBORDINATE</td><td>100</td></tr>
+<tr><td>D_SUBORDINATE</td><td>100</td></tr>
+</tbody></table>
+</div>
+<h3 id="drc-nonsec---bcbs-creditqiality-weights"><a class="header" href="#drc-nonsec---bcbs-creditqiality-weights">DRC nonSec - BCBS CreditQiality Weights</a></h3>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>CreditQuality</td><td>WeightBCBS</td></tr>
+<tr><td>AAA</td><td>0.005</td></tr>
+<tr><td>AA</td><td>0.02</td></tr>
+<tr><td>A</td><td>0.03</td></tr>
+<tr><td>BBB</td><td>0.06</td></tr>
+<tr><td>BAA</td><td>0.06</td></tr>
+<tr><td>BB</td><td>0.15</td></tr>
+<tr><td>BA</td><td>0.15</td></tr>
+<tr><td>B</td><td>0.3</td></tr>
+<tr><td>CCC</td><td>0.5</td></tr>
+<tr><td>CAA</td><td>0.5</td></tr>
+<tr><td>CA</td><td>0.5</td></tr>
+<tr><td>UNRATED</td><td>0.15</td></tr>
+<tr><td>NORATING</td><td>0.15</td></tr>
+<tr><td>DEFAULTED</td><td>1</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>CreditQuality</td><td>WeightCRR2</td></tr>
+<tr><td>AAA</td><td>0.005</td></tr>
+<tr><td>AA</td><td>0.005</td></tr>
+<tr><td>A</td><td>0.03</td></tr>
+<tr><td>BBB</td><td>0.06</td></tr>
+<tr><td>BAA</td><td>0.06</td></tr>
+<tr><td>BB</td><td>0.15</td></tr>
+<tr><td>BA</td><td>0.15</td></tr>
+<tr><td>B</td><td>0.3</td></tr>
+<tr><td>CCC</td><td>0.5</td></tr>
+<tr><td>CAA</td><td>0.5</td></tr>
+<tr><td>CA</td><td>0.5</td></tr>
+<tr><td>UNRATED</td><td>0.15</td></tr>
+<tr><td>NORATING</td><td>0.15</td></tr>
+<tr><td>DEFAULTED</td><td>1</td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -146,12 +146,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><strong>Ultima</strong> is a service which allows you to define, compute and breakdown the key performance metrics of your business.</p>
-<p>This user guide is a walk through of <strong><code>ultibi</code></strong>, a python library by <strong>Ultima</strong>, applied to a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a more general usecase refer to the general user guide. Here we will focus on FRTB only.</p>
+<p><strong><code>ultibi</code></strong> is a free python library by <strong>Ultima</strong>. </p>
+<p>This user guide's primary focus is a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a more general usecase refer to the general user guide(TBA). Here we will focus on FRTB only. In general <strong><code>ultibi</code></strong> is a python interface of <strong>Ultima</strong>, a service which allows you to define, compute and breakdown the key performance metrics of your business.</p>
 <h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
 <ul>
 <li>
 <p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
+</li>
+<li>
+<p>You can breakdown and drillthrough your computation </p>
 </li>
 <li>
 <p><code>ultibi</code> is very flexible and allows you to override any of the prescribed parameters (such as <code>girr_delta_rho_infl_base_low</code>) via <code>calc_params</code> argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can <strong>stress test</strong> against changes in the values of the prescribed (aka hard coded by ISDA) parameters.</p>
@@ -163,6 +166,350 @@
 <p>Blazingly <a href="./performace.html">fast</a>.</p>
 </li>
 </ul>
+<h3 id="supported-measures"><a class="header" href="#supported-measures">Supported measures</a></h3>
+<p>CSR Sec CTP CVRdown</p>
+<p>CSR Sec CTP CVRup</p>
+<p>CSR Sec CTP Curvature Kb High</p>
+<p>CSR Sec CTP Curvature Kb Low</p>
+<p>CSR Sec CTP Curvature Kb Medium</p>
+<p>CSR Sec CTP Curvature KbMinus High</p>
+<p>CSR Sec CTP Curvature KbMinus Low</p>
+<p>CSR Sec CTP Curvature KbMinus Medium</p>
+<p>CSR Sec CTP Curvature KbPlus High</p>
+<p>CSR Sec CTP Curvature KbPlus Low</p>
+<p>CSR Sec CTP Curvature KbPlus Medium</p>
+<p>CSR Sec CTP Curvature Sb High</p>
+<p>CSR Sec CTP Curvature Sb Low</p>
+<p>CSR Sec CTP Curvature Sb Medium</p>
+<p>CSR Sec CTP CurvatureCharge High</p>
+<p>CSR Sec CTP CurvatureCharge Low</p>
+<p>CSR Sec CTP CurvatureCharge MAX</p>
+<p>CSR Sec CTP CurvatureCharge Medium</p>
+<p>CSR Sec CTP CurvatureDelta</p>
+<p>CSR Sec CTP CurvatureDelta_Weighted</p>
+<p>CSR Sec CTP DeltaCharge High</p>
+<p>CSR Sec CTP DeltaCharge Low</p>
+<p>CSR Sec CTP DeltaCharge MAX</p>
+<p>CSR Sec CTP DeltaCharge Medium</p>
+<p>CSR Sec CTP DeltaKb High</p>
+<p>CSR Sec CTP DeltaKb Low</p>
+<p>CSR Sec CTP DeltaKb Medium</p>
+<p>CSR Sec CTP DeltaSb</p>
+<p>CSR Sec CTP DeltaSens</p>
+<p>CSR Sec CTP DeltaSens Weighted</p>
+<p>CSR Sec CTP PnLdown</p>
+<p>CSR Sec CTP PnLup</p>
+<p>CSR Sec CTP VegaCharge High</p>
+<p>CSR Sec CTP VegaCharge Low</p>
+<p>CSR Sec CTP VegaCharge MAX</p>
+<p>CSR Sec CTP VegaCharge Medium</p>
+<p>CSR Sec CTP VegaKb High</p>
+<p>CSR Sec CTP VegaKb Low</p>
+<p>CSR Sec CTP VegaKb Medium</p>
+<p>CSR Sec CTP VegaSb</p>
+<p>CSR Sec CTP VegaSens</p>
+<p>CSR Sec CTP VegaSens Weighted</p>
+<p>CSR Sec nonCTP CVRdown</p>
+<p>CSR Sec nonCTP CVRup</p>
+<p>CSR Sec nonCTP Curvature Kb High</p>
+<p>CSR Sec nonCTP Curvature Kb Low</p>
+<p>CSR Sec nonCTP Curvature Kb Medium</p>
+<p>CSR Sec nonCTP Curvature KbMinus High</p>
+<p>CSR Sec nonCTP Curvature KbMinus Low</p>
+<p>CSR Sec nonCTP Curvature KbMinus Medium</p>
+<p>CSR Sec nonCTP Curvature KbPlus High</p>
+<p>CSR Sec nonCTP Curvature KbPlus Low</p>
+<p>CSR Sec nonCTP Curvature KbPlus Medium</p>
+<p>CSR Sec nonCTP Curvature Sb High</p>
+<p>CSR Sec nonCTP Curvature Sb Low</p>
+<p>CSR Sec nonCTP Curvature Sb Medium</p>
+<p>CSR Sec nonCTP CurvatureCharge High</p>
+<p>CSR Sec nonCTP CurvatureCharge Low</p>
+<p>CSR Sec nonCTP CurvatureCharge MAX</p>
+<p>CSR Sec nonCTP CurvatureCharge Medium</p>
+<p>CSR Sec nonCTP CurvatureDelta</p>
+<p>CSR Sec nonCTP CurvatureDelta Weighted</p>
+<p>CSR Sec nonCTP DeltaCharge High</p>
+<p>CSR Sec nonCTP DeltaCharge Low</p>
+<p>CSR Sec nonCTP DeltaCharge MAX</p>
+<p>CSR Sec nonCTP DeltaCharge Medium</p>
+<p>CSR Sec nonCTP DeltaKb High</p>
+<p>CSR Sec nonCTP DeltaKb Low</p>
+<p>CSR Sec nonCTP DeltaKb Medium</p>
+<p>CSR Sec nonCTP DeltaSb</p>
+<p>CSR Sec nonCTP DeltaSens</p>
+<p>CSR Sec nonCTP DeltaSens Weighted</p>
+<p>CSR Sec nonCTP PnLdown</p>
+<p>CSR Sec nonCTP PnLup</p>
+<p>CSR Sec nonCTP TotalCharge High</p>
+<p>CSR Sec nonCTP TotalCharge Low</p>
+<p>CSR Sec nonCTP TotalCharge MAX</p>
+<p>CSR Sec nonCTP TotalCharge Medium</p>
+<p>CSR Sec nonCTP VegaCharge High</p>
+<p>CSR Sec nonCTP VegaCharge Low</p>
+<p>CSR Sec nonCTP VegaCharge MAX</p>
+<p>CSR Sec nonCTP VegaCharge Medium</p>
+<p>CSR Sec nonCTP VegaKb High</p>
+<p>CSR Sec nonCTP VegaKb Low</p>
+<p>CSR Sec nonCTP VegaKb Medium</p>
+<p>CSR Sec nonCTP VegaSb</p>
+<p>CSR Sec nonCTP VegaSens</p>
+<p>CSR Sec nonCTP VegaSens Weighted</p>
+<p>CSR nonSec CVRdown</p>
+<p>CSR nonSec CVRup</p>
+<p>CSR nonSec Curvature Kb High</p>
+<p>CSR nonSec Curvature Kb Low</p>
+<p>CSR nonSec Curvature Kb Medium</p>
+<p>CSR nonSec Curvature KbMinus High</p>
+<p>CSR nonSec Curvature KbMinus Low</p>
+<p>CSR nonSec Curvature KbMinus Medium</p>
+<p>CSR nonSec Curvature KbPlus High</p>
+<p>CSR nonSec Curvature KbPlus Low</p>
+<p>CSR nonSec Curvature KbPlus Medium</p>
+<p>CSR nonSec Curvature Sb High</p>
+<p>CSR nonSec Curvature Sb Low</p>
+<p>CSR nonSec Curvature Sb Medium</p>
+<p>CSR nonSec CurvatureCharge High</p>
+<p>CSR nonSec CurvatureCharge Low</p>
+<p>CSR nonSec CurvatureCharge MAX</p>
+<p>CSR nonSec CurvatureCharge Medium</p>
+<p>CSR nonSec CurvatureDelta</p>
+<p>CSR nonSec CurvatureDeltaWeighted</p>
+<p>CSR nonSec DeltaCharge High</p>
+<p>CSR nonSec DeltaCharge Low</p>
+<p>CSR nonSec DeltaCharge MAX</p>
+<p>CSR nonSec DeltaCharge Medium</p>
+<p>CSR nonSec DeltaKb High</p>
+<p>CSR nonSec DeltaKb Low</p>
+<p>CSR nonSec DeltaKb Medium</p>
+<p>CSR nonSec DeltaSb</p>
+<p>CSR nonSec DeltaSens</p>
+<p>CSR nonSec DeltaSens Weighted</p>
+<p>CSR nonSec PnLdown</p>
+<p>CSR nonSec PnLup</p>
+<p>CSR nonSec TotalCharge High</p>
+<p>CSR nonSec TotalCharge Low</p>
+<p>CSR nonSec TotalCharge MAX</p>
+<p>CSR nonSec TotalCharge Medium</p>
+<p>CSR nonSec VegaCharge High</p>
+<p>CSR nonSec VegaCharge Low</p>
+<p>CSR nonSec VegaCharge MAX</p>
+<p>CSR nonSec VegaCharge Medium</p>
+<p>CSR nonSec VegaKb High</p>
+<p>CSR nonSec VegaKb Low</p>
+<p>CSR nonSec VegaKb Medium</p>
+<p>CSR nonSec VegaSb</p>
+<p>CSR nonSec VegaSens</p>
+<p>CSR nonSec VegaSens Weighted</p>
+<p>CSR_secCTP_TotalCharge_High</p>
+<p>CSR_secCTP_TotalCharge_Low</p>
+<p>CSR_secCTP_TotalCharge_Medium</p>
+<p>Commodity CVRdown</p>
+<p>Commodity CVRup</p>
+<p>Commodity Curvature Kb High</p>
+<p>Commodity Curvature Kb Low</p>
+<p>Commodity Curvature Kb Medium</p>
+<p>Commodity Curvature KbMinus High</p>
+<p>Commodity Curvature KbMinus Low</p>
+<p>Commodity Curvature KbMinus Medium</p>
+<p>Commodity Curvature KbPlus High</p>
+<p>Commodity Curvature KbPlus Low</p>
+<p>Commodity Curvature KbPlus Medium</p>
+<p>Commodity Curvature Sb High</p>
+<p>Commodity Curvature Sb Low</p>
+<p>Commodity Curvature Sb Medium</p>
+<p>Commodity CurvatureCharge High</p>
+<p>Commodity CurvatureCharge Low</p>
+<p>Commodity CurvatureCharge MAX</p>
+<p>Commodity CurvatureCharge Medium</p>
+<p>Commodity CurvatureDelta</p>
+<p>Commodity CurvatureDelta Weighted</p>
+<p>Commodity DeltaCharge High</p>
+<p>Commodity DeltaCharge Low</p>
+<p>Commodity DeltaCharge MAX</p>
+<p>Commodity DeltaCharge Medium</p>
+<p>Commodity DeltaKb High</p>
+<p>Commodity DeltaKb Low</p>
+<p>Commodity DeltaKb Medium</p>
+<p>Commodity DeltaSb</p>
+<p>Commodity DeltaSens</p>
+<p>Commodity DeltaSens Weighted</p>
+<p>Commodity PnLdown</p>
+<p>Commodity PnLup</p>
+<p>Commodity TotalCharge High</p>
+<p>Commodity TotalCharge Low</p>
+<p>Commodity TotalCharge MAX</p>
+<p>Commodity TotalCharge Medium</p>
+<p>Commodity VegaCharge High</p>
+<p>Commodity VegaCharge Low</p>
+<p>Commodity VegaCharge MAX</p>
+<p>Commodity VegaCharge Medium</p>
+<p>Commodity VegaKb High</p>
+<p>Commodity VegaKb Low</p>
+<p>Commodity VegaKb Medium</p>
+<p>Commodity VegaSb</p>
+<p>Commodity VegaSens</p>
+<p>Commodity VegaSens Weighted</p>
+<p>DRC Charge</p>
+<p>DRC Sec nonCTP CapitalCharge</p>
+<p>DRC Sec nonCTP GrossJTD</p>
+<p>DRC Sec nonCTP GrossJTD Scaled</p>
+<p>DRC Sec nonCTP HBR</p>
+<p>DRC Sec nonCTP NetLongJTD</p>
+<p>DRC Sec nonCTP NetLongJTD Weighted</p>
+<p>DRC Sec nonCTP NetShortJTD</p>
+<p>DRC Sec nonCTP NetShortJTD Weighted</p>
+<p>DRC nonSec CapitalCharge</p>
+<p>DRC nonSec GrossJTD</p>
+<p>DRC nonSec GrossJTD Scaled</p>
+<p>DRC nonSec HBR</p>
+<p>DRC nonSec NetAbsShortJTD Weighted</p>
+<p>DRC nonSec NetLongJTD</p>
+<p>DRC nonSec NetLongJTD Weighted</p>
+<p>DRC nonSec NetShortJTD</p>
+<p>EQ CVRdown</p>
+<p>EQ CVRup</p>
+<p>EQ Curvature Kb High</p>
+<p>EQ Curvature Kb Low</p>
+<p>EQ Curvature Kb Medium</p>
+<p>EQ Curvature KbMinus High</p>
+<p>EQ Curvature KbMinus Low</p>
+<p>EQ Curvature KbMinus Medium</p>
+<p>EQ Curvature KbPlus High</p>
+<p>EQ Curvature KbPlus Low</p>
+<p>EQ Curvature KbPlus Medium</p>
+<p>EQ Curvature Sb High</p>
+<p>EQ Curvature Sb Low</p>
+<p>EQ Curvature Sb Medium</p>
+<p>EQ CurvatureCharge High</p>
+<p>EQ CurvatureCharge Low</p>
+<p>EQ CurvatureCharge MAX</p>
+<p>EQ CurvatureCharge Medium</p>
+<p>EQ CurvatureDelta</p>
+<p>EQ CurvatureDelta_Weighted</p>
+<p>EQ DeltaCharge High</p>
+<p>EQ DeltaCharge Low</p>
+<p>EQ DeltaCharge MAX</p>
+<p>EQ DeltaCharge Medium</p>
+<p>EQ DeltaKb High</p>
+<p>EQ DeltaKb Low</p>
+<p>EQ DeltaKb Medium</p>
+<p>EQ DeltaSb</p>
+<p>EQ DeltaSens</p>
+<p>EQ DeltaSens Weighted</p>
+<p>EQ PnLdown</p>
+<p>EQ PnLup</p>
+<p>EQ TotalCharge High</p>
+<p>EQ TotalCharge Low</p>
+<p>EQ TotalCharge Medium</p>
+<p>EQ VegaCharge High</p>
+<p>EQ VegaCharge Low</p>
+<p>EQ VegaCharge MAX</p>
+<p>EQ VegaCharge Medium</p>
+<p>EQ VegaKb High</p>
+<p>EQ VegaKb Low</p>
+<p>EQ VegaKb Medium</p>
+<p>EQ VegaSb</p>
+<p>EQ VegaSens</p>
+<p>EQ VegaSens Weighted</p>
+<p>Exotic RRAO Charge</p>
+<p>Exotic RRAO Notional</p>
+<p>FX CVRdown</p>
+<p>FX CVRup</p>
+<p>FX Curvature Kb</p>
+<p>FX Curvature KbMinus</p>
+<p>FX Curvature KbPlus</p>
+<p>FX Curvature Sb</p>
+<p>FX CurvatureCharge High</p>
+<p>FX CurvatureCharge Low</p>
+<p>FX CurvatureCharge MAX</p>
+<p>FX CurvatureCharge Medium</p>
+<p>FX CurvatureDelta</p>
+<p>FX CurvatureDelta Weighted</p>
+<p>FX DeltaCharge High</p>
+<p>FX DeltaCharge Low</p>
+<p>FX DeltaCharge MAX</p>
+<p>FX DeltaCharge Medium</p>
+<p>FX DeltaKb</p>
+<p>FX DeltaSb</p>
+<p>FX DeltaSens</p>
+<p>FX DeltaSens Weighted</p>
+<p>FX PnLdown</p>
+<p>FX PnLup</p>
+<p>FX TotalCharge High</p>
+<p>FX TotalCharge Low</p>
+<p>FX TotalCharge Medium</p>
+<p>FX VegaCharge High</p>
+<p>FX VegaCharge Low</p>
+<p>FX VegaCharge MAX</p>
+<p>FX VegaCharge Medium</p>
+<p>FX VegaKb High</p>
+<p>FX VegaKb Low</p>
+<p>FX VegaKb Medium</p>
+<p>FX VegaSb</p>
+<p>FX VegaSens</p>
+<p>FX VegaSens Weighted</p>
+<p>GIRR CVRdown</p>
+<p>GIRR CVRup</p>
+<p>GIRR Curvature Kb</p>
+<p>GIRR Curvature KbMinus</p>
+<p>GIRR Curvature KbPlus</p>
+<p>GIRR Curvature Sb</p>
+<p>GIRR CurvatureCharge High</p>
+<p>GIRR CurvatureCharge Low</p>
+<p>GIRR CurvatureCharge MAX</p>
+<p>GIRR CurvatureCharge Medium</p>
+<p>GIRR CurvatureDelta</p>
+<p>GIRR CurvatureDelta Weighted</p>
+<p>GIRR DeltaCharge High</p>
+<p>GIRR DeltaCharge Low</p>
+<p>GIRR DeltaCharge MAX</p>
+<p>GIRR DeltaCharge Medium</p>
+<p>GIRR DeltaKb High</p>
+<p>GIRR DeltaKb Low</p>
+<p>GIRR DeltaKb Medium</p>
+<p>GIRR DeltaSb</p>
+<p>GIRR DeltaSens</p>
+<p>GIRR DeltaSens Weighted</p>
+<p>GIRR PnLdown</p>
+<p>GIRR PnLup</p>
+<p>GIRR TotalCharge High</p>
+<p>GIRR TotalCharge Low</p>
+<p>GIRR TotalCharge Medium</p>
+<p>GIRR VegaCharge High</p>
+<p>GIRR VegaCharge Low</p>
+<p>GIRR VegaCharge MAX</p>
+<p>GIRR VegaCharge Medium</p>
+<p>GIRR VegaKb High</p>
+<p>GIRR VegaKb Low</p>
+<p>GIRR VegaKb Medium</p>
+<p>GIRR VegaSb</p>
+<p>GIRR VegaSens</p>
+<p>GIRR VegaSens Weighted</p>
+<p>GrossJTD</p>
+<p>Notional</p>
+<p>Other RRAO Charge</p>
+<p>Other RRAO Notional</p>
+<p>PnL_Down</p>
+<p>PnL_Up</p>
+<p>RRAO Charge</p>
+<p>RiskWeights</p>
+<p>SA Charge</p>
+<p>SBM Charge</p>
+<p>SBM Charge High</p>
+<p>SBM Charge Low</p>
+<p>SBM Charge Medium</p>
+<p>SensitivitySpot</p>
+<p>Sensitivity_025Y</p>
+<p>Sensitivity_05Y</p>
+<p>Sensitivity_10Y</p>
+<p>Sensitivity_15Y</p>
+<p>Sensitivity_1Y</p>
+<p>Sensitivity_20Y</p>
+<p>Sensitivity_2Y</p>
+<p>Sensitivity_30Y</p>
+<p>Sensitivity_3Y</p>
+<p>Sensitivity_5Y</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <p>If you are downloading from a software repository</p>
 <pre><code class="language-console">pip install ultibi
@@ -172,13 +519,210 @@
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---input-format"><a class="header" href="#frtb-sa---input-format">FRTB SA - Input format</a></h1>
 <p>Any calculation/function needs inputs. In case of FRTB SA the <strong>input is your portfolio sensitivities at trade level</strong>. Currently expected format for the sensitivities is like this: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv">Delta.csv</a>. This format is very similar to the industry standard <a href="https://www.isda.org/a/aBzTE/The-Future-of-Risk-Capital-and-Margin.pdf">CRIF</a>. Coming soon full CRIF support. As you can see, this file is your Sensitivities at Trade-RiskFactor-Tenor level.</p>
-<p>In our examples we will also be using the optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal.</p>
-<p>Finally, we need <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv">TradeAttributes.csv</a>. It is similar to our Delta Sensis but The infor here is at Trade level only. Ie Notional, Product/Derivative Type, RRAO Flags etc etc.</p>
+<p>In our examples we will also be using an optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal structure (eg which Desk or Legal Entity).</p>
+<p>Finally, we need <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv">TradeAttributes.csv</a>. It is similar to our Delta Sensis but the data here is at Trade level only. Ie Notional, Product/Derivative Type, RRAO Flags etc etc.</p>
 <h1 id="defenitions"><a class="header" href="#defenitions">Defenitions</a></h1>
 <p>Note that the <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> actually well defines what a &quot;RiskFactor&quot; is and the formulas for &quot;Sensitivities&quot;. See paragraphs <code>21.8-21.19</code> and <code>21.19-21.26</code> respectively.</p>
-<h1 id="expected-columns"><a class="header" href="#expected-columns">Expected Columns</a></h1>
-<p>Table below will outline which columns are expected, the useage and meaning behind them.</p>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="ultima-dataset"><a class="header" href="#ultima-dataset">Ultima DataSet</a></h2>
+<h3 id="expected-columns-explanation---risk"><a class="header" href="#expected-columns-explanation---risk">Expected Columns Explanation - Risk</a></h3>
+<p>Table below will outline which columns are expected, the useage and meaning behind them. This table might get outdated. Always check <code>Delta.csv</code>.</p>
+<div class="table-wrapper"><table><thead><tr><th>ColumnName</th><th>Expected for Weights Assignments</th><th>Expected for Calculation (past weights/scailing assignments)</th><th>Restrictions on values</th><th>Where used</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>COB</td><td>Y</td><td>N</td><td>N</td><td>Used with MaturityDate to assign DRC Scailing Factor</td><td></td></tr>
+<tr><td>TradeId</td><td>N</td><td>Y</td><td>N</td><td>RRAO</td><td></td></tr>
+<tr><td>RiskCategory</td><td>Y</td><td>Y</td><td>Delta or Vega</td><td>All Risk Calculations</td><td>Note: Curvature goes under Delta</td></tr>
+<tr><td>RiskClass</td><td>Y</td><td>Y</td><td>DRC_Sec_nonCTP/DRC_nonSec/CSR_Sec_nonCTP/Commodity/CSR_Sec_CTP/CSR_nonSec/Equity/FX/GIRR</td><td>All Risk Calculations(except RRAO)</td><td></td></tr>
+<tr><td>RiskFactor</td><td>Y</td><td>Y</td><td></td><td>All Risk Calculations(except RRAO)</td><td>Different meaning depending on RiskClass. See Delta.csv for correct value for your particular RiskClass. Note: for FX convention used XXXCCY where CCY is your reporting currency. Parameter reporting_ccy will filter out all lines where CCY doesn't match it's value. For jurisdiction BCBS XXXUSD only will be used (unless overriden with reporting_ccy), and similarly XXXEUR for CRR2.</td></tr>
+<tr><td>RiskFactorType</td><td>Y</td><td>Y</td><td>See Delta.csv</td><td>All Risk Calculations(except RRAO)</td><td>Note: Different meaning depending on RiskClass. See Delta.csv for correct value for your particular RiskClass.</td></tr>
+<tr><td>CreditQuality</td><td></td><td>N</td><td></td><td>DRC nonSec and DRC Sec nonCTP</td><td>For DRC Sec nonCTP Joined with RiskFactorType with _ and then assigned via the table below. For DRC nonSec see respective table</td></tr>
+<tr><td>MaturityDate</td><td>Y</td><td>N</td><td></td><td>Used with COB to assign DRC Scailing Factor</td><td></td></tr>
+<tr><td>Tranche</td><td></td><td>Y</td><td></td><td>DRC_Sec_nonCTP</td><td></td></tr>
+<tr><td>CommodityLocation</td><td></td><td>Y</td><td></td><td>Commodity Delta</td><td></td></tr>
+<tr><td>GirrVegaUnderlyingMaturity</td><td></td><td>Y</td><td></td><td>GIRR Vega</td><td></td></tr>
+<tr><td>BucketBCBS</td><td></td><td>Y</td><td>See Delta.csv</td><td>All Risk Calculations(except RRAO)</td><td>Be careful, refer to Delta.csv Note: For FX if not provided will be derived using RiskFactor</td></tr>
+<tr><td>BucketCRR2</td><td></td><td>Y(if opt in CRR2)</td><td>See Delta.csv</td><td></td><td>Note: Present because some CSR buckets are different between BCBS and CRR2</td></tr>
+<tr><td>GrossJTD</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>PnL_Up</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>PnL_Down</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>SensitivitySpot</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_025Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_05Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_1Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_2Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_3Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_5Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_10Y</td><td></td><td>Y</td><td></td><td></td><td>For Vega used as Option Maturity Tenor. For Delta as Risk Factor Tenor</td></tr>
+<tr><td>Sensitivity_15Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_20Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>Sensitivity_30Y</td><td></td><td>Y</td><td></td><td></td><td></td></tr>
+<tr><td>CoveredBondReducedWeight</td><td>Y(if you opted in via config)</td><td>N</td><td></td><td>Y or N</td><td></td></tr>
+<tr><td>FxCurvDivEligibility</td><td></td><td>Y</td><td></td><td>Y or N</td><td></td></tr>
+</tbody></table>
+</div>
+<h3 id="expected-columns-explanation---trade-attributes"><a class="header" href="#expected-columns-explanation---trade-attributes">Expected Columns Explanation - Trade attributes</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>ColumnName</th><th>Expected for Weights Assignments</th><th>Expected for Calculation (past weights/scailing assignments)</th><th>Restrictions on values</th><th>Where used</th><th>Explanation</th></tr></thead><tbody>
+<tr><td>TradeId</td><td>N</td><td>Y</td><td>N</td><td>RRAO</td><td></td></tr>
+<tr><td>BookId</td><td>N</td><td>N</td><td></td><td></td><td>Not required. We use it to join hms.csv</td></tr>
+<tr><td>EXOTIC_RRAO</td><td>N</td><td>Y</td><td></td><td>RRAO</td><td></td></tr>
+<tr><td>OTHER_RRAO</td><td>N</td><td>Y</td><td></td><td>RRAO</td><td></td></tr>
+<tr><td>Notional</td><td>N</td><td>Y</td><td></td><td>RRAO</td><td></td></tr>
+</tbody></table>
+</div>
+<h3 id="drc-sec-nonctp---creditqiality_riskfactortype-weights"><a class="header" href="#drc-sec-nonctp---creditqiality_riskfactortype-weights">DRC Sec nonCTP - CreditQiality+_+RiskFactorType Weights</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>CreditQuality+_+RiskFactorType</th><th>DRC Sec  nonCTP Weight</th></tr></thead><tbody>
+<tr><td>AAA_SENIOR</td><td>1.2</td></tr>
+<tr><td>AA+_SENIOR</td><td>1.2</td></tr>
+<tr><td>AA_SENIOR</td><td>2</td></tr>
+<tr><td>AA-_SENIOR</td><td>2.4</td></tr>
+<tr><td>A+_SENIOR</td><td>3.2</td></tr>
+<tr><td>A_SENIOR</td><td>4</td></tr>
+<tr><td>A-_SENIOR</td><td>4.8</td></tr>
+<tr><td>BBB+_SENIOR</td><td>6</td></tr>
+<tr><td>BBB_SENIOR</td><td>7.2</td></tr>
+<tr><td>BBB-_SENIOR</td><td>9.6</td></tr>
+<tr><td>BB+_SENIOR</td><td>11.2</td></tr>
+<tr><td>BB_SENIOR</td><td>12.8</td></tr>
+<tr><td>BB-_SENIOR</td><td>16</td></tr>
+<tr><td>B+_SENIOR</td><td>20</td></tr>
+<tr><td>B_SENIOR</td><td>24.8</td></tr>
+<tr><td>B-_SENIOR</td><td>30.4</td></tr>
+<tr><td>CCC+_SENIOR</td><td>36.8</td></tr>
+<tr><td>CCC_SENIOR</td><td>36.8</td></tr>
+<tr><td>CCC-_SENIOR</td><td>36.8</td></tr>
+<tr><td>D_SENIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_SENIOR</td><td>100</td></tr>
+<tr><td>OTHER_SENIOR</td><td>100</td></tr>
+<tr><td>AAA_JUNIOR</td><td>1.2</td></tr>
+<tr><td>AA+_JUNIOR</td><td>1.2</td></tr>
+<tr><td>AA_JUNIOR</td><td>2.4</td></tr>
+<tr><td>AA-_JUNIOR</td><td>3.2</td></tr>
+<tr><td>A+_JUNIOR</td><td>4.8</td></tr>
+<tr><td>A_JUNIOR</td><td>6.4</td></tr>
+<tr><td>A-_JUNIOR</td><td>9.6</td></tr>
+<tr><td>BBB+_JUNIOR</td><td>13.6</td></tr>
+<tr><td>BBB_JUNIOR</td><td>17.6</td></tr>
+<tr><td>BBB-_JUNIOR</td><td>26.4</td></tr>
+<tr><td>BB+_JUNIOR</td><td>37.6</td></tr>
+<tr><td>BB_JUNIOR</td><td>49.6</td></tr>
+<tr><td>BB-_JUNIOR</td><td>60</td></tr>
+<tr><td>B+_JUNIOR  </td><td>72</td></tr>
+<tr><td>B_JUNIOR</td><td>84</td></tr>
+<tr><td>B-_JUNIOR</td><td>90.4</td></tr>
+<tr><td>CCC+_JUNIOR</td><td>100</td></tr>
+<tr><td>CCC_JUNIOR</td><td>100</td></tr>
+<tr><td>CCC-_JUNIOR</td><td>100</td></tr>
+<tr><td>D_JUNIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_JUNIOR</td><td>100</td></tr>
+<tr><td>OTHER_JUNIOR</td><td>100</td></tr>
+<tr><td>A-1_JUNIOR</td><td>1.2</td></tr>
+<tr><td>A-1_SENIOR</td><td>1.2</td></tr>
+<tr><td>P-1_JUNIOR</td><td>1.2</td></tr>
+<tr><td>P-1_SENIOR</td><td>1.2</td></tr>
+<tr><td>A-2_JUNIOR</td><td>4</td></tr>
+<tr><td>A-2_SENIOR</td><td>4</td></tr>
+<tr><td>P-2_JUNIOR</td><td>4</td></tr>
+<tr><td>P-2_SENIOR</td><td>4</td></tr>
+<tr><td>A-3_JUNIOR</td><td>8</td></tr>
+<tr><td>A-3_SENIOR</td><td>8</td></tr>
+<tr><td>P-3_JUNIOR</td><td>8</td></tr>
+<tr><td>P-3_SENIOR</td><td>8</td></tr>
+<tr><td>UNDERATD_JUNIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_SENIOR</td><td>100</td></tr>
+<tr><td>AAA_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>AA+_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>AA_NONSENIOR</td><td>2.4</td></tr>
+<tr><td>AA-_NONSENIOR</td><td>3.2</td></tr>
+<tr><td>A+_NONSENIOR</td><td>4.8</td></tr>
+<tr><td>A_NONSENIOR</td><td>6.4</td></tr>
+<tr><td>A-_NONSENIOR</td><td>9.6</td></tr>
+<tr><td>BBB+_NONSENIOR</td><td>13.6</td></tr>
+<tr><td>BBB_NONSENIOR</td><td>17.6</td></tr>
+<tr><td>BBB-_NONSENIOR</td><td>26.4</td></tr>
+<tr><td>BB+_NONSENIOR</td><td>37.6</td></tr>
+<tr><td>BB_NONSENIOR</td><td>49.6</td></tr>
+<tr><td>BB-_NONSENIOR</td><td>60</td></tr>
+<tr><td>B+_NONSENIOR</td><td>72</td></tr>
+<tr><td>B_NONSENIOR</td><td>84</td></tr>
+<tr><td>B-_NONSENIOR</td><td>90.4</td></tr>
+<tr><td>CCC+_NONSENIOR</td><td>100</td></tr>
+<tr><td>CCC_NONSENIOR</td><td>100</td></tr>
+<tr><td>CCC-_NONSENIOR</td><td>100</td></tr>
+<tr><td>D_NONSENIOR</td><td>100</td></tr>
+<tr><td>UNDERATD_NONSENIOR</td><td>100</td></tr>
+<tr><td>OTHER_NONSENIOR</td><td>100</td></tr>
+<tr><td>A-1_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>P-1_NONSENIOR</td><td>1.2</td></tr>
+<tr><td>A-2_NONSENIOR</td><td>4</td></tr>
+<tr><td>P-2_NONSENIOR</td><td>4</td></tr>
+<tr><td>A-3_NONSENIOR</td><td>8</td></tr>
+<tr><td>P-3_NONSENIOR</td><td>8</td></tr>
+<tr><td>UNDERATD_NONSENIOR</td><td>100</td></tr>
+<tr><td>D_NONSENIOR</td><td>100</td></tr>
+<tr><td>AAA_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>AA+_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>AA_SUBORDINATE</td><td>2.4</td></tr>
+<tr><td>AA-_SUBORDINATE</td><td>3.2</td></tr>
+<tr><td>A+_SUBORDINATE</td><td>4.8</td></tr>
+<tr><td>A_SUBORDINATE</td><td>6.4</td></tr>
+<tr><td>A-_SUBORDINATE</td><td>9.6</td></tr>
+<tr><td>BBB+_SUBORDINATE</td><td>13.6</td></tr>
+<tr><td>BBB_SUBORDINATE</td><td>17.6</td></tr>
+<tr><td>BBB-_SUBORDINATE</td><td>26.4</td></tr>
+<tr><td>BB+_SUBORDINATE</td><td>37.6</td></tr>
+<tr><td>BB_SUBORDINATE</td><td>49.6</td></tr>
+<tr><td>BB-_SUBORDINATE</td><td>60</td></tr>
+<tr><td>B+_SUBORDINATE</td><td>72</td></tr>
+<tr><td>B_SUBORDINATE</td><td>84</td></tr>
+<tr><td>B-_SUBORDINATE</td><td>90.4</td></tr>
+<tr><td>CC+_SUBORDINATE</td><td>100</td></tr>
+<tr><td>CC_SUBORDINATE</td><td>100</td></tr>
+<tr><td>CC-_SUBORDINATE</td><td>100</td></tr>
+<tr><td>D_SUBORDINATE</td><td>100</td></tr>
+<tr><td>UNDERATD_SUBORDINATE</td><td>100</td></tr>
+<tr><td>OTHER_SUBORDINATE</td><td>100</td></tr>
+<tr><td>A-1_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>P-1_SUBORDINATE</td><td>1.2</td></tr>
+<tr><td>A-2_SUBORDINATE</td><td>4</td></tr>
+<tr><td>P-2_SUBORDINATE</td><td>4</td></tr>
+<tr><td>A-3_SUBORDINATE</td><td>8</td></tr>
+<tr><td>P-3_SUBORDINATE</td><td>8</td></tr>
+<tr><td>UNDERATD_SUBORDINATE</td><td>100</td></tr>
+<tr><td>D_SUBORDINATE</td><td>100</td></tr>
+</tbody></table>
+</div>
+<h3 id="drc-nonsec---bcbs-creditqiality-weights"><a class="header" href="#drc-nonsec---bcbs-creditqiality-weights">DRC nonSec - BCBS CreditQiality Weights</a></h3>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>CreditQuality</td><td>WeightBCBS</td></tr>
+<tr><td>AAA</td><td>0.005</td></tr>
+<tr><td>AA</td><td>0.02</td></tr>
+<tr><td>A</td><td>0.03</td></tr>
+<tr><td>BBB</td><td>0.06</td></tr>
+<tr><td>BAA</td><td>0.06</td></tr>
+<tr><td>BB</td><td>0.15</td></tr>
+<tr><td>BA</td><td>0.15</td></tr>
+<tr><td>B</td><td>0.3</td></tr>
+<tr><td>CCC</td><td>0.5</td></tr>
+<tr><td>CAA</td><td>0.5</td></tr>
+<tr><td>CA</td><td>0.5</td></tr>
+<tr><td>UNRATED</td><td>0.15</td></tr>
+<tr><td>NORATING</td><td>0.15</td></tr>
+<tr><td>DEFAULTED</td><td>1</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>CreditQuality</td><td>WeightCRR2</td></tr>
+<tr><td>AAA</td><td>0.005</td></tr>
+<tr><td>AA</td><td>0.005</td></tr>
+<tr><td>A</td><td>0.03</td></tr>
+<tr><td>BBB</td><td>0.06</td></tr>
+<tr><td>BAA</td><td>0.06</td></tr>
+<tr><td>BB</td><td>0.15</td></tr>
+<tr><td>BA</td><td>0.15</td></tr>
+<tr><td>B</td><td>0.3</td></tr>
+<tr><td>CCC</td><td>0.5</td></tr>
+<tr><td>CAA</td><td>0.5</td></tr>
+<tr><td>CA</td><td>0.5</td></tr>
+<tr><td>UNRATED</td><td>0.15</td></tr>
+<tr><td>NORATING</td><td>0.15</td></tr>
+<tr><td>DEFAULTED</td><td>1</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h2 id="ultima-dataset"><a class="header" href="#ultima-dataset">Ultima DataSet</a></h2>
 <p>First step is to create a DataSet from your portfolio data. Think of a DataSet as a DataFrame with some special pre defined functions (eg &quot;FX Delta Capital Charge&quot;).</p>
 <h2 id="from-frame"><a class="header" href="#from-frame">From Frame</a></h2>
 <p>In order to use our library you need to convert your portfolio into <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported. Note polars also supports <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="input.html#data-source-config">config</a>.</p>
@@ -257,10 +801,10 @@ print(diff(ds.frame(), original))
 <p>Before you specify what you want to calculate <strong>make sure the measure/risk metric you are interested in is present in the dataset</strong>:</p>
 <pre><code class="language-python">print( ds.measures )
 </code></pre>
-<p>What you get there is a <code>dict</code>. The <strong>keys</strong> are measures' name. For example <code>SensitivitySpot</code> or <code>FX DeltaCharge Low</code>. The <strong>items</strong> indicate if there is any <em>restriction on aggregation method</em>, where <code>scalar</code> is a special method described below. If <code>None</code>, you are free to use any of the availiable:</p>
+<p>What you get there is a <code>dict</code>. The <strong>keys</strong> are measures' name. For example <code>SensitivitySpot</code> or <code>FX DeltaCharge Low</code>. The <strong>items</strong> indicate if there is any <em>restriction on aggregation method</em>, where <code>scalar</code> is a special method explained below. If <code>None</code>, you are free to use any of the availiable:</p>
 <pre><code class="language-python">print( ul.aggregation_ops() )
 </code></pre>
-<p>For example, <code>SensitivitySpot</code> can be aggregated any way you want for a given level, say Desk. In other wards, for a given Desk you can find the mean, max, min or sum (etc etc) of <code>SensitivitySpot</code>. On the other hand, you can not find mean, max, min (etc etc) of <code>FX DeltaCharge Low</code>. This wouldn't make sence since <code>FX DeltaCharge Low</code> is simply a single number defined by the regulation. Hence we call such aggregation method <code>scalar</code>.</p>
+<p>Note that any numeric column automatically considered a measure (eg <code>SensitivitySpot</code>). These measures can be aggregated any way you want for a given level, say Desk. In other words, for a given Desk you can find the mean, max, min or sum (etc etc) of <code>SensitivitySpot</code>. On the other hand, you can <strong>not</strong> find mean, max, min (etc etc) of <code>FX DeltaCharge Low</code>. This wouldn't make sence since <code>FX DeltaCharge Low</code> is simply a single number defined by the regulation. Hence we call such aggregation method <strong><code>scalar</code></strong> and we <strong>restrict</strong> you to use only this method.</p>
 <p>Also, make sure that columns which appear in measures, grouby and filters are present as well.</p>
 <h2 id="run"><a class="header" href="#run">Run</a></h2>
 <p>Now we are good to form the request which we need. Say, we want to understand the <code>DRC</code> capital charge and all intermediate results, for every combination of <code>Desk</code> - <code>BucketBCBS</code>.</p>
@@ -285,7 +829,7 @@ request = dict(
     },
 )
 </code></pre>
-<p>This has two parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="./whatif.html">analysis</a> chapter).</p>
+<p>Note: if you don't care about level of aggregation and just want a total say DRC Capital Charge for your portfolio, just provide an extra column to your portfolio, name it <code>&quot;Total&quot;</code>(for exmaple) and set all values in the columns as <code>&quot;Total&quot;</code>. Then do <code>groupby=[&quot;Total&quot;]</code>. Above request has two <strong>optional</strong> parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows <strong>from the result</strong> where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="./whatif.html">analysis</a> chapter) etc.</p>
 <p>Valide that you've formed a legitimate request (ie no compulsory field is missing, datatypes are correct etc):</p>
 <pre><code class="language-python">aggrequest = ul.AggRequest(request)
 print(request)
