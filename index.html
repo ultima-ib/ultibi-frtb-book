@@ -145,15 +145,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><strong><code>ultibi</code></strong> is a free python library by <strong>Ultima</strong>. </p>
-<p>This user guide's primary focus is a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a more general usecase refer to the general user guide(TBA). Here we will focus on FRTB only. In general <strong><code>ultibi</code></strong> is a python interface of <strong>Ultima</strong>, a service which allows you to define, compute and breakdown the key performance metrics of your business.</p>
+<p><strong><code>ultibi</code></strong> is a free python library by <strong>Ultima</strong>.</p>
+<p>This user guide's primary focus is a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a general usecase refer to the general user guide(TBA). Here we will focus on FRTB only. In general <strong><code>ultibi</code></strong> is a python interface of <strong>Ultima</strong>, a service which allows you to define, compute and breakdown the key metrics for your data.</p>
 <h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
 <ul>
 <li>
-<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
+<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> [^1] and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
 </li>
 <li>
-<p>You can breakdown and drillthrough your computation </p>
+<p>You can breakdown and drillthrough your computation</p>
 </li>
 <li>
 <p><code>ultibi</code> is very flexible and allows you to override any of the prescribed parameters (such as <code>girr_delta_rho_infl_base_low</code>) via <code>calc_params</code> argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can <strong>stress test</strong> against changes in the values of the prescribed (aka hard coded by ISDA) parameters.</p>
@@ -165,6 +165,7 @@
 <p>Blazingly <a href="./performace.html">fast</a>.</p>
 </li>
 </ul>
+<p>[^1]: <code>ultibi</code> is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation.</p>
 <h3 id="supported-measures"><a class="header" href="#supported-measures">Supported measures</a></h3>
 <p>CSR Sec CTP CVRdown</p>
 <p>CSR Sec CTP CVRup</p>

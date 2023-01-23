@@ -151,7 +151,7 @@
 <pre><code class="language-python">import ultibi as ul
 import json
 
-ds = ul.FRTBDataSet.from_config_path(&quot;datasource_config.toml&quot;)
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
 ds.prepare()
 added_rows = dict(
     prepare=True,
@@ -192,6 +192,7 @@ result1 = ds.execute(request1)
 
 # print(result1) #&lt;-- uncomment to see
 
+# Now, just for comparison - run metrics without and additional trades
 request2 = dict(
     measures=[
         [&quot;Commodity DeltaCharge Low&quot;, &quot;scalar&quot;],
