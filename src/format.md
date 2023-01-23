@@ -46,7 +46,6 @@ Table below will outline which columns are expected, the useage and meaning behi
 | CoveredBondReducedWeight   | Y(if you opted in via config)    | N                                                            |                                                                                          | Y or N                                               |                                                                                                                                                                                                                                                                                                                                                                                               |
 | FxCurvDivEligibility       |                                  | Y                                                            |                                                                                          | Y or N                                               |
 
-
 ### Expected Columns Explanation - Trade attributes
 
 | ColumnName  | Expected for Weights Assignments | Expected for Calculation (past weights/scailing assignments) | Restrictions on values | Where used | Explanation                             |
@@ -57,51 +56,51 @@ Table below will outline which columns are expected, the useage and meaning behi
 | OTHER_RRAO  | N                                | Y                                                            |                        | RRAO       |                                         |
 | Notional    | N                                | Y                                                            |                        | RRAO       |
 
-### DRC Sec nonCTP - CreditQiality+_+RiskFactorType Weights
+### DRC Sec nonCTP - CreditQiality+\_+RiskFactorType Weights
 
-| CreditQuality+_+RiskFactorType | DRC Sec  nonCTP Weight |
+| CreditQuality+\_+RiskFactorType | DRC Sec  nonCTP Weight |
 |--------------------------------|------------------------|
 | AAA_SENIOR                     | 1.2                    |
-| AA+_SENIOR                     | 1.2                    |
+| AA+\_SENIOR                     | 1.2                    |
 | AA_SENIOR                      | 2                      |
-| AA-_SENIOR                     | 2.4                    |
-| A+_SENIOR                      | 3.2                    |
+| AA-\_SENIOR                     | 2.4                    |
+| A+\_SENIOR                      | 3.2                    |
 | A_SENIOR                       | 4                      |
-| A-_SENIOR                      | 4.8                    |
-| BBB+_SENIOR                    | 6                      |
+| A-\_SENIOR                      | 4.8                    |
+| BBB+\_SENIOR                    | 6                      |
 | BBB_SENIOR                     | 7.2                    |
-| BBB-_SENIOR                    | 9.6                    |
-| BB+_SENIOR                     | 11.2                   |
+| BBB-\_SENIOR                    | 9.6                    |
+| BB+\_SENIOR                     | 11.2                   |
 | BB_SENIOR                      | 12.8                   |
-| BB-_SENIOR                     | 16                     |
-| B+_SENIOR                      | 20                     |
+| BB-\_SENIOR                     | 16                     |
+| B+\_SENIOR                      | 20                     |
 | B_SENIOR                       | 24.8                   |
-| B-_SENIOR                      | 30.4                   |
-| CCC+_SENIOR                    | 36.8                   |
+| B-\_SENIOR                      | 30.4                   |
+| CCC+\_SENIOR                    | 36.8                   |
 | CCC_SENIOR                     | 36.8                   |
-| CCC-_SENIOR                    | 36.8                   |
+| CCC-\_SENIOR                    | 36.8                   |
 | D_SENIOR                       | 100                    |
 | UNDERATD_SENIOR                | 100                    |
 | OTHER_SENIOR                   | 100                    |
 | AAA_JUNIOR                     | 1.2                    |
-| AA+_JUNIOR                     | 1.2                    |
+| AA+\_JUNIOR                     | 1.2                    |
 | AA_JUNIOR                      | 2.4                    |
-| AA-_JUNIOR                     | 3.2                    |
-| A+_JUNIOR                      | 4.8                    |
+| AA-\_JUNIOR                     | 3.2                    |
+| A+\_JUNIOR                      | 4.8                    |
 | A_JUNIOR                       | 6.4                    |
-| A-_JUNIOR                      | 9.6                    |
-| BBB+_JUNIOR                    | 13.6                   |
+| A-\_JUNIOR                      | 9.6                    |
+| BBB+\_JUNIOR                    | 13.6                   |
 | BBB_JUNIOR                     | 17.6                   |
-| BBB-_JUNIOR                    | 26.4                   |
-| BB+_JUNIOR                     | 37.6                   |
+| BBB-\_JUNIOR                    | 26.4                   |
+| BB+\_JUNIOR                     | 37.6                   |
 | BB_JUNIOR                      | 49.6                   |
-| BB-_JUNIOR                     | 60                     |
-| B+_JUNIOR                      | 72                     |
+| BB-\_JUNIOR                     | 60                     |
+| B+\_JUNIOR                      | 72                     |
 | B_JUNIOR                       | 84                     |
-| B-_JUNIOR                      | 90.4                   |
-| CCC+_JUNIOR                    | 100                    |
+| B-\_JUNIOR                      | 90.4                   |
+| CCC+\_JUNIOR                    | 100                    |
 | CCC_JUNIOR                     | 100                    |
-| CCC-_JUNIOR                    | 100                    |
+| CCC-\_JUNIOR                    | 100                    |
 | D_JUNIOR                       | 100                    |
 | UNDERATD_JUNIOR                | 100                    |
 | OTHER_JUNIOR                   | 100                    |
@@ -120,24 +119,24 @@ Table below will outline which columns are expected, the useage and meaning behi
 | UNDERATD_JUNIOR                | 100                    |
 | UNDERATD_SENIOR                | 100                    |
 | AAA_NONSENIOR                  | 1.2                    |
-| AA+_NONSENIOR                  | 1.2                    |
+| AA+\_NONSENIOR                  | 1.2                    |
 | AA_NONSENIOR                   | 2.4                    |
-| AA-_NONSENIOR                  | 3.2                    |
-| A+_NONSENIOR                   | 4.8                    |
+| AA-\_NONSENIOR                  | 3.2                    |
+| A+\_NONSENIOR                   | 4.8                    |
 | A_NONSENIOR                    | 6.4                    |
-| A-_NONSENIOR                   | 9.6                    |
-| BBB+_NONSENIOR                 | 13.6                   |
+| A-\_NONSENIOR                   | 9.6                    |
+| BBB+\_NONSENIOR                 | 13.6                   |
 | BBB_NONSENIOR                  | 17.6                   |
-| BBB-_NONSENIOR                 | 26.4                   |
-| BB+_NONSENIOR                  | 37.6                   |
+| BBB-\_NONSENIOR                 | 26.4                   |
+| BB+\_NONSENIOR                  | 37.6                   |
 | BB_NONSENIOR                   | 49.6                   |
-| BB-_NONSENIOR                  | 60                     |
-| B+_NONSENIOR                   | 72                     |
+| BB-\_NONSENIOR                  | 60                     |
+| B+\_NONSENIOR                   | 72                     |
 | B_NONSENIOR                    | 84                     |
-| B-_NONSENIOR                   | 90.4                   |
-| CCC+_NONSENIOR                 | 100                    |
+| B-\_NONSENIOR                   | 90.4                   |
+| CCC+\_NONSENIOR                 | 100                    |
 | CCC_NONSENIOR                  | 100                    |
-| CCC-_NONSENIOR                 | 100                    |
+| CCC-\_NONSENIOR                 | 100                    |
 | D_NONSENIOR                    | 100                    |
 | UNDERATD_NONSENIOR             | 100                    |
 | OTHER_NONSENIOR                | 100                    |
@@ -150,24 +149,24 @@ Table below will outline which columns are expected, the useage and meaning behi
 | UNDERATD_NONSENIOR             | 100                    |
 | D_NONSENIOR                    | 100                    |
 | AAA_SUBORDINATE                | 1.2                    |
-| AA+_SUBORDINATE                | 1.2                    |
+| AA+\_SUBORDINATE                | 1.2                    |
 | AA_SUBORDINATE                 | 2.4                    |
-| AA-_SUBORDINATE                | 3.2                    |
-| A+_SUBORDINATE                 | 4.8                    |
+| AA-\_SUBORDINATE                | 3.2                    |
+| A+\_SUBORDINATE                 | 4.8                    |
 | A_SUBORDINATE                  | 6.4                    |
-| A-_SUBORDINATE                 | 9.6                    |
-| BBB+_SUBORDINATE               | 13.6                   |
+| A-\_SUBORDINATE                 | 9.6                    |
+| BBB+\_SUBORDINATE               | 13.6                   |
 | BBB_SUBORDINATE                | 17.6                   |
-| BBB-_SUBORDINATE               | 26.4                   |
-| BB+_SUBORDINATE                | 37.6                   |
+| BBB-\_SUBORDINATE               | 26.4                   |
+| BB+\_SUBORDINATE                | 37.6                   |
 | BB_SUBORDINATE                 | 49.6                   |
-| BB-_SUBORDINATE                | 60                     |
-| B+_SUBORDINATE                 | 72                     |
+| BB-\_SUBORDINATE                | 60                     |
+| B+\_SUBORDINATE                 | 72                     |
 | B_SUBORDINATE                  | 84                     |
-| B-_SUBORDINATE                 | 90.4                   |
-| CC+_SUBORDINATE                | 100                    |
+| B-\_SUBORDINATE                 | 90.4                   |
+| CC+\_SUBORDINATE                | 100                    |
 | CC_SUBORDINATE                 | 100                    |
-| CC-_SUBORDINATE                | 100                    |
+| CC-\_SUBORDINATE                | 100                    |
 | D_SUBORDINATE                  | 100                    |
 | UNDERATD_SUBORDINATE           | 100                    |
 | OTHER_SUBORDINATE              | 100                    |
@@ -179,7 +178,6 @@ Table below will outline which columns are expected, the useage and meaning behi
 | P-3_SUBORDINATE                | 8                      |
 | UNDERATD_SUBORDINATE           | 100                    |
 | D_SUBORDINATE                  | 100                    |
-
 
 ### DRC nonSec - BCBS CreditQiality Weights
 
@@ -216,5 +214,3 @@ Table below will outline which columns are expected, the useage and meaning behi
 | UNRATED       | 0.15       |
 | NORATING      | 0.15       |
 | DEFAULTED     | 1          |
-
-
