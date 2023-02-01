@@ -19,6 +19,7 @@ original = ds.frame()  # keep the old value for comparison
 # If you call it twice you will get an error
 ds.prepare()
 
+
 # Let's see what happened
 def diff(df1: pl.DataFrame, df2: pl.DataFrame) -> pl.DataFrame:
     """Columns in df1 which are not in df2

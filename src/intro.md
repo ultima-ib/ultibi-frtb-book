@@ -6,7 +6,7 @@ This user guide's primary focus is a very specific case - **[Fundamental Review 
 
 # Why to use `ultibi`
 
-- The calculation goes as per **[FRTB SA Paper](https://www.bis.org/bcbs/publ/d457.pdf)** \[^1\] and aims to be fully compliant(although not certified). **`ultibi`** supports **[CRR2](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255)** parameter set out of the box. Switch between the two is as easy as setting `jurisdiction` to `CRR2` or `BCBS`.
+- The calculation goes as per **[FRTB SA Paper](https://www.bis.org/bcbs/publ/d457.pdf)** (Note: `ultibi` is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation) and aims to be fully compliant(although not certified). **`ultibi`** supports **[CRR2](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255)** parameter set out of the box. Switch between the two is as easy as setting `jurisdiction` to `CRR2` or `BCBS`.
 
 - You can breakdown and drillthrough your computation
 
@@ -15,8 +15,6 @@ This user guide's primary focus is a very specific case - **[Fundamental Review 
 - Everything you need for analysis: [Filtering](./filters.md), [Overriding](./override.md), [Adding Trades](./add_row.md) and so on.
 
 - Blazingly [fast](./performace.md).
-
-\[^1\]: `ultibi` is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation.
 
 ### Supported measures
 
