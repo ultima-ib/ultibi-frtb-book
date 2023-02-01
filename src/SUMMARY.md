@@ -5,6 +5,8 @@
 # User Guide
 
 - [Installation](./installation.md)
+- [Quickstart](./quickstart.md)
+  - [FX](./fx.md)
 - [FRTB SA - Input(Exposures)](./format.md)
   - [Loading Input](./input.md)
 - [FRTB SA - Capital](./capital.md)

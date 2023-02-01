@@ -4,9 +4,9 @@ on:
   pull_request:
     branches: [master]
     
-defaults:
-  run:
-    working-directory: frtb_userguide
+#defaults:
+#  run:
+#    working-directory: frtb_userguide
 
 jobs:
   test:
