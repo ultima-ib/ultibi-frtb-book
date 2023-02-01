@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">2.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">2.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">3.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">3.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">3.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">3.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">4.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">4.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">4.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">4.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">5.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">6.</strong> Contacts and Feedback</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">2.</strong> Quickstart</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fx.html"><strong aria-hidden="true">2.1.</strong> FX</a></li></ol></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">3.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">3.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">4.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">4.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">4.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">5.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">5.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">5.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">5.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">6.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">7.</strong> Contacts and Feedback</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,7 +151,7 @@
 <h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
 <ul>
 <li>
-<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> [^1] and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
+<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> (Note: <code>ultibi</code> is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation) and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
 </li>
 <li>
 <p>You can breakdown and drillthrough your computation</p>
@@ -166,7 +166,6 @@
 <p>Blazingly <a href="./performace.html">fast</a>.</p>
 </li>
 </ul>
-<p>[^1]: <code>ultibi</code> is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation.</p>
 <h3 id="supported-measures"><a class="header" href="#supported-measures">Supported measures</a></h3>
 <p>CSR Sec CTP CVRdown</p>
 <p>CSR Sec CTP CVRup</p>
@@ -518,6 +517,86 @@
 <p>or if you have a .whl file</p>
 <pre><code class="language-console">pip install *.whl
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tldr"><a class="header" href="#tldr">TLDR;</a></h1>
+<p>Although it is strongly advised to read all the chapters, this chapter consists of reproducible examples if you are looking to get up and running instantaneously.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fx-example"><a class="header" href="#fx-example">FX Example</a></h1>
+<pre><code class="language-python">import polars as pl
+import ultibi as ul
+
+pl.Config.set_tbl_rows(100)
+pl.Config.set_tbl_cols(14)
+
+# First, let's mock up a portfolio of 15 trades
+# Note: we will ask ultibi to assign risk weight for us as per the regulation
+# As such, we need to provide all the columns required for weights assignments,
+# even if they are not used.
+# fmt: off
+data = {
+# Optional but useful column. We will aggregate at the level of &quot;Group&quot;
+&quot;Group&quot;: [&quot;Ultima&quot;]*15,
+# Delta represents both Delta and Curvature risk. Vega is for Vega only
+&quot;RiskCategory&quot;:	[&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;],
+&quot;RiskClass&quot;: [&quot;FX&quot;,	&quot;FX&quot;, &quot;FX&quot;,	&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;],
+# FX Risk Factor must be of CCY1/CCY2 format
+&quot;RiskFactor&quot;:[&quot;GBPUSD&quot;,&quot;BRLUSD&quot;,&quot;BRLUSD&quot;,&quot;JPYEUR&quot;,&quot;GBPUSD&quot;,&quot;GBPUSD&quot;,&quot;THOUSD&quot;,&quot;JPYEUR&quot;,&quot;EUREUR&quot;,&quot;EURUSD&quot;,&quot;GBPEUR&quot;,&quot;GBPUSD&quot;,&quot;EURUSD&quot;,&quot;AZNUSD&quot;,&quot;EURUSD&quot;],
+# We leave it as none because ultibi fills nans on this column with RiskFactor for FX
+&quot;BucketBCBS&quot;: [None]*15,															
+&quot;BucketCRR2&quot;: [None]*15,
+# RiskFactorType is not relevant to FX, but we still need to provide it 
+&quot;RiskFactorType&quot;: [&quot;&quot;]*15,
+&quot;CreditQuality&quot;: [&quot;&quot;]*15,	
+# Cob and MaturityDate is not relevant to FX, but we still need to provide it 
+&quot;COB&quot;: [&quot;2023-01-30&quot;]*15,
+&quot;MaturityDate&quot;: [&quot;2023-01-30&quot;]*15,	
+# These are our sensitivities
+&quot;PnL_Up&quot;:[1000.0,1000,1000,1000,None,None,None,None,None,None,None,None,None,None,None],										
+&quot;PnL_Down&quot;:[-1000.0,-1000,-1000,-1000,None,None,None,None,None,None,None,None,None,None,None],										
+&quot;SensitivitySpot&quot;:[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,-13.5,100],
+&quot;Sensitivity_05Y&quot;:[None,None,None,None,5000,5000,1000,None,None,None,None,None,None,None,None],							
+&quot;Sensitivity_1Y&quot;:[None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],								
+&quot;Sensitivity_3Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
+&quot;Sensitivity_5Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
+&quot;Sensitivity_10Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
+# 21.98
+&quot;FxCurvDivEligibility&quot;:[True,True,None,None,None,None,None,None,None,None,None,None,None,None,None],
+}	
+# fmt: on
+df = pl.DataFrame(data)
+
+# Conver our frame into FRTB dataset, opting into sqrt 2 division as per 21.88
+ds = ul.FRTBDataSet.from_frame(df, build_params={&quot;fx_sqrt2_div&quot;: &quot;true&quot;})
+# This will add SensWeights and CurvatureWeight columns to our dataset
+ds.prepare()
+
+request = dict(
+    measures=[
+        [&quot;FX DeltaCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;FX DeltaCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;FX DeltaCharge High&quot;, &quot;scalar&quot;],
+        [&quot;FX VegaCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;FX VegaCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;FX VegaCharge High&quot;, &quot;scalar&quot;],
+        [&quot;FX CurvatureCharge Low&quot;, &quot;scalar&quot;],
+        [&quot;FX CurvatureCharge Medium&quot;, &quot;scalar&quot;],
+        [&quot;FX CurvatureCharge High&quot;, &quot;scalar&quot;],
+    ],
+    # Break down results by Group and BucketBCBS
+    groupby=[&quot;Group&quot;, &quot;BucketBCBS&quot;],
+    # Show totals for each Group (note in this example only 1)
+    totals=True,
+    # Hide rows where each result is 0
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        # Apply 21.98
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+    },
+)
+
+# Execute
+result = ds.execute(request)
+print(result)
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---input-format"><a class="header" href="#frtb-sa---input-format">FRTB SA - Input format</a></h1>
 <p>Any calculation/function needs inputs. In case of FRTB SA the <strong>input is your portfolio sensitivities at trade level</strong>. Currently expected format for the sensitivities is like this: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv">Delta.csv</a>. This format is very similar to the industry standard <a href="https://www.isda.org/a/aBzTE/The-Future-of-Risk-Capital-and-Margin.pdf">CRIF</a>. Coming soon full CRIF support. As you can see, this file is your Sensitivities at Trade-RiskFactor-Tenor level.</p>
 <p>In our examples we will also be using an optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal structure (eg which Desk or Legal Entity).</p>
@@ -774,7 +853,8 @@ ds.prepare()
 print(ds.frame())
 </code></pre>
 <p>You will get an error if you try to assign twice. Now, let's see what happened. We will need a little helper function:</p>
-<pre><code class="language-python"># Let's see what happened
+<pre><code class="language-python">
+# Let's see what happened
 def diff(df1: pl.DataFrame, df2: pl.DataFrame) -&gt; pl.DataFrame:
     &quot;&quot;&quot;Columns in df1 which are not in df2
 
@@ -785,7 +865,6 @@ def diff(df1: pl.DataFrame, df2: pl.DataFrame) -&gt; pl.DataFrame:
     Returns:
         pl.DataFrame: _description_
     &quot;&quot;&quot;
-    return df1.select([c for c in df1 if c.name not in df2])
 print(diff(ds.frame(), original))
 </code></pre>
 <p>At the time of writing this returns 6 new columns(names of the columns might change slightly but the meaning will always be the same):</p>
