@@ -13,8 +13,10 @@ data = {
 # Optional but useful column. We will aggregate at the level of "Group"
 "Group": ["Ultima"]*15,
 # Delta represents both Delta and Curvature risk. Vega is for Vega only
-"RiskCategory":	["Delta","Delta","Delta","Delta","Vega","Vega","Vega","Vega","Delta","Delta","Delta","Delta","Delta","Delta","Delta"],
-"RiskClass": ["FX",	"FX", "FX",	"FX","FX","FX","FX","FX","FX","FX","FX","FX","FX","FX","FX"],
+"RiskCategory":	["Delta","Delta","Delta","Delta","Vega","Vega","Vega","Vega",
+                 "Delta","Delta","Delta","Delta","Delta","Delta","Delta"],
+"RiskClass": ["FX",	"FX", "FX",	"FX","FX","FX","FX","FX","FX","FX","FX","FX","FX",
+              "FX","FX"],
 # FX Risk Factor must be of CCY1/CCY2 format
 "RiskFactor":["GBPUSD","BRLUSD","BRLUSD","JPYEUR","GBPUSD","GBPUSD","THOUSD","JPYEUR","EUREUR","EURUSD","GBPEUR","GBPUSD","EURUSD","AZNUSD","EURUSD"],
 # We leave it as none because ultibi fills nans on this column with RiskFactor for FX
@@ -29,12 +31,16 @@ data = {
 # These are our sensitivities
 "PnL_Up":[1000.0,1000,1000,1000,None,None,None,None,None,None,None,None,None,None,None],										
 "PnL_Down":[-1000.0,-1000,-1000,-1000,None,None,None,None,None,None,None,None,None,None,None],										
-"SensitivitySpot":[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,-13.5,100],
+"SensitivitySpot":[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,
+                    -13.5,100],
 "Sensitivity_05Y":[None,None,None,None,5000,5000,1000,None,None,None,None,None,None,None,None],							
 "Sensitivity_1Y":[None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],								
-"Sensitivity_3Y": [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
-"Sensitivity_5Y": [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
-"Sensitivity_10Y": [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
+"Sensitivity_3Y": [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
+"Sensitivity_5Y": [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
+"Sensitivity_10Y": [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
 # 21.98
 "FxCurvDivEligibility":[True,True,None,None,None,None,None,None,None,None,None,None,None,None,None],
 }	
@@ -72,4 +78,4 @@ request = dict(
 )
 
 # Execute
-result = ds.execute(request)
+result = ds.compute(request)

@@ -35,14 +35,14 @@ Valide that you've formed a legitimate request (ie no compulsory field is missin
 print(request)
 ```
 
-Finally, let's execute it:
+Finally, to execute(depreciated, do not use):
 
 ```python
 {{#include ./examples/frtb_calculate.py:32:32}}
 print(result)
 ```
 
-Or, if you want to do it in one go:
+Or, preferred way:
 
 ```python
 {{#include ./examples/frtb_calculate.py:36:36}}

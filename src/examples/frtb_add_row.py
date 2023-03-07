@@ -1,8 +1,8 @@
 import ultibi as ul
 import json
 
-ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
-ds.prepare()
+ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml", prepare=True)
+
 added_rows = dict(
     prepare=True,
     rows=[
@@ -38,7 +38,7 @@ request1 = dict(
     hide_zeros=True,
 )
 
-result1 = ds.execute(request1)
+result1 = ds.compute(request1)
 
 # print(result1) #<-- uncomment to see
 
@@ -53,4 +53,4 @@ request2 = dict(
     hide_zeros=True,
 )
 
-result2 = ds.execute(request2)
+result2 = ds.compute(request2)

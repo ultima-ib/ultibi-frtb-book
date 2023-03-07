@@ -2,8 +2,8 @@ import ultibi as ul
 import polars as pl
 
 pl.Config.set_tbl_rows(100)
-ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
-ds.prepare()
+ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml", prepare=True)
+
 
 request = dict(
     measures=[["SBM Charge", "scalar"]],
@@ -17,7 +17,7 @@ request = dict(
         "drc_offset": "true",
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 request = dict(
     measures=[["SBM Charge", "scalar"]],
@@ -31,7 +31,7 @@ request = dict(
         "drc_offset": "true",
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 request = dict(
     measures=[["SBM Charge", "scalar"]],
@@ -45,7 +45,7 @@ request = dict(
         "drc_offset": "true",
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 request = dict(
     measures=[["SBM Charge", "scalar"]],
@@ -59,7 +59,7 @@ request = dict(
         "drc_offset": "true",
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 request = dict(
     measures=[["SBM Charge", "scalar"]],
@@ -79,4 +79,4 @@ request = dict(
         "drc_offset": "true",
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
