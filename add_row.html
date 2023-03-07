@@ -35,6 +35,7 @@
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -72,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -151,8 +154,8 @@
 <pre><code class="language-python">import ultibi as ul
 import json
 
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-ds.prepare()
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;, prepare=True)
+
 added_rows = dict(
     prepare=True,
     rows=[
@@ -188,7 +191,7 @@ request1 = dict(
     hide_zeros=True,
 )
 
-result1 = ds.execute(request1)
+result1 = ds.compute(request1)
 
 # print(result1) #&lt;-- uncomment to see
 
@@ -203,7 +206,7 @@ request2 = dict(
     hide_zeros=True,
 )
 
-result2 = ds.execute(request2)
+result2 = ds.compute(request2)
 print(result1)
 print(result2)
 </code></pre>
@@ -259,5 +262,6 @@ print(result2)
         <script src="tabbed-code-blocks.js"></script>
 
 
+    </div>
     </body>
 </html>

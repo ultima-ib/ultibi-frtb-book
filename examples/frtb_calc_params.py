@@ -48,7 +48,7 @@ request1 = dict(
     calc_params=calc_params,
 )
 
-result1 = ds.execute(request1)
+result1 = ds.compute(request1)
 
 # print(result1) #<-- uncomment to see
 
@@ -62,6 +62,6 @@ request2 = dict(
     hide_zeros=True,
 )
 
-result2 = ds.execute(request2)
+result2 = ds.compute(request2)
 
 # print(result2) #<-- uncomment to see

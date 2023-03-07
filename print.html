@@ -36,6 +36,7 @@
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -73,10 +74,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -517,7 +520,7 @@
 <p>or if you have a .whl file</p>
 <pre><code class="language-console">pip install *.whl
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="tldr"><a class="header" href="#tldr">TLDR;</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tldr"><a class="header" href="#tldr">TL;DR</a></h1>
 <p>Although it is strongly advised to read all the chapters, this chapter consists of reproducible examples if you are looking to get up and running instantaneously.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fx-example"><a class="header" href="#fx-example">FX Example</a></h1>
 <pre><code class="language-python">import polars as pl
@@ -535,8 +538,10 @@ data = {
 # Optional but useful column. We will aggregate at the level of &quot;Group&quot;
 &quot;Group&quot;: [&quot;Ultima&quot;]*15,
 # Delta represents both Delta and Curvature risk. Vega is for Vega only
-&quot;RiskCategory&quot;:	[&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;],
-&quot;RiskClass&quot;: [&quot;FX&quot;,	&quot;FX&quot;, &quot;FX&quot;,	&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;],
+&quot;RiskCategory&quot;:	[&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,
+                 &quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;],
+&quot;RiskClass&quot;: [&quot;FX&quot;,	&quot;FX&quot;, &quot;FX&quot;,	&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,
+              &quot;FX&quot;,&quot;FX&quot;],
 # FX Risk Factor must be of CCY1/CCY2 format
 &quot;RiskFactor&quot;:[&quot;GBPUSD&quot;,&quot;BRLUSD&quot;,&quot;BRLUSD&quot;,&quot;JPYEUR&quot;,&quot;GBPUSD&quot;,&quot;GBPUSD&quot;,&quot;THOUSD&quot;,&quot;JPYEUR&quot;,&quot;EUREUR&quot;,&quot;EURUSD&quot;,&quot;GBPEUR&quot;,&quot;GBPUSD&quot;,&quot;EURUSD&quot;,&quot;AZNUSD&quot;,&quot;EURUSD&quot;],
 # We leave it as none because ultibi fills nans on this column with RiskFactor for FX
@@ -551,12 +556,16 @@ data = {
 # These are our sensitivities
 &quot;PnL_Up&quot;:[1000.0,1000,1000,1000,None,None,None,None,None,None,None,None,None,None,None],										
 &quot;PnL_Down&quot;:[-1000.0,-1000,-1000,-1000,None,None,None,None,None,None,None,None,None,None,None],										
-&quot;SensitivitySpot&quot;:[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,-13.5,100],
+&quot;SensitivitySpot&quot;:[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,
+                    -13.5,100],
 &quot;Sensitivity_05Y&quot;:[None,None,None,None,5000,5000,1000,None,None,None,None,None,None,None,None],							
 &quot;Sensitivity_1Y&quot;:[None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],								
-&quot;Sensitivity_3Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
-&quot;Sensitivity_5Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
-&quot;Sensitivity_10Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
+&quot;Sensitivity_3Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
+&quot;Sensitivity_5Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
+&quot;Sensitivity_10Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
 # 21.98
 &quot;FxCurvDivEligibility&quot;:[True,True,None,None,None,None,None,None,None,None,None,None,None,None,None],
 }	
@@ -594,7 +603,7 @@ request = dict(
 )
 
 # Execute
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---input-format"><a class="header" href="#frtb-sa---input-format">FRTB SA - Input format</a></h1>
@@ -914,12 +923,12 @@ request = dict(
 <pre><code class="language-python">aggrequest = ul.AggRequest(request)
 print(request)
 </code></pre>
-<p>Finally, let's execute it:</p>
+<p>Finally, to execute(depreciated, do not use):</p>
 <pre><code class="language-python">result = ul.execute_agg(aggrequest, ds)
 print(result)
 </code></pre>
-<p>Or, if you want to do it in one go:</p>
-<pre><code class="language-python">result = ds.execute(request)
+<p>Or, preferred way:</p>
+<pre><code class="language-python">result = ds.compute(request)
 print(result)
 print(&quot;Type: &quot;, type(result))
 </code></pre>
@@ -933,8 +942,8 @@ print(&quot;Type: &quot;, type(result))
 import polars as pl
 
 pl.Config.set_tbl_rows(100)
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-ds.prepare()
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;, prepare=True)
+
 
 request = dict(
     measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
@@ -948,7 +957,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <h3 id="not-equial-neq"><a class="header" href="#not-equial-neq">Not Equial (Neq)</a></h3>
@@ -965,7 +974,7 @@ print(result)
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <h3 id="in-in"><a class="header" href="#in-in">In (In)</a></h3>
@@ -983,7 +992,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 print(result)
 </code></pre>
@@ -1002,7 +1011,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 print(result)
 </code></pre>
@@ -1027,7 +1036,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---what-if"><a class="header" href="#frtb-sa---what-if">FRTB SA - What If</a></h1>
@@ -1064,7 +1073,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;false&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 request = dict(
 print(result)
@@ -1081,7 +1090,7 @@ print(result)
         &quot;drc_offset&quot;: &quot;false&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <p>Results should match!</p>
@@ -1092,8 +1101,8 @@ print(result)
 <pre><code class="language-python">import ultibi as ul
 import json
 
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-ds.prepare()
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;, prepare=True)
+
 added_rows = dict(
     prepare=True,
     rows=[
@@ -1129,7 +1138,7 @@ request1 = dict(
     hide_zeros=True,
 )
 
-result1 = ds.execute(request1)
+result1 = ds.compute(request1)
 
 # print(result1) #&lt;-- uncomment to see
 
@@ -1144,7 +1153,7 @@ request2 = dict(
     hide_zeros=True,
 )
 
-result2 = ds.execute(request2)
+result2 = ds.compute(request2)
 print(result1)
 print(result2)
 </code></pre>
@@ -1231,7 +1240,7 @@ request1 = dict(
     calc_params=calc_params,
 )
 
-result1 = ds.execute(request1)
+result1 = ds.compute(request1)
 
 # print(result1) #&lt;-- uncomment to see
 
@@ -1245,7 +1254,7 @@ request2 = dict(
     hide_zeros=True,
 )
 
-result2 = ds.execute(request2)
+result2 = ds.compute(request2)
 
 # print(result2) #&lt;-- uncomment to see
 print(result1)
@@ -1254,6 +1263,84 @@ print(result2)
 <h2 id="if-a-parameters-could-not-get-parsed"><a class="header" href="#if-a-parameters-could-not-get-parsed">If a parameters could not get parsed</a></h2>
 <p>Currently, if your passed calc_param could not get parsed into a correct value (eg you provided float instead of a vector) - it will <strong>silently</strong> fall back to the defaulted value of the <code>jurisdiction</code>. <strong>This will be changed in the next release to return an error to avoid ambiguity</strong>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="performance"><a class="header" href="#performance">Performance</a></h1>
+<p>ultibi FRTB aggregator was built with performance in mind. Bellow table summarizes a large Equity portfolio:</p>
+<pre><code class="language-python">┌───────────┬──────────────┬────────────────┬───────────────┬──────────────┬─────────────────────┬─────────────────────┬─────────────────────────┐
+│ RiskClass ┆ RiskCategory ┆ RiskFactorType ┆ TradeId_count ┆ PnL_Up_count ┆ BucketBCBS_n_unique ┆ RiskFactor_n_unique ┆ RiskFactorType_n_unique │
+│ ---       ┆ ---          ┆ ---            ┆ ---           ┆ ---          ┆ ---                 ┆ ---                 ┆ ---                     │
+│ str       ┆ str          ┆ str            ┆ u32           ┆ u32          ┆ u32                 ┆ u32                 ┆ u32                     │
+╞═══════════╪══════════════╪════════════════╪═══════════════╪══════════════╪═════════════════════╪═════════════════════╪═════════════════════════╡
+│ Equity    ┆ Delta        ┆ EqSpot         ┆ 648506        ┆ 648506       ┆ 4                   ┆ 18316               ┆ 1                       │
+│ Equity    ┆ Delta        ┆ EqRepo         ┆ 219792        ┆ 219792       ┆ 3                   ┆ 18316               ┆ 1                       │
+└───────────┴──────────────┴────────────────┴───────────────┴──────────────┴─────────────────────┴─────────────────────┴─────────────────────────┘
+</code></pre>
+<p>This portfolio consist of 868298 Equity Delta and Curvature (see PnL_Up_count) Sensitivities splic across 4 buckets, 18316 risk factors(equity names/tickers), with both Spot and Repo Present.</p>
+<p>The result as of ultibi v0.1.3:
+<strong>--- Read DF time: 483.5027ms ---</strong>
+<strong>--- Assign Weights time: 1.1574655s ---</strong></p>
+<p>Just single EQ Delta Charge:</p>
+<pre><code class="language-python">request2 = dict(
+    measures=[
+        [&quot;EQ DeltaCharge Medium&quot;, &quot;scalar&quot;]
+    ],
+    # Break down results by Group and BucketBCBS
+    groupby=[&quot;Group&quot;],
+
+    # Show totals for each Group (note in this example only 1)
+    totals = True,
+    # Hide rows where each result is 0
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        # Apply 21.98
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+    },
+)
+</code></pre>
+<p><strong>--- Compute time: 0.22789788246154785 seconds ---</strong></p>
+<pre><code class="language-python">request2 = dict(
+    measures=[
+        [&quot;SBM Charge&quot;, &quot;scalar&quot;]
+    ],
+    # Break down results by Group and BucketBCBS
+    groupby=[&quot;Group&quot;],
+
+    # Show totals for each Group (note in this example only 1)
+    totals = True,
+    # Hide rows where each result is 0
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        # Apply 21.98
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+    },
+)
+</code></pre>
+<p><strong>--- Compute No Deps time: 2.538625478744507 seconds ---</strong></p>
+<h1 id="caching"><a class="header" href="#caching">Caching</a></h1>
+<p>Note, thanks to <code>ultibi's</code> internal caching mechanism, basic measures can be reused. For example:</p>
+<pre><code class="language-python">request = dict(
+    measures=[
+        [&quot;SBM Charge High&quot;, &quot;scalar&quot;],
+        [&quot;SBM Charge Low&quot;, &quot;scalar&quot;],
+        [&quot;SBM Charge Medium&quot;, &quot;scalar&quot;]
+    ],
+    # Break down results by Group and BucketBCBS
+    groupby=[&quot;Group&quot;],
+
+    # Show totals for each Group (note in this example only 1)
+    totals = True,
+    # Hide rows where each result is 0
+    hide_zeros=True,
+    calc_params={
+        &quot;jurisdiction&quot;: &quot;BCBS&quot;,
+        # Apply 21.98
+        &quot;apply_fx_curv_div&quot;: &quot;true&quot;,
+    },
+)
+</code></pre>
+<p><strong>--- Compute No Deps time: 0.010367870330810547 seconds ---</strong></p>
+<p>Compute time is almost identical to that of <code>request2</code>. This is because <code>SBM Charge</code> is a simple max of <code>SBM Charge Low</code>, <code>SBM Charge Medium</code>, <code>SBM Charge High</code> and therefore almost no additional compute is required.</p>
+<p><strong>DataSet cache stores results of basic measures such as <code>EQ DeltaCharge Medium</code>. Therefore the next request will reuse them</strong>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contacts-and-feedback"><a class="header" href="#contacts-and-feedback">Contacts and Feedback</a></h1>
 <p><strong><code>ultibi</code></strong> was created by <strong><a href="https://ultimabi.uk/#">Ultima</a></strong></p>
 <p>Get in touch:</p>
@@ -1307,5 +1394,6 @@ print(result2)
         });
         </script>
 
+    </div>
     </body>
 </html>

@@ -35,6 +35,7 @@
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -72,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -182,12 +185,12 @@ request = dict(
 <pre><code class="language-python">aggrequest = ul.AggRequest(request)
 print(request)
 </code></pre>
-<p>Finally, let's execute it:</p>
+<p>Finally, to execute(depreciated, do not use):</p>
 <pre><code class="language-python">result = ul.execute_agg(aggrequest, ds)
 print(result)
 </code></pre>
-<p>Or, if you want to do it in one go:</p>
-<pre><code class="language-python">result = ds.execute(request)
+<p>Or, preferred way:</p>
+<pre><code class="language-python">result = ds.compute(request)
 print(result)
 print(&quot;Type: &quot;, type(result))
 </code></pre>
@@ -242,5 +245,6 @@ print(&quot;Type: &quot;, type(result))
         <script src="tabbed-code-blocks.js"></script>
 
 
+    </div>
     </body>
 </html>

@@ -35,6 +35,7 @@
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -72,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -160,8 +163,10 @@ data = {
 # Optional but useful column. We will aggregate at the level of &quot;Group&quot;
 &quot;Group&quot;: [&quot;Ultima&quot;]*15,
 # Delta represents both Delta and Curvature risk. Vega is for Vega only
-&quot;RiskCategory&quot;:	[&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;],
-&quot;RiskClass&quot;: [&quot;FX&quot;,	&quot;FX&quot;, &quot;FX&quot;,	&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;],
+&quot;RiskCategory&quot;:	[&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,&quot;Vega&quot;,
+                 &quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;,&quot;Delta&quot;],
+&quot;RiskClass&quot;: [&quot;FX&quot;,	&quot;FX&quot;, &quot;FX&quot;,	&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,&quot;FX&quot;,
+              &quot;FX&quot;,&quot;FX&quot;],
 # FX Risk Factor must be of CCY1/CCY2 format
 &quot;RiskFactor&quot;:[&quot;GBPUSD&quot;,&quot;BRLUSD&quot;,&quot;BRLUSD&quot;,&quot;JPYEUR&quot;,&quot;GBPUSD&quot;,&quot;GBPUSD&quot;,&quot;THOUSD&quot;,&quot;JPYEUR&quot;,&quot;EUREUR&quot;,&quot;EURUSD&quot;,&quot;GBPEUR&quot;,&quot;GBPUSD&quot;,&quot;EURUSD&quot;,&quot;AZNUSD&quot;,&quot;EURUSD&quot;],
 # We leave it as none because ultibi fills nans on this column with RiskFactor for FX
@@ -176,12 +181,16 @@ data = {
 # These are our sensitivities
 &quot;PnL_Up&quot;:[1000.0,1000,1000,1000,None,None,None,None,None,None,None,None,None,None,None],										
 &quot;PnL_Down&quot;:[-1000.0,-1000,-1000,-1000,None,None,None,None,None,None,None,None,None,None,None],										
-&quot;SensitivitySpot&quot;:[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,-13.5,100],
+&quot;SensitivitySpot&quot;:[123000,	123000,	123000,	123000, None,None,None,None,100,5,15,10,5,
+                    -13.5,100],
 &quot;Sensitivity_05Y&quot;:[None,None,None,None,5000,5000,1000,None,None,None,None,None,None,None,None],							
 &quot;Sensitivity_1Y&quot;:[None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],								
-&quot;Sensitivity_3Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
-&quot;Sensitivity_5Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
-&quot;Sensitivity_10Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,None,None],
+&quot;Sensitivity_3Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
+&quot;Sensitivity_5Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
+&quot;Sensitivity_10Y&quot;: [None,None,None,None,5000,5000,None,1000,None,None,None,None,None,
+                    None,None],
 # 21.98
 &quot;FxCurvDivEligibility&quot;:[True,True,None,None,None,None,None,None,None,None,None,None,None,None,None],
 }	
@@ -219,7 +228,7 @@ request = dict(
 )
 
 # Execute
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 
@@ -272,5 +281,6 @@ print(result)
         <script src="tabbed-code-blocks.js"></script>
 
 
+    </div>
     </body>
 </html>

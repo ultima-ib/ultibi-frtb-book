@@ -35,6 +35,7 @@
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -72,10 +73,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -153,8 +156,8 @@
 import polars as pl
 
 pl.Config.set_tbl_rows(100)
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-ds.prepare()
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;, prepare=True)
+
 
 request = dict(
     measures=[[&quot;SBM Charge&quot;, &quot;scalar&quot;]],
@@ -168,7 +171,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <h3 id="not-equial-neq"><a class="header" href="#not-equial-neq">Not Equial (Neq)</a></h3>
@@ -185,7 +188,7 @@ print(result)
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 <h3 id="in-in"><a class="header" href="#in-in">In (In)</a></h3>
@@ -203,7 +206,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 print(result)
 </code></pre>
@@ -222,7 +225,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 
 print(result)
 </code></pre>
@@ -247,7 +250,7 @@ request = dict(
         &quot;drc_offset&quot;: &quot;true&quot;,
     },
 )
-result = ds.execute(request)
+result = ds.compute(request)
 print(result)
 </code></pre>
 
@@ -300,5 +303,6 @@ print(result)
         <script src="tabbed-code-blocks.js"></script>
 
 
+    </div>
     </body>
 </html>

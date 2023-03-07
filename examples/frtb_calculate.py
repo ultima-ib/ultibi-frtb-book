@@ -33,4 +33,4 @@ result = ul.execute_agg(aggrequest, ds)
 # print(result)
 # print("Type: ", type(result))
 
-result = ds.execute(request)
+result = ds.compute(request)
