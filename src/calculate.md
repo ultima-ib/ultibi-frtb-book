@@ -35,17 +35,10 @@ Valide that you've formed a legitimate request (ie no compulsory field is missin
 print(request)
 ```
 
-Finally, to execute(depreciated, do not use):
+Finally, to execute
 
 ```python
-{{#include ./examples/frtb_calculate.py:32:32}}
-print(result)
-```
-
-Or, preferred way:
-
-```python
-{{#include ./examples/frtb_calculate.py:36:36}}
+{{#include ./examples/frtb_calculate.py:31:31}}
 print(result)
 print("Type: ", type(result))
 ```

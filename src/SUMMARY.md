@@ -17,5 +17,6 @@
   - [Overrides](./override.md)
   - [Add Trades/Books](./add_row.md)
   - [Calc Params and Params Sets](./calc_params.md)
+- [UI](./ui.md)
 - [Performance](./performance.md)
 - [Contacts and Feedback](./feedback.md)
