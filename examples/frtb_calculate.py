@@ -27,10 +27,7 @@ request = dict(
 )
 
 aggrequest = ul.AggRequest(request)
-# print(request)
-
-result = ul.execute_agg(aggrequest, ds)
-# print(result)
-# print("Type: ", type(result))
 
 result = ds.compute(request)
+# print(result)
+# print("Type: ", type(result))
