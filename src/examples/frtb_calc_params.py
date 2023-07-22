@@ -2,7 +2,7 @@ import ultibi as ul
 import json
 
 ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
-ds.prepare()
+
 for calc_param in ds.calc_params:
     if "com_delta_" in calc_param["name"]:
         # print(calc_param) #<-- uncomment to see

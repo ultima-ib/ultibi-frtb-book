@@ -1,7 +1,7 @@
 import ultibi as ul
 import json
 
-ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml", prepare=True)
+ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
 
 added_rows = dict(
     prepare=True,
