@@ -1,6 +1,6 @@
 # FX Example
 
 ```python
-{{#include ./examples/quickstart/fx.py}}
+{{#include ../examples/quickstart/fx.py}}
 print(result)
 ```

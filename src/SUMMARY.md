@@ -11,7 +11,7 @@
 - [Input and Data Sources](./inputs_intro.md)
   - [Loading Input](./datasources.md)
   - [FRTB Input Format](./format.md)
-- [Calculation](./capital.md)
+- [Calculation](./calc_intro.md)
   - [Prepare (FRTB Assign Weights)](./weights.md)
   - [Calculation (FRTB Capital)](./calculate.md)
     - [FRTB Supported measures](./frtb_measures.md)
