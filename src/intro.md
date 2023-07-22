@@ -1,8 +1,8 @@
 # Introduction
 
-**`ultibi`** is a free python library by **Ultima**.
+**`ultibi`** is a free python library by **[Ultima](https://github.com/ultima-ib/ultima)**. **`ultibi`** is a python interface of **Ultima**, a service which allows you to define, compute and breakdown the key metrics for your data.
 
-This user guide's primary focus is a very specific case - **[Fundamental Review of the Trading Book's Standardised Approach](https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book)**. For a general usecase refer to the general user guide(TBA). Here we will focus on FRTB only. In general **`ultibi`** is a python interface of **Ultima**, a service which allows you to define, compute and breakdown the key metrics for your data.
+This userguide will provide examples of the functionality. We pick - **[Fundamental Review of the Trading Book's Standardised Approach](https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book)** to serve as a great usecase example.
 
 # Why to use `ultibi`
 
