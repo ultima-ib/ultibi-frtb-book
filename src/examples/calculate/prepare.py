@@ -9,12 +9,11 @@ exposures = pl.read_csv("./data/frtb/Delta.csv", dtypes={"SensitivitySpot": pl.F
 # Feel free to join other attributes such as Hierarchy here ...
 ds = ul.FRTBDataSet.from_frame(exposures)
 
-
-# You can set up a config and we will take care of
-# castings, joins etc
-ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
-
 original = ds.frame()  # keep the old value for comparison
+
+ds.prepare()
+
+prepared = ds.frame()
 
 # Let's see what happened
 def diff(df1: pl.DataFrame, df2: pl.DataFrame) -> pl.DataFrame:
@@ -30,4 +29,4 @@ def diff(df1: pl.DataFrame, df2: pl.DataFrame) -> pl.DataFrame:
     return df1.select([c for c in df1 if c.name not in df2])
 
 
-# print(diff(ds.frame(), original))
+diff_frame = diff(prepared, original)
