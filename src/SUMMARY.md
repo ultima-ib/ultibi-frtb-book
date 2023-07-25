@@ -8,7 +8,7 @@
 - [Quickstart](./quickstart/quickstart.md)
   - [with UI](./quickstart/ui_quick.md)
   - [FRTB FX](./quickstart/fx.md)
-- [Input and Data Sources](./inputs/inputs_intro.md)
+- [Input, DataSource and DataSet](./inputs/inputs_intro.md)
   - [Data Sources](./inputs/datasources.md)
   - [Config file](./inputs/input.md)
   - [FRTB Input Format](./inputs/format.md)

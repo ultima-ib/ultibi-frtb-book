@@ -4,7 +4,7 @@ import json
 ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
 
 for calc_param in ds.calc_params:
-    if "com_delta_" in calc_param["name"]:
+    if "com_delta_" in calc_param[0]:
         # print(calc_param) #<-- uncomment to see
         pass
 # fmt: off
