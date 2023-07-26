@@ -19,11 +19,13 @@ venv:  ## Set up virtual environment. Last step potentially to be replaced with 
 
 data:
 	@mkdir -p ./data/frtb
-	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml -O ./data/frtb/datasource_config.toml
+#	Commenting out since we can't align the same config for tests, book, EFS etc 
+# 	This book will have it's own config
+#	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml -O ./data/frtb/datasource_config.toml
 	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv              -O ./data/frtb/Delta.csv
 	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv                -O ./data/frtb/hms.csv
 	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv    -O ./data/frtb/TradeAttributes.csv
-	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/titanic.csv    			   -O ./data/titanic.csv
+#	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/titanic.csv    			   -O ./data/titanic.csv
 
 .PHONY: fmt
 fmt: venv  ## Run autoformatting and linting
