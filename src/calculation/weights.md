@@ -1,5 +1,7 @@
 # Assign Weights/Prepare
 
+**Currently this section only applies to FRTBDataSet**. In the future `python` users will be able to define their own, custom `prepare` functions too. 
+
 Prepare is a **fixed** calculation which happens with every request for scans/db DataSources. For InMemory it happens only when you call `.prepare()`.
 
 `from_config()` call `.prepare()` depending on `source_type`.

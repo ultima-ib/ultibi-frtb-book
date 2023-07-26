@@ -12,6 +12,7 @@
   - [Data Sources](./inputs/datasources.md)
   - [Config file](./inputs/input.md)
   - [FRTB Input Format](./inputs/format.md)
+  - [Define your own Measures](./inputs/bespoke_measures.md)
 - [Calculation](./calculation/calc_intro.md)
   - [Prepare (FRTB Assign Weights)](./calculation/weights.md)
   - [Calculation (FRTB Capital)](./calculation/calculate.md)
