@@ -42,7 +42,7 @@ clean:  ## Clean up caches and build artifacts
 	@rm -rf venv/
 	@rm -rf target/
 	-@rm -fr .venv
-	-@rm -fr data
+	-@rm -fr data/frtb/*.csv
 	mdbook clean &>/dev/null
 
 .PHONY: help
