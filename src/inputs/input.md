@@ -9,7 +9,7 @@ print(ds.frame(None))
 
 ## Validate (work in progress)
 
-If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call `.validate()`` on your dataset. It checks if every required column for every availiable calculation is present. Note: If you **can** guarantee your particular calculation would not require the missing columns you can proceed at your own risk!
+If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call \`.validate()\`\` on your dataset. It checks if every required column for every availiable calculation is present. Note: If you **can** guarantee your particular calculation would not require the missing columns you can proceed at your own risk!
 
 ```python
 {{#include ../examples/frtb_validate.py}}

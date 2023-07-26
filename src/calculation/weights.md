@@ -1,6 +1,6 @@
 # Assign Weights/Prepare
 
-**Currently this section only applies to FRTBDataSet**. In the future `python` users will be able to define their own, custom `prepare` functions too. 
+**Currently this section only applies to FRTBDataSet**. In the future `python` users will be able to define their own, custom `prepare` functions too.
 
 Prepare is a **fixed** calculation which happens with every request for scans/db DataSources. For InMemory it happens only when you call `.prepare()`.
 
@@ -14,7 +14,6 @@ print(diff_frame.columns)
 ```
 
 You will get an error if you try to assign twice. Now, let's see what happened. We will need a little helper function:
-
 
 At the time of writing this returns 6 new columns(names of the columns might change slightly but the meaning will always be the same):
 

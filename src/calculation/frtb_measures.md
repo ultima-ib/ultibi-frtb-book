@@ -1,28 +1,30 @@
 # FRTB Supported measures
 
 At the time of writing:
+
 ```python
 ds = ul.FRTBDataSet.from_frame(df)
 for m in ds.measures.keys():
     print(m)
 ```
-CSR Sec CTP CVRdown 
 
-CSR Sec CTP CVRup 
+CSR Sec CTP CVRdown
 
-CSR Sec CTP Curvature Kb High 
+CSR Sec CTP CVRup
 
-CSR Sec CTP Curvature Kb Low 
+CSR Sec CTP Curvature Kb High
 
-CSR Sec CTP Curvature Kb Medium 
+CSR Sec CTP Curvature Kb Low
 
-CSR Sec CTP Curvature KbMinus High 
+CSR Sec CTP Curvature Kb Medium
 
-CSR Sec CTP Curvature KbMinus Low 
+CSR Sec CTP Curvature KbMinus High
 
-CSR Sec CTP Curvature KbMinus Medium 
+CSR Sec CTP Curvature KbMinus Low
 
-CSR Sec CTP Curvature KbPlus High 
+CSR Sec CTP Curvature KbMinus Medium
+
+CSR Sec CTP Curvature KbPlus High
 
 CSR Sec CTP Curvature KbPlus Low
 
@@ -44,7 +46,7 @@ CSR Sec CTP CurvatureCharge Medium
 
 CSR Sec CTP CurvatureDelta
 
-CSR Sec CTP CurvatureDelta_Weighted 
+CSR Sec CTP CurvatureDelta_Weighted
 
 CSR Sec CTP DeltaCharge High
 
@@ -142,7 +144,7 @@ CSR Sec nonCTP DeltaCharge Low
 
 CSR Sec nonCTP DeltaCharge MAX
 
-CSR Sec nonCTP DeltaCharge Medium 
+CSR Sec nonCTP DeltaCharge Medium
 
 CSR Sec nonCTP DeltaKb High
 
@@ -310,7 +312,7 @@ Commodity CurvatureCharge High
 
 Commodity CurvatureCharge Low
 
-Commodity CurvatureCharge MAX 
+Commodity CurvatureCharge MAX
 
 Commodity CurvatureCharge Medium
 
@@ -374,7 +376,7 @@ DRC Charge
 
 DRC Sec nonCTP CapitalCharge
 
-DRC Sec nonCTP GrossJTD 
+DRC Sec nonCTP GrossJTD
 
 DRC Sec nonCTP GrossJTD Scaled
 
@@ -424,7 +426,7 @@ EQ Curvature KbPlus High
 
 EQ Curvature KbPlus Low
 
-EQ Curvature KbPlus Medium 
+EQ Curvature KbPlus Medium
 
 EQ Curvature Sb High
 
@@ -630,7 +632,7 @@ GIRR VegaCharge MAX
 
 GIRR VegaCharge Medium
 
-GIRR VegaKb High 
+GIRR VegaKb High
 
 GIRR VegaKb Low
 

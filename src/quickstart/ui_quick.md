@@ -1,5 +1,7 @@
 # with UI
+
 To spin up the Cube/Pivot UI
+
 ```python
 {{#include ../examples/quickstart/ui_quick.py}}
 

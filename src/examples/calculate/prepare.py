@@ -1,4 +1,4 @@
-#TODO scan here to demonstrate prepare
+# TODO scan here to demonstrate prepare
 
 import polars as pl
 import ultibi as ul
@@ -14,6 +14,7 @@ original = ds.frame()  # keep the old value for comparison
 ds.prepare()
 
 prepared = ds.frame()
+
 
 # Let's see what happened
 def diff(df1: pl.DataFrame, df2: pl.DataFrame) -> pl.DataFrame:
