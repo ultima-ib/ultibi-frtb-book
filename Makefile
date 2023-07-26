@@ -23,6 +23,7 @@ data:
 	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv              -O ./data/frtb/Delta.csv
 	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv                -O ./data/frtb/hms.csv
 	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv    -O ./data/frtb/TradeAttributes.csv
+	wget -N -q --no-check-certificate https://ultima-bi.s3.eu-west-2.amazonaws.com/titanic.csv    			   -O ./data/titanic.csv
 
 .PHONY: fmt
 fmt: venv  ## Run autoformatting and linting
