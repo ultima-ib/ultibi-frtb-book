@@ -6,11 +6,11 @@
 
 # Dependencies
 polars
-pyarrow
+#pyarrow
 ultibi
 
 # Tooling
 maturin
 
 # Presenting
-jupyterlab
+# jupyterlab
