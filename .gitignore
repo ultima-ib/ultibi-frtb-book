@@ -10,7 +10,9 @@ venv/
 .venv/
 /__pycache__
 book/
-data/
+data/frtb/Delta.csv
+data/frtb/hms.csv
+data/frtb/TradeAttributes.csv
 .ipynb*/
 
 # Byte-compiled / optimized / DLL files

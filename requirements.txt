@@ -5,7 +5,7 @@
 --prefer-binary
 
 # Dependencies
-polars
+# polars
 pyarrow
 ultibi
 
@@ -13,4 +13,4 @@ ultibi
 maturin
 
 # Presenting
-jupyterlab
+# jupyterlab

@@ -1,26 +1,19 @@
-# Prepare
+# Assign Weights/Prepare
 
-First, lets save the original table. You can get your data like this:
+**Currently this section only applies to FRTBDataSet**. In the future `python` users will be able to define their own, custom `prepare` functions too.
 
-```python
-{{#include ./examples/frtb_input.py:15:15}}
-```
+Prepare is a **fixed** calculation which happens with every request for scans/db DataSources. For InMemory it happens only when you call `.prepare()`.
 
-## Assign Weights
+`from_config()` call `.prepare()` depending on `source_type`.
 
-First part of the calculation(assuming you've got your exposures/sensitivities) is to assign weights to them as per the regulation. **`ultibi` assigns weights (and few other parameters) to your exposures as per the regulation**. Make sure you **assign weights before doing any computations**:
+A good usecase for that is to assign weights column to your data, as per FRTB regulation for example. **Make sure you assign weights before doing any computations**:
 
 ```python
-{{#include ./examples/frtb_input.py:18:20}}
-print(ds.frame())
+{{#include ../examples/calculate/prepare.py}}
+print(diff_frame.columns)
 ```
 
 You will get an error if you try to assign twice. Now, let's see what happened. We will need a little helper function:
-
-```python
-{{#include ./examples/frtb_input.py:22:33}}
-print(diff(ds.frame(), original))
-```
 
 At the time of writing this returns 6 new columns(names of the columns might change slightly but the meaning will always be the same):
 

@@ -1,0 +1,1314 @@
+Name,PClass,Age,Sex,Survived,State,City,Country
+"Allen, Miss Elisabeth Walton",1st,29,female,1,NY,Buffalo,US
+"Allison, Miss Helen Loraine",1st,2,female,0,Greater London,London,UK
+"Allison, Mr Hudson Joshua Creighton",1st,30,male,0,Moscow,Moscow,Russia
+"Allison, Mrs Hudson JC (Bessie Waldo Daniels)",1st,25,female,0,Oxfordshire,Oxford,UK
+"Allison, Master Hudson Trevor",1st,0.92,male,1,NY,Buffalo,US
+"Anderson, Mr Harry",1st,47,male,1,Greater London,London,UK
+"Andrews, Miss Kornelia Theodosia",1st,63,female,1,Moscow,Moscow,Russia
+"Andrews, Mr Thomas, jr",1st,39,male,0,Oxfordshire,Oxford,UK
+"Appleton, Mrs Edward Dale (Charlotte Lamson)",1st,58,female,1,NY,Buffalo,US
+"Artagaveytia, Mr Ramon",1st,71,male,0,Greater London,London,UK
+"Astor, Colonel John Jacob",1st,47,male,0,Moscow,Moscow,Russia
+"Astor, Mrs John Jacob (Madeleine Talmadge Force)",1st,19,female,1,Oxfordshire,Oxford,UK
+"Aubert, Mrs Leontine Pauline",1st,,female,1,NY,Buffalo,US
+"Barkworth, Mr Algernon H",1st,,male,1,Greater London,London,UK
+"Baumann, Mr John D",1st,,male,0,Moscow,Moscow,Russia
+"Baxter, Mrs James (Helene DeLaudeniere Chaput)",1st,50,female,1,Oxfordshire,Oxford,UK
+"Baxter, Mr Quigg Edmond",1st,24,male,0,NY,Buffalo,US
+"Beattie, Mr Thomson",1st,36,male,0,Greater London,London,UK
+"Beckwith, Mr Richard Leord",1st,37,male,1,Moscow,Moscow,Russia
+"Beckwith, Mrs Richard Leord (Sallie Monypeny)",1st,47,female,1,Oxfordshire,Oxford,UK
+"Behr, Mr Karl Howell",1st,26,male,1,NY,Buffalo,US
+"Birnbaum, Mr Jakob",1st,25,male,0,Greater London,London,UK
+"Bishop, Mr Dickinson H",1st,25,male,1,Moscow,Moscow,Russia
+"Bishop, Mrs Dickinson H (Helen Walton)",1st,19,female,1,Oxfordshire,Oxford,UK
+"Bjornstrm-Steffansson, Mr Mauritz Hakan",1st,28,male,1,NY,Buffalo,US
+"Blackwell, Mr Stephen Weart",1st,45,male,0,Greater London,London,UK
+"Blank, Mr Henry",1st,39,male,1,Moscow,Moscow,Russia
+"Bonnell, Miss Caroline",1st,30,female,1,Oxfordshire,Oxford,UK
+"Bonnell, Miss Elizabeth",1st,58,female,1,NY,Buffalo,US
+"Borebank, Mr John James",1st,,male,0,Greater London,London,UK
+"Bowen, Miss Grace Scott",1st,45,female,1,Moscow,Moscow,Russia
+"Bowerman, Miss Elsie Edith",1st,22,female,1,Oxfordshire,Oxford,UK
+"Bradley, Mr George",1st,,male,1,NY,Buffalo,US
+"Brady, Mr John Bertram",1st,41,male,0,Greater London,London,UK
+"Brandeis, Mr Emil",1st,48,male,0,Moscow,Moscow,Russia
+"Brewe, Dr Arthur Jackson",1st,,male,0,Oxfordshire,Oxford,UK
+"Brown, Mrs James Joseph (Margaret Molly"" Tobin)""",1st,44,female,1,NY,Buffalo,US
+"Brown, Mrs John Murray (Caroline Lane Lamson)",1st,59,female,1,Greater London,London,UK
+"Bucknell, Mrs William Robert (Emma Eliza Ward)",1st,60,female,1,Moscow,Moscow,Russia
+"Butt, Major Archibald Willingham",1st,45,male,0,Oxfordshire,Oxford,UK
+"Calderhead, Mr Edward P",1st,,male,1,NY,Buffalo,US
+"Candee, Mrs Edward (Helen Churchill Hungerford)",1st,53,female,1,Greater London,London,UK
+"Cardeza, Mrs James Warburton Martinez (Charlotte Wardle Drake)",1st,58,female,1,Moscow,Moscow,Russia
+"Cardeza, Mr Thomas Drake Martinez",1st,36,male,1,Oxfordshire,Oxford,UK
+"Carlsson, Mr Frans Olof",1st,33,male,0,NY,Buffalo,US
+"Carrau, Mr Francisco M",1st,,male,0,Greater London,London,UK
+"Carrau, Mr Jose Pedro",1st,,male,0,Moscow,Moscow,Russia
+"Carter, Mr William Ernest",1st,36,male,1,Oxfordshire,Oxford,UK
+"Carter, Mrs William Ernest (Lucile Polk)",1st,36,female,1,NY,Buffalo,US
+"Carter, Miss Lucile Polk",1st,14,female,1,Greater London,London,UK
+"Carter, Master William T II",1st,11,male,1,Moscow,Moscow,Russia
+"Case, Mr Howard Brown",1st,49,male,0,Oxfordshire,Oxford,UK
+"Cassebeer, Mrs Henry Arthur jr (Genevieve Fosdick)",1st,,female,1,NY,Buffalo,US
+"Cavendish, Mr Tyrell William",1st,36,male,0,Greater London,London,UK
+"Cavendish, Mrs Tyrell William Julia Florence Siegel",1st,,female,1,Moscow,Moscow,Russia
+"Chaffee, Mr Herbert Fuller",1st,46,male,0,Oxfordshire,Oxford,UK
+"Chaffee, Mrs Herbert Fuller (Carrie Constance Toogood)",1st,47,female,1,NY,Buffalo,US
+"Chambers, Mr Norman Campbell",1st,27,male,1,Greater London,London,UK
+"Chambers, Mrs Norman Campbell (Bertha Griggs)",1st,31,female,1,Moscow,Moscow,Russia
+"Cherry, Miss Gladys",1st,,female,1,Oxfordshire,Oxford,UK
+"Chevre, Mr Paul",1st,,male,1,NY,Buffalo,US
+"Chibll (Bowerman), Mrs Edith Martha",1st,,female,1,Greater London,London,UK
+"Chisholm, Mr Roderick Robert",1st,,male,0,Moscow,Moscow,Russia
+"Clark, Mr Walter Miller",1st,27,male,0,Oxfordshire,Oxford,UK
+"Clark, Mrs Walter Miller (Virginia McDowell)",1st,26,female,1,NY,Buffalo,US
+"Clifford, Mr George Quincy",1st,,male,0,Greater London,London,UK
+"Colley, Mr Edward Pomeroy",1st,,male,0,Moscow,Moscow,Russia
+"Compton, Mrs Alexander Taylor (Mary Eliza Ingersoll)",1st,64,female,1,Oxfordshire,Oxford,UK
+"Compton, Mr Alexander Taylor, Jr",1st,37,male,0,NY,Buffalo,US
+"Compton, Miss Sara Rebecca",1st,39,female,1,Greater London,London,UK
+"Cornell, Mrs Robert Clifford (Malvi Helen Lamson)",1st,55,female,1,Moscow,Moscow,Russia
+"Crafton, Mr John Bertram",1st,,male,0,Oxfordshire,Oxford,UK
+"Crosby, Captain Edward Gifford",1st,70,male,0,NY,Buffalo,US
+"Crosby, Mrs Edward Gifford (Catherine Elizabeth Halstead)",1st,69,female,1,Greater London,London,UK
+"Crosby, Miss Harriet R",1st,36,female,1,Moscow,Moscow,Russia
+"Cumings, Mr John Bradley",1st,39,male,0,Oxfordshire,Oxford,UK
+"Cumings, Mrs John Bradley (Florence Briggs Thayer)",1st,38,female,1,NY,Buffalo,US
+"Daly, Mr Peter Denis ",1st,,male,1,Greater London,London,UK
+"Daniel, Mr Robert Williams",1st,27,male,1,Moscow,Moscow,Russia
+"Davidson, Mr Thornton",1st,31,male,0,Oxfordshire,Oxford,UK
+"Davidson, Mrs Thornton (Orian Hays)",1st,27,female,1,NY,Buffalo,US
+"de Villiers, Madame Berthe",1st,,female,1,Greater London,London,UK
+"Dick, Mr Albert Adrian",1st,31,male,1,Moscow,Moscow,Russia
+"Dick, Mrs Albert Adrian Vera Gillespie",1st,17,female,1,Oxfordshire,Oxford,UK
+"Dodge, Dr Washington",1st,,male,1,NY,Buffalo,US
+"Dodge, Mrs Washington (Ruth Vidaver)",1st,,female,1,Greater London,London,UK
+"Dodge, Master Washington",1st,4,male,1,Moscow,Moscow,Russia
+"Douglas, Mrs Frederick Charles (Suzette Baxter)",1st,27,female,1,Oxfordshire,Oxford,UK
+"Douglas, Mr Walter Dold",1st,50,male,0,NY,Buffalo,US
+"Douglas, Mrs Walter Dold (Mahala Dutton)",1st,48,female,1,Greater London,London,UK
+"Duff Gordon, Sir Cosmo Edmund",1st,49,male,1,Moscow,Moscow,Russia
+"Duff Gordon, Lady (Lucille Wallace Sutherland)",1st,48,female,1,Oxfordshire,Oxford,UK
+"Dulles, Mr William Crothers",1st,39,male,0,NY,Buffalo,US
+"Earnshaw, Mrs Boulton (Olive Potter)",1st,23,female,1,Greater London,London,UK
+"Eustis, Miss Elizabeth Mussey",1st,53,female,1,Moscow,Moscow,Russia
+"Evans, Miss Edith Corse",1st,36,female,0,Oxfordshire,Oxford,UK
+"Flegenheim, Mrs Alfred (Antoinette)",1st,,female,1,NY,Buffalo,US
+"Flynn, Mr John Irving",1st,,male,1,Greater London,London,UK
+"Foreman, Mr Benjamin Laventall",1st,30,male,0,Moscow,Moscow,Russia
+"Fortune, Miss Alice Elizabeth",1st,24,female,1,Oxfordshire,Oxford,UK
+"Fortune, Mr Charles Alexander",1st,19,male,0,NY,Buffalo,US
+"Fortune, Miss Ethel Flora",1st,28,female,1,Greater London,London,UK
+"Fortune, Miss Mabel",1st,23,female,1,Moscow,Moscow,Russia
+"Fortune, Mr Mark",1st,64,male,0,Oxfordshire,Oxford,UK
+"Fortune, Mrs Mark (Mary McDougald)",1st,60,female,1,NY,Buffalo,US
+"Franklin, Mr Thomas Parham",1st,,male,0,Greater London,London,UK
+"Frauenthal, Dr Henry William",1st,49,male,1,Moscow,Moscow,Russia
+"Frauenthal, Mrs Henry William (Clara Heinsheimer)",1st,,female,1,Oxfordshire,Oxford,UK
+"Frauenthal, Mr Isaac Gerald",1st,44,male,1,NY,Buffalo,US
+"Frolicher, Miss Marguerite",1st,22,female,1,Greater London,London,UK
+"Frolicher-Stehli, Mr Maxmillian",1st,60,male,1,Moscow,Moscow,Russia
+"Frolicher-Stehli, Mrs Maxmillian (Margaretha Emerentia Stehli)",1st,48,female,1,Oxfordshire,Oxford,UK
+"Futrelle, Mr Jacques",1st,37,male,0,NY,Buffalo,US
+"Futrelle, Mrs Jacques (May Peel)",1st,35,female,1,Greater London,London,UK
+"Gee, Mr Arthur H",1st,47,male,0,Moscow,Moscow,Russia
+"Gibson, Miss Dorothy",1st,22,female,1,Oxfordshire,Oxford,UK
+"Gibson, Mrs Leord (Pauline C Boeson)",1st,45,female,1,NY,Buffalo,US
+"Goldenberg, Mr Samuel L",1st,49,male,1,Greater London,London,UK
+"Goldenberg, Mrs Samuel L (Edwiga Grabowsko)",1st,,female,1,Moscow,Moscow,Russia
+"Goldschmidt, Mr George B",1st,71,male,0,Oxfordshire,Oxford,UK
+"Gracie, Colonel Archibald IV",1st,54,male,1,NY,Buffalo,US
+"Graham, Mr George Edward",1st,38,male,0,Greater London,London,UK
+"Graham, Miss Margaret Edith",1st,19,female,1,Moscow,Moscow,Russia
+"Graham, Mrs William Thompson (Edith Junkins)",1st,58,female,1,Oxfordshire,Oxford,UK
+"Greenfield, Mrs Leo David (Blanche Strouse)",1st,45,female,1,NY,Buffalo,US
+"Greenfield, Mr William Bertram",1st,23,male,1,Greater London,London,UK
+"Guggenheim, Mr Benjamin",1st,46,male,0,Moscow,Moscow,Russia
+"Harder, Mr George Achilles",1st,25,male,1,Oxfordshire,Oxford,UK
+"Harder, Mrs George Achilles (Dorothy Ann)",1st,21,female,1,NY,Buffalo,US
+"Harper, Mr Henry Sleeper",1st,48,male,1,Greater London,London,UK
+"Harper, Mrs Henry Sleeper (My Haxtun)",1st,49,female,1,Moscow,Moscow,Russia
+"Harris, Mr Henry Birkhardt",1st,45,male,0,Oxfordshire,Oxford,UK
+"Harris, Mrs Henry Birkhardt (Irene Wallach)",1st,36,female,1,NY,Buffalo,US
+"Hawksford, Mr Walter James",1st,,male,1,Greater London,London,UK
+"Hays, Mr Charles Melville",1st,55,male,0,Moscow,Moscow,Russia
+"Hays, Mrs Charles Melville (Clara Jennings Gregg)",1st,52,female,1,Oxfordshire,Oxford,UK
+"Hays, Miss Margaret Bechstein",1st,24,female,1,NY,Buffalo,US
+"Head, Mr Christopher",1st,,male,0,Greater London,London,UK
+"Hilliard, Mr Herbert Henry",1st,,male,0,Moscow,Moscow,Russia
+"Hipkins, Mr William Edward",1st,,male,0,Oxfordshire,Oxford,UK
+"Hippach, Miss Jean Gertrude",1st,16,female,1,NY,Buffalo,US
+"Hippach, Mrs Louis Albert (Ida Sophia Fischer)",1st,44,female,1,Greater London,London,UK
+"Hogeboom, Mrs John C (An Andrews)",1st,51,female,1,Moscow,Moscow,Russia
+"Holverson, Mr Alexander Oskar",1st,42,male,0,Oxfordshire,Oxford,UK
+"Holverson, Mrs Alexander Oskar (Mary Aline Towner)",1st,35,female,1,NY,Buffalo,US
+"Homer, Mr Harry",1st,35,male,1,Greater London,London,UK
+"Hoyt, Mr Frederick Maxfield",1st,38,male,1,Moscow,Moscow,Russia
+"Hoyt, Mrs Frederick Maxfield (Jane Anne Forby)",1st,35,female,1,Oxfordshire,Oxford,UK
+"Hoyt, Mr William F",1st,,male,0,NY,Buffalo,US
+"Isham, Miss Anne Elizabeth",1st,50,female,0,Greater London,London,UK
+"Ismay, Mr Joseph Bruce",1st,49,male,1,Moscow,Moscow,Russia
+"Jones, Mr Charles Cresson",1st,46,male,0,Oxfordshire,Oxford,UK
+"Julian, Mr Henry Forbes",1st,,male,0,NY,Buffalo,US
+"Kent, Mr Edward Austin",1st,58,male,0,Greater London,London,UK
+"Kenyon, Mr Frederick R",1st,41,male,0,Moscow,Moscow,Russia
+"Kenyon, Mrs Frederick R (Marion)",1st,,female,1,Oxfordshire,Oxford,UK
+"Kimball, Mr Edwin Nelson Jr",1st,42,male,1,NY,Buffalo,US
+"Kimball, Mrs Edwin Nelson Jr (Gertrude Parsons)",1st,40,female,1,Greater London,London,UK
+"Klaber, Mr Herman",1st,,male,0,Moscow,Moscow,Russia
+"Leader, Dr Alice Farnham",1st,,female,1,Oxfordshire,Oxford,UK
+"Lewy, Mr Ervin G",1st,,male,0,NY,Buffalo,US
+"Lindeberg-Lind, Mr Erik Gustaf",1st,42,male,0,Greater London,London,UK
+"Lindstrom, Mrs Carl Johan (Sigrid Posse)",1st,55,female,1,Moscow,Moscow,Russia
+"Lines, Mrs Ernest H (Elizabeth Lindsey James)",1st,50,female,1,Oxfordshire,Oxford,UK
+"Lines, Miss Mary Conover",1st,16,female,1,NY,Buffalo,US
+"Lingrey, Mr Edward",1st,,male,0,Greater London,London,UK
+"Long, Mr Milton Clyde",1st,29,male,0,Moscow,Moscow,Russia
+"Longley, Miss Gretchen Fiske",1st,21,female,1,Oxfordshire,Oxford,UK
+"Loring, Mr Joseph Holland",1st,30,male,0,NY,Buffalo,US
+"Madill, Miss Georgette Alexandra",1st,15,female,1,Greater London,London,UK
+"Maguire, Mr John Edward",1st,30,male,0,Moscow,Moscow,Russia
+"Marechal, Mr Pierre",1st,,male,1,Oxfordshire,Oxford,UK
+"Marvin, Mr Daniel Warner",1st,,male,0,NY,Buffalo,US
+"Marvin, Mrs Daniel Warner (Mary Graham Carmichael Farquarson)",1st,,female,1,Greater London,London,UK
+"McCaffry, Mr Thomas Francis",1st,46,male,0,Moscow,Moscow,Russia
+"McCarthy, Mr Timothy J",1st,54,male,0,Oxfordshire,Oxford,UK
+"McGough, Mr James R",1st,36,male,1,NY,Buffalo,US
+"Meyer, Mr Edgar Joseph",1st,28,male,0,Greater London,London,UK
+"Meyer, Mrs Edgar Joseph (Leila Saks)",1st,,female,1,Moscow,Moscow,Russia
+"Millet, Mr Francis Davis",1st,65,male,0,Oxfordshire,Oxford,UK
+"Mihan, Miss Daisy E",1st,33,female,1,NY,Buffalo,US
+"Mihan, Dr William Edward",1st,44,male,0,Greater London,London,UK
+"Mihan, Mrs William Edward (Lillian E Thorpe)",1st,37,female,1,Moscow,Moscow,Russia
+"Mock, Mr Philip E",1st,,male,1,Oxfordshire,Oxford,UK
+"Molson, Mr Harry Markland",1st,55,male,0,NY,Buffalo,US
+"Moore, Mr Clarence Bloomfield",1st,47,male,0,Greater London,London,UK
+"tsch, Mr Charles H",1st,36,male,0,Moscow,Moscow,Russia
+"Newell, Mr Arthur Webster",1st,58,male,0,Oxfordshire,Oxford,UK
+"Newell, Miss Madeleine",1st,31,female,1,NY,Buffalo,US
+"Newell, Miss Marjorie",1st,23,female,1,Greater London,London,UK
+"Newsom, Miss Helen Monypeny",1st,19,female,1,Moscow,Moscow,Russia
+"Nicholson, Mr Arthur Ernest",1st,64,male,0,Oxfordshire,Oxford,UK
+"Omont, Mr A Fernd",1st,,male,1,NY,Buffalo,US
+"Ostby, Mr Engelhart Cornelius",1st,64,male,0,Greater London,London,UK
+"Ostby, Miss Helen Raghnild",1st,22,female,1,Moscow,Moscow,Russia
+"Ovies y Rodriguez, Mr Servando",1st,28,male,0,Oxfordshire,Oxford,UK
+"Parr, Mr William Henry Marsh",1st,,male,0,NY,Buffalo,US
+"Partner, Mr Austin",1st,,male,0,Greater London,London,UK
+"Payne, Mr Vivian Ponsonby",1st,22,male,0,Moscow,Moscow,Russia
+"Pears, Mr Thomas",1st,,male,0,Oxfordshire,Oxford,UK
+"Pears, Mrs Thomas (Edith)",1st,,female,1,NY,Buffalo,US
+"Pesco, Mr Victor de Satode",1st,18,male,0,Greater London,London,UK
+"Pesco, Mrs Victor de Satode (Josefa de Soto)",1st,17,female,1,Moscow,Moscow,Russia
+"Peuchen, Major Arthur Godfrey",1st,52,male,1,Oxfordshire,Oxford,UK
+"Porter, Mr Walter Chamberlain",1st,46,male,0,NY,Buffalo,US
+"Potter, Mrs Thomas, Jr (Lily Alexenia Wilson)",1st,56,female,1,Greater London,London,UK
+"Reuchlin, Jonkheer John George",1st,,male,0,Moscow,Moscow,Russia
+"Rheims, Mr George Lucien",1st,,male,1,Oxfordshire,Oxford,UK
+"Robert, Mrs Edward Scott (Elisabeth Walton McMillan)",1st,43,female,1,NY,Buffalo,US
+"Roebling, Mr Washington Augustus 2nd",1st,31,male,0,Greater London,London,UK
+"Romaine, Mr Charles Hallace",1st,,male,1,Moscow,Moscow,Russia
+"Rood, Mr Hugh R",1st,,male,0,Oxfordshire,Oxford,UK
+"Rosenbaum (Russell), Miss Edith Louise",1st,33,female,1,NY,Buffalo,US
+"Ross, Mr John Hugo",1st,,male,0,Greater London,London,UK
+"Rothes, the Countess of (Noel Lucy Martha Dyer-Edwardes)",1st,27,female,1,Moscow,Moscow,Russia
+"Rothschild, Mr Martin",1st,55,male,0,Oxfordshire,Oxford,UK
+"Rothschild, Mrs Martin (Elizabeth L Barrett)",1st,54,female,1,NY,Buffalo,US
+"Rowe, Mr Alfred G",1st,,male,0,Greater London,London,UK
+"Ryerson, Mr Arthur Larned",1st,61,male,0,Moscow,Moscow,Russia
+"Ryerson, Mrs Arthur Larned (Emily Maria Borie)",1st,48,female,1,Oxfordshire,Oxford,UK
+"Ryerson, Miss Emily Borie",1st,18,female,1,NY,Buffalo,US
+"Ryerson, Master John Borie",1st,13,male,1,Greater London,London,UK
+"Ryerson, Miss Susan (Suzette) Parker",1st,21,female,1,Moscow,Moscow,Russia
+"Saalfeld, Mr Adolphe",1st,,male,1,Oxfordshire,Oxford,UK
+"Salomon, Mr Abraham L",1st,,male,1,NY,Buffalo,US
+"Schabert, Mrs Paul (Emma Mock)",1st,,female,1,Greater London,London,UK
+"Seward, Mr Frederic Kimber",1st,34,male,1,Moscow,Moscow,Russia
+"Shutes, Miss Elizabeth W",1st,40,female,1,Oxfordshire,Oxford,UK
+"Silverthorne, Mr Spencer Victor",1st,36,male,1,NY,Buffalo,US
+"Silvey, Mr William Baird",1st,50,male,0,Greater London,London,UK
+"Silvey, Mrs William Baird (Alice Munger)",1st,39,female,1,Moscow,Moscow,Russia
+"Simonius-Blumer, Col Alfons",1st,56,male,1,Oxfordshire,Oxford,UK
+"Sloper, Mr William Thompson",1st,28,male,1,NY,Buffalo,US
+"Smart, Mr John Montgomery",1st,56,male,0,Greater London,London,UK
+"Smith, Mr James Clinch",1st,56,male,0,Moscow,Moscow,Russia
+"Smith, Mr Lucien Philip",1st,24,male,0,Oxfordshire,Oxford,UK
+"Smith, Mrs Lucien Philip (Mary Eloise Hughes",1st,18,female,1,NY,Buffalo,US
+"Smith, Mr Richard William",1st,,male,0,Greater London,London,UK
+"Snyder, Mr John Pillsbury",1st,24,male,1,Moscow,Moscow,Russia
+"Snyder, Mrs John Pillsbury (Nelle Stevenson)",1st,23,female,1,Oxfordshire,Oxford,UK
+"Spedden, Mr Frederick Oakley",1st,45,male,1,NY,Buffalo,US
+"Spedden, Mrs Frederick Oakley (Margaretta Corning Stone)",1st,40,female,1,Greater London,London,UK
+"Spedden, Master Robert Douglas",1st,6,male,1,Moscow,Moscow,Russia
+"Spencer, Mr William Augustus",1st,57,male,0,Oxfordshire,Oxford,UK
+"Spencer, Mrs William Augustus (Marie Eugenie)",1st,,female,1,NY,Buffalo,US
+"Staehlin, Dr Max",1st,32,male,1,Greater London,London,UK
+"Stead, Mr William Thomas",1st,62,male,0,Moscow,Moscow,Russia
+"Stengel, Mr Charles Emil Henry",1st,54,male,1,Oxfordshire,Oxford,UK
+"Stengel, Mrs Charles Emil Henry (Annie May Morris)",1st,43,female,1,NY,Buffalo,US
+"Stephenson, Mrs Walter Bertram (Martha Eustis)",1st,52,female,1,Greater London,London,UK
+"Stewart, Mr Albert A",1st,,male,0,Moscow,Moscow,Russia
+"Stone, Mrs George Nelson (Martha E)",1st,62,female,1,Oxfordshire,Oxford,UK
+"Straus, Mr Isidor",1st,67,male,0,NY,Buffalo,US
+"Straus, Mrs Isidor (Ida Blun)",1st,63,female,0,Greater London,London,UK
+"Sutton, Mr Frederick",1st,61,male,0,Moscow,Moscow,Russia
+"Swift, Mrs Frederick Joel (Margaret Welles Barron)",1st,46,female,1,Oxfordshire,Oxford,UK
+"Taussig, Mr Emil",1st,52,male,0,NY,Buffalo,US
+"Taussig, Mrs Emil (Tillie Mandelbaum)",1st,39,female,1,Greater London,London,UK
+"Taussig, Miss Ruth",1st,18,female,1,Moscow,Moscow,Russia
+"Taylor, Mr Elmer Zebley",1st,48,male,1,Oxfordshire,Oxford,UK
+"Taylor, Mrs Elmer Zebley (Juliet Cummins Wright)",1st,,female,1,NY,Buffalo,US
+"Thayer, Mr John Borland",1st,49,male,0,Greater London,London,UK
+"Thayer, Mrs John Borland (Marian Longstreth Morris)",1st,39,female,1,Moscow,Moscow,Russia
+"Thayer, Mr John Borland, jr",1st,17,male,1,Oxfordshire,Oxford,UK
+"Thorne, Mr George (alias of: Mr George Rosenshine)",1st,46,male,0,NY,Buffalo,US
+"Thorne, Mrs Gertrude Maybelle",1st,,female,1,Greater London,London,UK
+"Tucker, Mr Gilbert Milligan, jr",1st,31,male,1,Moscow,Moscow,Russia
+"Uruchurtu, Mr Manuel E",1st,,male,0,Oxfordshire,Oxford,UK
+"Van Derhoef, Mr Wyckoff",1st,61,male,0,NY,Buffalo,US
+"Walker, Mr William Anderson",1st,47,male,0,Greater London,London,UK
+"Warren, Mr Frank Manley",1st,64,male,0,Moscow,Moscow,Russia
+"Warren, Mrs Frank Manley (An S Atkinson)",1st,60,female,1,Oxfordshire,Oxford,UK
+"Weir, Col John",1st,60,male,0,NY,Buffalo,US
+"White, Mrs J Stuart (Ella Holmes)",1st,55,female,1,Greater London,London,UK
+"White, Mr Percival Wayland",1st,54,male,0,Moscow,Moscow,Russia
+"White, Mr Richard Frasar",1st,21,male,0,Oxfordshire,Oxford,UK
+"Wick, Mr George Dennick",1st,57,male,0,NY,Buffalo,US
+"Wick, Mrs George Dennick (Martha Hitchcock)",1st,45,female,1,Greater London,London,UK
+"Wick, Miss Mary talie",1st,31,female,1,Moscow,Moscow,Russia
+"Widener, Mr George Dunton",1st,50,male,0,Oxfordshire,Oxford,UK
+"Widener, Mrs George Dunton (Eleanor Elkins)",1st,50,female,1,NY,Buffalo,US
+"Widener, Mr Harry Elkins",1st,27,male,0,Greater London,London,UK
+"Willard, Miss Constance",1st,20,female,1,Moscow,Moscow,Russia
+"Williams, Mr Charles Duane",1st,51,male,0,Oxfordshire,Oxford,UK
+"Williams, Mr Fletcher Lambert",1st,,male,0,NY,Buffalo,US
+"Williams, Mr Richard Norris II",1st,21,male,1,Greater London,London,UK
+"Woolner, Mr Hugh",1st,,male,1,Moscow,Moscow,Russia
+"Wright, Mr George",1st,,male,0,Oxfordshire,Oxford,UK
+"Young, Miss Marie Grice",1st,36,female,1,NY,Buffalo,US
+"Barber, Ms ",1st,,female,1,Greater London,London,UK
+"Bazzani, Ms Albi",1st,,female,1,Moscow,Moscow,Russia
+"Bidois, Miss Rosalie",1st,,female,1,Oxfordshire,Oxford,UK
+"Bird, Ms Ellen",1st,,female,1,NY,Buffalo,US
+"Bissetti, Ms Amelia",1st,,female,1,Greater London,London,UK
+"Burns, Ms Elizabeth Margaret",1st,,female,1,Moscow,Moscow,Russia
+"Chaudanson, Ms         Victorine",1st,,female,1,Oxfordshire,Oxford,UK
+"Cleaver, Ms Alice",1st,,female,1,NY,Buffalo,US
+"Daniels, Ms Sarah",1st,,female,1,Greater London,London,UK
+"Endres, Miss Caroline Louise",1st,,female,1,Moscow,Moscow,Russia
+"Farthing, Mr John",1st,,male,0,Oxfordshire,Oxford,UK
+"Fleming, Ms Margaret",1st,,female,0,NY,Buffalo,US
+"Francatelli, Ms Laura Mabel",1st,,female,1,Greater London,London,UK
+"Fry, Mr Richard",1st,,male,0,Moscow,Moscow,Russia
+"Geiger, Miss Emily ",1st,,female,1,Oxfordshire,Oxford,UK
+"Giglio, Mr Victor",1st,,male,0,NY,Buffalo,US
+"Harrington, Mr Charles",1st,,male,0,Greater London,London,UK
+"Harrison, Mr William   Henry",1st,40,male,0,Moscow,Moscow,Russia
+"Hassah, Mr Hamad",1st,,male,0,Oxfordshire,Oxford,UK
+"Icabad (Icabod), Ms",1st,,female,1,NY,Buffalo,US
+"Keeping, Mr Edwin",1st,32,male,0,Greater London,London,UK
+"Kenchen, Ms Amelia",1st,,female,1,Moscow,Moscow,Russia
+"LeRoy, Miss Berthe",1st,,female,1,Oxfordshire,Oxford,UK
+"Lesneur, Mr Gustave",1st,,male,0,NY,Buffalo,US
+"Maloney, Ms",1st,,female,1,Greater London,London,UK
+"Oliva, Mlle",1st,,female,0,Moscow,Moscow,Russia
+"Pericault, Ms",1st,,female,1,Oxfordshire,Oxford,UK
+"Ringhini, Mr Sante",1st,33,male,0,NY,Buffalo,US
+"Robbins, Mr Victor",1st,,male,0,Greater London,London,UK
+"Segesser, Mlle Emma",1st,,female,1,Moscow,Moscow,Russia
+"Seredeca, Ms",1st,,female,0,Oxfordshire,Oxford,UK
+"Ward, Ms An",1st,,female,0,NY,Buffalo,US
+"Wilson, Ms Helen",1st,,female,1,Greater London,London,UK
+"Abelson, Mr Samuel",2nd,30,male,0,Moscow,Moscow,Russia
+"Abelson, Mrs Samuel (An)",2nd,28,female,1,Oxfordshire,Oxford,UK
+"Andrew, Mr Edgar Samuel",2nd,18,male,0,NY,Buffalo,US
+"Andrew, Mr Frank",2nd,,male,0,Greater London,London,UK
+"Angle, Mr William A",2nd,34,male,0,Moscow,Moscow,Russia
+"Angle, Mrs William A (Florence)",2nd,32,female,1,Oxfordshire,Oxford,UK
+"Ashby, Mr John",2nd,57,male,0,NY,Buffalo,US
+"Bailey, Mr Percy Andrew",2nd,18,male,0,Greater London,London,UK
+"Baimbrigge, Mr Charles R",2nd,23,male,0,Moscow,Moscow,Russia
+"Balls, Mrs Ada E Hall",2nd,36,female,1,Oxfordshire,Oxford,UK
+"Banfield, Mr Frederick J",2nd,28,male,0,NY,Buffalo,US
+"Bateman, Rev Robert James",2nd,51,male,0,Greater London,London,UK
+"Beane, Mr Edward",2nd,32,male,1,Moscow,Moscow,Russia
+"Beane, Mrs Edward (Ethel Clarke)",2nd,19,female,1,Oxfordshire,Oxford,UK
+"Beauchamp, Mr Henry James",2nd,28,male,0,NY,Buffalo,US
+"Becker, Mrs Allen Oliver (Nellie E Baumgardner)",2nd,36,female,1,Greater London,London,UK
+"Becker, Miss Marion Louise",2nd,4,female,1,Moscow,Moscow,Russia
+"Becker, Master Richard F",2nd,1,male,1,Oxfordshire,Oxford,UK
+"Becker, Miss Ruth Elizabeth",2nd,12,female,1,NY,Buffalo,US
+"Beesley, Mr Lawrence",2nd,34,male,1,Greater London,London,UK
+"Bentham, Miss Lilian W",2nd,19,female,1,Moscow,Moscow,Russia
+"Berriman, Mr William S",2nd,23,male,0,Oxfordshire,Oxford,UK
+"Botsford, Mr William Hull",2nd,26,male,0,NY,Buffalo,US
+"Bowenur, Mr Solomon",2nd,,male,0,Greater London,London,UK
+"Bracken, Mr James H",2nd,27,male,0,Moscow,Moscow,Russia
+"Brown, Miss Edith E",2nd,15,female,1,Oxfordshire,Oxford,UK
+"Brown, Mr Thomas William Solomon",2nd,45,male,0,NY,Buffalo,US
+"Brown, Mrs Thomas William Solomon (Elizabeth C)",2nd,40,female,1,Greater London,London,UK
+"Bryhl, Miss Dagmar",2nd,20,female,1,Moscow,Moscow,Russia
+"Bryhl, Mr Kurt Arnold Gottfrid",2nd,25,male,0,Oxfordshire,Oxford,UK
+"Buss, Miss Kate",2nd,36,female,1,NY,Buffalo,US
+"Butler, Mr Regild Fenton",2nd,25,male,0,Greater London,London,UK
+"Byles, Rev Thomas Roussel D",2nd,,male,0,Moscow,Moscow,Russia
+"Bystrom, Mrs Caroli",2nd,42,female,1,Oxfordshire,Oxford,UK
+"Caldwell, Mr Albert Francis",2nd,26,male,1,NY,Buffalo,US
+"Caldwell, Mrs Albert Francis (Sylvia Mae Harbaugh)",2nd,26,female,1,Greater London,London,UK
+"Caldwell, Master Alden Gates",2nd,0.83,male,1,Moscow,Moscow,Russia
+"Cameron, Miss Clear",2nd,31,female,1,Oxfordshire,Oxford,UK
+"Campbell, Mr William",2nd,,male,0,NY,Buffalo,US
+"Carbines, Mr William",2nd,19,male,0,Greater London,London,UK
+"Carter, Rev Ernest Courtey",2nd,54,male,0,Moscow,Moscow,Russia
+"Carter, Mrs Ernest Courtey (Lillian Hughes)",2nd,44,female,0,Oxfordshire,Oxford,UK
+"Chapman, Mr Charles Henry",2nd,52,male,0,NY,Buffalo,US
+"Chapman, Mr John Henry",2nd,30,male,0,Greater London,London,UK
+"Chapman, Mrs John Henry (Elizabeth Lawry)",2nd,30,female,0,Moscow,Moscow,Russia
+"Christy, Mrs Alice Frances",2nd,,female,1,Oxfordshire,Oxford,UK
+"Christy, Miss Julie",2nd,,female,1,NY,Buffalo,US
+"Clarke, Mr Charles V",2nd,29,male,0,Greater London,London,UK
+"Clarke, Mrs Charles V (Ada Maria)",2nd,,female,1,Moscow,Moscow,Russia
+"Coleridge, Mr Regild Charles",2nd,29,male,0,Oxfordshire,Oxford,UK
+"Collander, Mr Erik",2nd,27,male,0,NY,Buffalo,US
+"Collett, Mr Sidney C Stuart",2nd,24,male,1,Greater London,London,UK
+"Collyer, Mr Harvey",2nd,35,male,0,Moscow,Moscow,Russia
+"Collyer, Mrs Harvey (Charlotte Tate)",2nd,31,female,1,Oxfordshire,Oxford,UK
+"Collyer, Miss Marjorie",2nd,8,female,1,NY,Buffalo,US
+"Cook, Mrs Sele Rogers",2nd,22,female,0,Greater London,London,UK
+"Corbett, Mrs Walter H (Irene Colvin)",2nd,30,female,0,Moscow,Moscow,Russia
+"Corey, Mrs Percy C (Mary Phyllis Elizabeth Miller)",2nd,,female,0,Oxfordshire,Oxford,UK
+"Cotterill, Mr Harry",2nd,20,male,0,NY,Buffalo,US
+"Cunningham, Mr Alfred Fleming",2nd,,male,0,Greater London,London,UK
+"Davies, Mr Charles Henry",2nd,21,male,0,Moscow,Moscow,Russia
+"Davis, Mrs Agnes",2nd,49,female,1,Oxfordshire,Oxford,UK
+"Davis, Master John Morgan",2nd,8,male,1,NY,Buffalo,US
+"Davis, Miss Mary",2nd,28,female,1,Greater London,London,UK
+"Deacon, Mr Percy",2nd,18,male,0,Moscow,Moscow,Russia
+"de Brito, Mr Jose Joaquim",2nd,,male,0,Oxfordshire,Oxford,UK
+"del Carlo, Mr Sebastiano",2nd,28,male,0,NY,Buffalo,US
+"del Carlo, Mrs Sebastiano (Argenia Genovese)",2nd,22,female,1,Greater London,London,UK
+"Denbury, Mr Herbert",2nd,25,male,0,Moscow,Moscow,Russia
+"Dibden, Mr William",2nd,18,male,0,Oxfordshire,Oxford,UK
+"Doling, Mrs Ada",2nd,32,female,1,NY,Buffalo,US
+"Doling, Miss Elsie",2nd,18,female,1,Greater London,London,UK
+"Downton (?Douton), Mr William James",2nd,,male,0,Moscow,Moscow,Russia
+"Drew, Mr James Vivian",2nd,42,male,0,Oxfordshire,Oxford,UK
+"Drew, Mrs James Vivian (Lulu Thorne Christian)",2nd,34,female,1,NY,Buffalo,US
+"Drew, Master Marshall Brines",2nd,8,male,1,Greater London,London,UK
+"Duran y More, Miss Asuncion",2nd,,female,1,Moscow,Moscow,Russia
+"Duran y More, Miss Florenti",2nd,,female,1,Oxfordshire,Oxford,UK
+"Eitemiller, Mr George Floyd",2nd,23,male,0,NY,Buffalo,US
+"Ender, Mr Ingvar",2nd,21,male,0,Greater London,London,UK
+"Fahlstrom, Mr Arne Jos",2nd,19,male,0,Moscow,Moscow,Russia
+"Faunthorpe, Mr Harry",2nd,,male,0,Oxfordshire,Oxford,UK
+"Faunthorpe, Mrs Lizzie (see Wilkinson, E)",2nd,,female,1,NY,Buffalo,US
+"Fillbrook, Mr Charles",2nd,,male,0,Greater London,London,UK
+"Fox, Mr Stanley H",2nd,38,male,0,Moscow,Moscow,Russia
+"Frost, Mr Anthony (Archie) W",2nd,,male,0,Oxfordshire,Oxford,UK
+"Funk, Miss Annie C",2nd,38,female,0,NY,Buffalo,US
+"Fynney, Mr Joseph J",2nd,35,male,0,Greater London,London,UK
+"Gale, Mr Harry",2nd,35,male,0,Moscow,Moscow,Russia
+"Gale, Mr Shadrach",2nd,38,male,0,Oxfordshire,Oxford,UK
+"Garside, Miss Ethel",2nd,24,female,1,NY,Buffalo,US
+"Gaskell, Mr Alfred",2nd,16,male,0,Greater London,London,UK
+"Gavey, Mr Lawrence",2nd,26,male,0,Moscow,Moscow,Russia
+"Gilbert, Mr William",2nd,45,male,0,Oxfordshire,Oxford,UK
+"Giles, Mr Edgar",2nd,24,male,0,NY,Buffalo,US
+"Giles, Mr Frederick",2nd,21,male,0,Greater London,London,UK
+"Giles, Mr Ralph",2nd,22,male,0,Moscow,Moscow,Russia
+"Gill, Mr John W",2nd,,male,0,Oxfordshire,Oxford,UK
+"Gillespie, Mr William",2nd,34,male,0,NY,Buffalo,US
+"Givard, Mr Hans Christensen",2nd,30,male,0,Greater London,London,UK
+"Greenberg, Mr Samuel",2nd,50,male,0,Moscow,Moscow,Russia
+"Hale, Mr Regild",2nd,30,male,0,Oxfordshire,Oxford,UK
+"Hamalainen, Mrs William (An)",2nd,23,female,1,NY,Buffalo,US
+"Hamalainen, Master Viljo",2nd,1,male,1,Greater London,London,UK
+"Harbeck, Mr William H",2nd,44,male,0,Moscow,Moscow,Russia
+"Harper, Rev John",2nd,28,male,0,Oxfordshire,Oxford,UK
+"Harper, Miss Ni",2nd,6,female,1,NY,Buffalo,US
+"Harris, Mr George",2nd,30,male,1,Greater London,London,UK
+"Harris, Mr Walter",2nd,,male,0,Moscow,Moscow,Russia
+"Hart, Mr Benjamin",2nd,43,male,0,Oxfordshire,Oxford,UK
+"Hart, Mrs Benjamin (Esther)",2nd,45,female,1,NY,Buffalo,US
+"Hart, Miss Eva Miriam",2nd,7,female,1,Greater London,London,UK
+"Herman, Miss Alice",2nd,24,female,1,Moscow,Moscow,Russia
+"Herman, Miss Kate",2nd,24,female,1,Oxfordshire,Oxford,UK
+"Herman, Mr Samuel",2nd,49,male,0,NY,Buffalo,US
+"Herman, Mrs Samuel (Jane Laver)",2nd,48,female,1,Greater London,London,UK
+"Hewlett, Mrs Mary D",2nd,,female,1,Moscow,Moscow,Russia
+"Hickman, Mr Leord Mark",2nd,34,male,0,Oxfordshire,Oxford,UK
+"Hickman, Mr Lewis",2nd,32,male,0,NY,Buffalo,US
+"Hickman, Mr Stanley George",2nd,21,male,0,Greater London,London,UK
+"Hiltunen, Miss Marta",2nd,18,female,0,Moscow,Moscow,Russia
+"Hocking, Mrs Elizabeth",2nd,53,female,1,Oxfordshire,Oxford,UK
+"Hocking, Mr George",2nd,23,male,0,NY,Buffalo,US
+"Hocking, Miss Ellen (Nellie)",2nd,21,female,1,Greater London,London,UK
+"Hocking, Mr Samuel James",2nd,,male,0,Moscow,Moscow,Russia
+"Hodges, Mr Henry Price",2nd,52,male,0,Oxfordshire,Oxford,UK
+"Hold, Mr Stephen",2nd,42,male,0,NY,Buffalo,US
+"Hold, Mrs Stephen (Annie Margaret)",2nd,36,female,1,Greater London,London,UK
+"Hood, Mr Ambrose, Jr",2nd,21,male,0,Moscow,Moscow,Russia
+"Hosono, Mr Masafumi",2nd,41,male,1,Oxfordshire,Oxford,UK
+"Howard, Mr Benjamin",2nd,,male,0,NY,Buffalo,US
+"Howard, Mrs Benjamin (Ellen Truelove)",2nd,,female,0,Greater London,London,UK
+"Hunt, Mr George Henry",2nd,33,male,0,Moscow,Moscow,Russia
+"Ilett, Miss Bertha",2nd,17,female,1,Oxfordshire,Oxford,UK
+Jacobsohn Mr Samuel,,,male,0,NY,Buffalo,US
+"Jacobsohn, Mrs Sidney Samuel (Amy Frances Christy)",2nd,,female,1,Greater London,London,UK
+"Jarvis, Mr John Denzil",2nd,,male,0,Moscow,Moscow,Russia
+"Jefferys, Mr Clifford",2nd,,male,0,Oxfordshire,Oxford,UK
+"Jefferys, Mr Ernest",2nd,,male,0,NY,Buffalo,US
+"Jenkin, Mr Stephen Curnow",2nd,,male,0,Greater London,London,UK
+"Jerwan, Mrs Amin S (Marie Thuillard)",2nd,23,female,1,Moscow,Moscow,Russia
+"Kantor, Mr Sii",2nd,34,male,0,Oxfordshire,Oxford,UK
+"Kantor, Mrs Sii (Miriam Sternim)",2nd,,female,1,NY,Buffalo,US
+"Karnes, Mrs J Frank (Claire Bennett)",2nd,22,female,0,Greater London,London,UK
+"Keane, Mr Daniel",2nd,,male,0,Moscow,Moscow,Russia
+"Keane, Miss Nora A",2nd,,female,1,Oxfordshire,Oxford,UK
+"Kelly, Mrs Florence (Fannie)",2nd,45,female,1,NY,Buffalo,US
+"Kirkland, Rev Charles Leord",2nd,,male,0,Greater London,London,UK
+"Knight, Mr Robert",2nd,,male,0,Moscow,Moscow,Russia
+"Kvillner, Mr Johan Henrik Johannesson",2nd,31,male,0,Oxfordshire,Oxford,UK
+"Lahtinen, Rev William",2nd,30,male,0,NY,Buffalo,US
+"Lahtinen, Mrs William (An Sylvan)",2nd,26,female,0,Greater London,London,UK
+"Lamb, Mr John James",2nd,,male,0,Moscow,Moscow,Russia
+"Lemore, Mrs Amelia",2nd,34,female,1,Oxfordshire,Oxford,UK
+"LaRoche, Mr Joseph",2nd,26,male,0,NY,Buffalo,US
+"LaRoche, Mrs Joseph (Juliet)",2nd,22,female,1,Greater London,London,UK
+"LaRoche, Miss Louise",2nd,1,female,1,Moscow,Moscow,Russia
+"LaRoche, Miss Simonne",2nd,3,female,1,Oxfordshire,Oxford,UK
+"Lehmann, Miss Bertha",2nd,,female,1,NY,Buffalo,US
+"Leitch, Miss Jessie",2nd,,female,1,Greater London,London,UK
+"Levy, Mr Rene Jacques",2nd,,male,0,Moscow,Moscow,Russia
+"Leyson, Mr Robert William Norman",2nd,25,male,0,Oxfordshire,Oxford,UK
+"Lingan, Mr John",2nd,,male,0,NY,Buffalo,US
+"Louch, Mr Charles Alexander",2nd,48,male,0,Greater London,London,UK
+"Louch, Mrs Charles Alexander (Alice Adelaide)",2nd,,female,1,Moscow,Moscow,Russia
+"Mack, Mrs Mary",2nd,57,female,0,Oxfordshire,Oxford,UK
+"Malachard, Mr Noel",2nd,,male,0,NY,Buffalo,US
+"Mallet, Mr Albert",2nd,,male,0,Greater London,London,UK
+"Mallet, Mrs Albert (Antoinette)",2nd,,female,1,Moscow,Moscow,Russia
+"Mallet, Master Andre",2nd,2,male,1,Oxfordshire,Oxford,UK
+"Mangiavacchi, Mr Serafino Emilio",2nd,,male,0,NY,Buffalo,US
+"Mantvila, Rev Joseph",2nd,27,male,0,Greater London,London,UK
+"Marshall, Mrs Kate Louise Phillips",2nd,19,female,1,Moscow,Moscow,Russia
+"Matthews, Mr William John",2nd,30,male,0,Oxfordshire,Oxford,UK
+"Maybery, Mr Frank H",2nd,20,male,0,NY,Buffalo,US
+"McCrae, Mr Arthur Gordon",2nd,45,male,0,Greater London,London,UK
+"McCrie, Mr James Matthew",2nd,,male,0,Moscow,Moscow,Russia
+"McKane, Mr Peter D",2nd,46,male,0,Oxfordshire,Oxford,UK
+"Mellenger, Mrs Elizabeth Anne",2nd,41,female,1,NY,Buffalo,US
+"Mellenger, Miss Madeleine Violet",2nd,13,female,1,Greater London,London,UK
+"Mellor, Mr William John",2nd,19,male,1,Moscow,Moscow,Russia
+"Meyer, Mr August",2nd,30,male,0,Oxfordshire,Oxford,UK
+"Milling, Mr Jacob Christian",2nd,48,male,0,NY,Buffalo,US
+"Mitchell, Mr Henry Michael",2nd,71,male,0,Greater London,London,UK
+"Moraweck, Dr Ernest",2nd,54,male,0,Moscow,Moscow,Russia
+"Morley, Mr William",2nd,,male,0,Oxfordshire,Oxford,UK
+"Mudd, Mr Thomas C",2nd,,male,0,NY,Buffalo,US
+"Myles, Mr Thomas Francis",2nd,64,male,0,Greater London,London,UK
+"sser (srallah), Mr Nicholas",2nd,32,male,0,Moscow,Moscow,Russia
+"sser (srallah), Mrs Nicholas",2nd,18,female,1,Oxfordshire,Oxford,UK
+"vratil, Master Edmond Roger",2nd,2,male,1,NY,Buffalo,US
+"vratil, Mr Michel",2nd,32,male,0,Greater London,London,UK
+"vratil, Master Michel M",2nd,3,male,1,Moscow,Moscow,Russia
+"Nesson, Mr Israel",2nd,26,male,0,Oxfordshire,Oxford,UK
+"Nicholls, Mr Joseph Charles",2nd,19,male,0,NY,Buffalo,US
+"Norman, Mr Robert Douglas",2nd,,male,0,Greater London,London,UK
+"Nourney, Mr Alfred (aka Baron von Drachstedt)",2nd,20,male,1,Moscow,Moscow,Russia
+"Nye, Mrs Elizabeth Ramell",2nd,29,female,1,Oxfordshire,Oxford,UK
+"Otter, Mr Richard",2nd,39,male,0,NY,Buffalo,US
+"Oxenham, Mr Percy Thomas",2nd,22,male,1,Greater London,London,UK
+"Padro y Manent, Mr Julian",2nd,,male,1,Moscow,Moscow,Russia
+"Pain, Dr Alfred",2nd,24,male,0,Oxfordshire,Oxford,UK
+"Pallas y Castello, Mr Emilio",2nd,,male,1,NY,Buffalo,US
+"Parker, Mr Clifford R",2nd,28,male,0,Greater London,London,UK
+"Parkes, Mr Francis (Frank)",2nd,,male,0,Moscow,Moscow,Russia
+"Parrish, Mrs Lutie Davis",2nd,50,female,1,Oxfordshire,Oxford,UK
+"Pengelly, Mr Frederick",2nd,20,male,0,NY,Buffalo,US
+"Peruschitz, Rev Joseph M",2nd,40,male,0,Greater London,London,UK
+"Phillips, Miss Alice",2nd,42,female,1,Moscow,Moscow,Russia
+"Phillips, Mr Robert",2nd,21,male,0,Oxfordshire,Oxford,UK
+"Pinsky, Miss Rosa",2nd,32,female,1,NY,Buffalo,US
+"Ponesell, Mr Martin",2nd,34,male,0,Greater London,London,UK
+"Portaluppi, Mr Emilio",2nd,,male,1,Moscow,Moscow,Russia
+"Pulbaum, Mr Frank",2nd,,male,0,Oxfordshire,Oxford,UK
+"Quick, Mrs Frederick C (Jane Richards)",2nd,33,female,1,NY,Buffalo,US
+"Quick, Miss Phyllis May",2nd,2,female,1,Greater London,London,UK
+"Quick, Miss Winifred Vera",2nd,8,female,1,Moscow,Moscow,Russia
+"Reeves, Mr David",2nd,36,male,0,Oxfordshire,Oxford,UK
+"Renouf, Mr Peter Henry",2nd,34,male,0,NY,Buffalo,US
+"Renouf, Mrs Peter Henry (Lillian Jefferys)",2nd,30,female,1,Greater London,London,UK
+"Reyldo, Mrs Encarcion",2nd,28,female,1,Moscow,Moscow,Russia
+"Richard, Mr Emil",2nd,23,male,0,Oxfordshire,Oxford,UK
+"Richards, Master George Sidney",2nd,0.8,male,1,NY,Buffalo,US
+"Richards, Mrs Sidney (Emily Hocking)",2nd,25,female,1,Greater London,London,UK
+"Richards, Master William Rowe",2nd,3,male,1,Moscow,Moscow,Russia
+"Ridsdale, Miss Lucy",2nd,50,female,1,Oxfordshire,Oxford,UK
+"Rogers, Mr Harry",2nd,,male,0,NY,Buffalo,US
+"Rugg, Miss Emily",2nd,21,female,1,Greater London,London,UK
+"Sedgwick, Mr Charles Frederick Waddington",2nd,,male,0,Moscow,Moscow,Russia
+"Sharp, Mr Percival",2nd,,male,0,Oxfordshire,Oxford,UK
+"Shelley, Mrs William (Imanita)",2nd,25,female,1,NY,Buffalo,US
+"Silven, Miss Lyyli",2nd,18,female,1,Greater London,London,UK
+"Sincock, Miss Maude",2nd,20,female,1,Moscow,Moscow,Russia
+"Siukonnen, Miss An",2nd,30,female,1,Oxfordshire,Oxford,UK
+"Sjostedt, Mr Ernst Adolf",2nd,59,male,0,NY,Buffalo,US
+"Slayter, Miss Hilda Mary",2nd,30,female,1,Greater London,London,UK
+"Slemen, Mr Richard James",2nd,35,male,0,Moscow,Moscow,Russia
+"Smith (Schmidt), Mr Augustus",2nd,22,male,0,Oxfordshire,Oxford,UK
+"Smith, Miss Marion",2nd,,female,1,NY,Buffalo,US
+"Sobey, Mr Hayden",2nd,25,male,0,Greater London,London,UK
+"Stanton, Mr Samuel Ward",2nd,41,male,0,Moscow,Moscow,Russia
+"Stokes, Mr Philip Joseph",2nd,25,male,0,Oxfordshire,Oxford,UK
+"Sweet, Mr George",2nd,14,male,0,NY,Buffalo,US
+"Toomey, Miss Ellen",2nd,50,female,1,Greater London,London,UK
+"Troupiansky, Mr Moses Aaron",2nd,22,male,0,Moscow,Moscow,Russia
+"Trout, Mrs William H (Jessie L)",2nd,,female,1,Oxfordshire,Oxford,UK
+"Troutt, Miss Edwi Celia",2nd,27,female,1,NY,Buffalo,US
+"Turpin, Mr William John",2nd,29,male,0,Greater London,London,UK
+"Turpin, Mrs William John (Dorothy Anne Woncott)",2nd,27,female,0,Moscow,Moscow,Russia
+"Veale, Mr James",2nd,30,male,0,Oxfordshire,Oxford,UK
+"Waelens, Mr Achille",2nd,22,male,0,NY,Buffalo,US
+"Walcroft, Miss Nellie",2nd,35,female,1,Greater London,London,UK
+"Ware, Mr John James",2nd,30,male,0,Moscow,Moscow,Russia
+"Ware, Mrs John James (Florence Louise Long)",2nd,28,female,1,Oxfordshire,Oxford,UK
+"Ware, Mr William J",2nd,23,male,0,NY,Buffalo,US
+"Watson, Mr Ennis Hastings",2nd,,male,0,Greater London,London,UK
+"Watt, Miss Bertha",2nd,12,female,1,Moscow,Moscow,Russia
+"Watt, Mrs James (Bessie Inglis Milne)",2nd,40,female,1,Oxfordshire,Oxford,UK
+"Webber, Miss Susan",2nd,36,female,1,NY,Buffalo,US
+"Weisz, Mr Leopold",2nd,28,male,0,Greater London,London,UK
+"Weisz, Mrs Leopold (Mathilde)",2nd,32,female,1,Moscow,Moscow,Russia
+"Wells, Mrs Arthur H (Addie Trevaskis)",2nd,29,female,1,Oxfordshire,Oxford,UK
+"Wells, Miss Joan",2nd,4,female,1,NY,Buffalo,US
+"Wells, Master Ralph Lester",2nd,2,male,1,Greater London,London,UK
+"West, Miss Barbara J",2nd,,female,1,Moscow,Moscow,Russia
+"West, Miss Constance Mirium",2nd,,female,1,Oxfordshire,Oxford,UK
+"West, Mr Edwy Arthur",2nd,36,male,0,NY,Buffalo,US
+"West, Mrs Edwy Arthur (Ada Mary)",2nd,33,female,1,Greater London,London,UK
+"Wheadon, Mr Edward",2nd,,male,0,Moscow,Moscow,Russia
+"Wheeler, Mr Edwin",2nd,,male,0,Oxfordshire,Oxford,UK
+"Wheeler, Mr Frederick",2nd,,male,0,NY,Buffalo,US
+"Wilhelms, Mr Charles",2nd,32,male,1,Greater London,London,UK
+"Wilkinson, Mrs Elizabeth Anne",2nd,,female,1,Moscow,Moscow,Russia
+"Williams, Mr Charles Eugene",2nd,,male,1,Oxfordshire,Oxford,UK
+"Wright, Miss Marion",2nd,26,female,1,NY,Buffalo,US
+"Yrois, Miss Henriette",2nd,,female,0,Greater London,London,UK
+"Aldworth, Mr Charles Augustus",2nd,30,male,0,Moscow,Moscow,Russia
+"Brown, Miss Mildred",2nd,24,female,1,Oxfordshire,Oxford,UK
+"Pernot, Mr Rene",2nd,,male,0,NY,Buffalo,US
+"Swane, Mr George",2nd,18,male,0,Greater London,London,UK
+"Abbing, Mr Anthony",3rd,42,male,0,Moscow,Moscow,Russia
+"Abbott, Master Eugene Joseph",3rd,13,male,0,Oxfordshire,Oxford,UK
+"Abbott, Mr Rossmore Edward",3rd,16,male,0,NY,Buffalo,US
+"Abbott, Mrs Stanton (Rosa)",3rd,35,female,1,Greater London,London,UK
+"Abelseth, Miss An Karen",3rd,16,female,1,Moscow,Moscow,Russia
+"Abelseth, Mr Olaus",3rd,25,male,1,Oxfordshire,Oxford,UK
+"Abraham, Mrs Joseph (Sophie Easu)",3rd,18,female,1,NY,Buffalo,US
+"Abrahamsson, Mr August",3rd,20,male,1,Greater London,London,UK
+"Adahl, Mr Mauritz Nils Martin",3rd,30,male,0,Moscow,Moscow,Russia
+"Adams, Mr John",3rd,26,male,0,Oxfordshire,Oxford,UK
+"Ahlin, Mrs Johan Persdotter",3rd,40,female,0,NY,Buffalo,US
+"Ahmed, Mr Ali",3rd,24,male,0,Greater London,London,UK
+"Aijo-Nirva, Mr Isak",3rd,41,male,0,Moscow,Moscow,Russia
+"Aks, Mrs Sam (Leah Rosen)",3rd,18,female,1,Oxfordshire,Oxford,UK
+"Aks, Master Philip",3rd,0.83,male,1,NY,Buffalo,US
+"Alexander, Mr William",3rd,23,male,0,Greater London,London,UK
+"Alhomaki, Mr Ilmari Rudolf",3rd,20,male,0,Moscow,Moscow,Russia
+"Ali, Mr William",3rd,25,male,0,Oxfordshire,Oxford,UK
+"Allen, Mr William Henry",3rd,35,male,0,NY,Buffalo,US
+"Allum, Mr Owen George",3rd,17,male,0,Greater London,London,UK
+"Andersen, Mr Albert Karvin",3rd,32,male,0,Moscow,Moscow,Russia
+"Andersen, Mr Thor Olsvigen",3rd,20,male,0,Oxfordshire,Oxford,UK
+"Andersson, Mr Anders Johan",3rd,39,male,0,NY,Buffalo,US
+"Andersson, Mrs Anders Johan (Alfrida K Brogren)",3rd,39,female,0,Greater London,London,UK
+"Andersson, Miss Ebba Iris",3rd,6,female,0,Moscow,Moscow,Russia
+"Andersson, Miss Ellis An Maria",3rd,2,female,0,Oxfordshire,Oxford,UK
+"Andersson, Miss Er",3rd,17,female,1,NY,Buffalo,US
+"Andersson, Miss Ida Augusta Margareta",3rd,38,female,0,Greater London,London,UK
+"Andersson, Miss Ingeborg Constancia",3rd,9,female,0,Moscow,Moscow,Russia
+"Andersson, Mr Johan Samuel",3rd,26,male,0,Oxfordshire,Oxford,UK
+"Andersson, Miss Sigrid Elizabeth",3rd,11,female,0,NY,Buffalo,US
+"Andersson, Master Sigvard Harald Elias",3rd,4,male,0,Greater London,London,UK
+"Andreasson, Mr Paul Edvin",3rd,20,male,0,Moscow,Moscow,Russia
+"Angheloff, Mr Minko",3rd,26,male,0,Oxfordshire,Oxford,UK
+"Arnold, Mr Josef",3rd,25,male,0,NY,Buffalo,US
+"Arnold, Mrs Josef (Josephine Frank)",3rd,18,female,0,Greater London,London,UK
+"Aronsson, Mr Ernst Axel Algot",3rd,24,male,0,Moscow,Moscow,Russia
+"Asim, Mr Adola",3rd,35,male,0,Oxfordshire,Oxford,UK
+"Asplund, Mr Carl Oscar Vilhelm Gustafsson",3rd,40,male,0,NY,Buffalo,US
+"Asplund, Mrs Carl Oscar (Selma Augusta Johansson)",3rd,38,female,1,Greater London,London,UK
+"Asplund, Master Carl Edgar",3rd,5,male,0,Moscow,Moscow,Russia
+"Asplund, Master Clarence Gustaf Hugo",3rd,9,male,0,Oxfordshire,Oxford,UK
+"Aspland, Master Edvin Rojj Felix",3rd,3,male,1,NY,Buffalo,US
+"Asplund, Master Filip Oscar",3rd,13,male,0,Greater London,London,UK
+"Asplund, Mr John Charles",3rd,23,male,1,Moscow,Moscow,Russia
+"Asplund, Miss Lillian Gertrud",3rd,5,female,1,Oxfordshire,Oxford,UK
+"Assaf, Mr Gerios",3rd,,male,0,NY,Buffalo,US
+"Assaf, Mrs Maria",3rd,45,female,1,Greater London,London,UK
+"Assam, Mr Ali",3rd,23,male,0,Moscow,Moscow,Russia
+"Attalah, Miss Malaka",3rd,17,female,0,Oxfordshire,Oxford,UK
+"Attala (Kalil), Mr Solomon",3rd,27,male,0,NY,Buffalo,US
+"Augustsson, Mr Albert",3rd,23,male,0,Greater London,London,UK
+"Baccos, Mr Rafoul",3rd,20,male,0,Moscow,Moscow,Russia
+"Backstrom, Mr Karl Alfred",3rd,32,male,0,Oxfordshire,Oxford,UK
+"Backstrom, Mrs Karl Alfred (Maria Mathilda Gustafsson)",3rd,33,female,1,NY,Buffalo,US
+"Baclini, Miss Eugenie",3rd,3,female,1,Greater London,London,UK
+"Baclini, Miss Helene",3rd,,female,1,Moscow,Moscow,Russia
+"Baclini, Miss Maria",3rd,,female,1,Oxfordshire,Oxford,UK
+"Baclini, Mrs Solomon (Latifa)",3rd,,female,1,NY,Buffalo,US
+"Badman, Miss Emily Louisa",3rd,18,female,1,Greater London,London,UK
+"Badt, Mr Mohamed",3rd,40,male,0,Moscow,Moscow,Russia
+"Balkic, Mr Cerin",3rd,26,male,0,Oxfordshire,Oxford,UK
+"Banoura, Miss Ayout",3rd,15,female,1,NY,Buffalo,US
+"Barbara, Mrs Catherine",3rd,45,female,0,Greater London,London,UK
+"Barbara, Miss Saude",3rd,18,female,0,Moscow,Moscow,Russia
+"Barry, Miss Julia",3rd,27,female,0,Oxfordshire,Oxford,UK
+"Barton, Mr David",3rd,22,male,0,NY,Buffalo,US
+"Beavan, Mr William Thomas",3rd,19,male,0,Greater London,London,UK
+"Bengtsson, Mr John Viktor",3rd,26,male,0,Moscow,Moscow,Russia
+"Berglund, Mr Karl Ivar Sven",3rd,22,male,0,Oxfordshire,Oxford,UK
+"Betros, Mr Tannous",3rd,20,male,0,NY,Buffalo,US
+"Bing, Mr Lee",3rd,32,male,1,Greater London,London,UK
+"Birkeland, Mr Hans",3rd,21,male,0,Moscow,Moscow,Russia
+"Bjorklund, Ernst Herbert",3rd,18,male,0,Oxfordshire,Oxford,UK
+"Bostandyeff, Mr Guentcho",3rd,26,male,0,NY,Buffalo,US
+"Boulos, Master Akar",3rd,6,male,0,Greater London,London,UK
+"Boulos, Mr Han",3rd,,male,0,Moscow,Moscow,Russia
+"Boulos, Mrs Joseph (Sulta)",3rd,,female,0,Oxfordshire,Oxford,UK
+"Boulos, Miss Laura",3rd,9,female,0,NY,Buffalo,US
+"Bourke, Mr John",3rd,40,male,0,Greater London,London,UK
+"Bourke, Mrs John (Catherine)",3rd,32,female,0,Moscow,Moscow,Russia
+"Bourke, Miss Mary",3rd,,female,0,Oxfordshire,Oxford,UK
+"Bowen, Mr David",3rd,26,male,0,NY,Buffalo,US
+"Bradley, Miss Bridget Delia",3rd,18,female,1,Greater London,London,UK
+"Braf, Miss Elin Ester Maria",3rd,20,female,0,Moscow,Moscow,Russia
+"Brahim, Mr Youssef",3rd,,male,0,Oxfordshire,Oxford,UK
+"Braund, Mr Lewis Richard",3rd,29,male,0,NY,Buffalo,US
+"Braund, Mr Owen Harris",3rd,22,male,0,Greater London,London,UK
+"Brobek, Mr Karl Rudolf",3rd,22,male,0,Moscow,Moscow,Russia
+"Brocklebank, Mr William Alfred",3rd,35,male,0,Oxfordshire,Oxford,UK
+"Buckley, Mr Daniel",3rd,21,male,1,NY,Buffalo,US
+"Buckley, Miss Katherine",3rd,20,female,0,Greater London,London,UK
+"Burke, Mr Jeremiah",3rd,19,male,0,Moscow,Moscow,Russia
+"Burns, Miss Mary Delia",3rd,18,female,0,Oxfordshire,Oxford,UK
+"Cacic, Mr Grego",3rd,18,male,0,NY,Buffalo,US
+"Cacic, Mr Luka",3rd,38,male,0,Greater London,London,UK
+"Cacic, Mr Manda",3rd,,male,0,Moscow,Moscow,Russia
+"Cacic, Mr Maria",3rd,30,male,0,Oxfordshire,Oxford,UK
+"Calic, Mr Peter",3rd,17,male,0,NY,Buffalo,US
+"Cavan, Miss Mary",3rd,21,female,0,Greater London,London,UK
+"Cavan, Mr Patrick",3rd,21,male,0,Moscow,Moscow,Russia
+"Cann, Mr Ernest",3rd,21,male,0,Oxfordshire,Oxford,UK
+"Caram (Kareem), Mr Joseph",3rd,,male,0,NY,Buffalo,US
+"Caram (Kareem), Mrs Joseph (Maria Elias)",3rd,,female,0,Greater London,London,UK
+"Carlsson, Mr Carl Robert",3rd,24,male,0,Moscow,Moscow,Russia
+"Carlsson, Mr Frans Olof",3rd,33,male,0,Oxfordshire,Oxford,UK
+"Carlsson, Mr Julius",3rd,33,male,0,NY,Buffalo,US
+"Carlsson, Mr August Sigfrid",3rd,28,male,0,Greater London,London,UK
+"Carr, Miss Helen",3rd,16,female,1,Moscow,Moscow,Russia
+"Carr, Miss Jeannie",3rd,37,female,0,Oxfordshire,Oxford,UK
+"Carver, Mr Alfred John",3rd,28,male,0,NY,Buffalo,US
+"Cassem, Mr ssef Belmenly",3rd,,male,1,Greater London,London,UK
+"Celotti, Mr Francesco",3rd,24,male,0,Moscow,Moscow,Russia
+"Chartens, Mr David",3rd,21,male,0,Oxfordshire,Oxford,UK
+"Chebab, Mr Emir Farres",3rd,,male,0,NY,Buffalo,US
+"Chip, Mr Chang",3rd,32,male,0,Greater London,London,UK
+"Christmann, Mr Emil",3rd,29,male,0,Moscow,Moscow,Russia
+"Chronopoulos, Mr Apostolos",3rd,26,male,0,Oxfordshire,Oxford,UK
+"Chronopoulos, Mr Demetrios",3rd,18,male,0,NY,Buffalo,US
+"Coelho, Mr Domingos Ferndes",3rd,20,male,0,Greater London,London,UK
+"Cohen, Mr Gurshon (Gus)",3rd,19,male,1,Moscow,Moscow,Russia
+"Colbert, Mr Patrick",3rd,24,male,0,Oxfordshire,Oxford,UK
+"Coleff, Mr Fotio",3rd,24,male,0,NY,Buffalo,US
+"Coleff, Mr Peyo",3rd,36,male,0,Greater London,London,UK
+"Conlin, Mr Thomas Henry",3rd,31,male,0,Moscow,Moscow,Russia
+"Conghton, Mr Michael",3rd,31,male,0,Oxfordshire,Oxford,UK
+"Connolly, Miss Kate",3rd,30,female,0,NY,Buffalo,US
+"Connolly, Miss Kate",3rd,22,female,1,Greater London,London,UK
+"Connors, Mr Patrick",3rd,,male,0,Moscow,Moscow,Russia
+"Cook, Mr Jacob",3rd,43,male,0,Oxfordshire,Oxford,UK
+"Cor, Mr Bartol",3rd,35,male,0,NY,Buffalo,US
+"Cor, Mr Ivan",3rd,27,male,0,Greater London,London,UK
+"Cor, Mr Ludovik",3rd,19,male,0,Moscow,Moscow,Russia
+"Corn, Mr Harry",3rd,30,male,0,Oxfordshire,Oxford,UK
+"Coutts, Mrs William (Minnie)",3rd,36,female,1,NY,Buffalo,US
+"Coutts, Master Neville",3rd,3,male,1,Greater London,London,UK
+"Coutts, Master William Leslie",3rd,9,male,1,Moscow,Moscow,Russia
+"Coxon, Mr Daniel",3rd,59,male,0,Oxfordshire,Oxford,UK
+"Crease, Mr Ernest James",3rd,19,male,0,NY,Buffalo,US
+"Cribb, Mr John Hatfield",3rd,44,male,0,Greater London,London,UK
+"Cribb, Miss Laura Alice",3rd,17,female,1,Moscow,Moscow,Russia
+"Daher, Mr Tannous",3rd,,male,0,Oxfordshire,Oxford,UK
+"Dahl, Mr Charles Edward",3rd,45,male,1,NY,Buffalo,US
+"Dahlberg, Miss Gerda Ulrika",3rd,22,female,0,Greater London,London,UK
+"Dakic, Mr Branko",3rd,19,male,0,Moscow,Moscow,Russia
+"Daly, Mr Eugene",3rd,29,male,1,Oxfordshire,Oxford,UK
+"Daly, Miss Marcella",3rd,30,female,1,NY,Buffalo,US
+"Danbom, Mr Ernst Gilbert",3rd,34,male,0,Greater London,London,UK
+"Danbom, Mrs Ernst Gilbert (An Sigrid Maria Brogren)",3rd,28,female,0,Moscow,Moscow,Russia
+"Danbom, Master Gilbert Sigvard Emanuel",3rd,0.33,male,0,Oxfordshire,Oxford,UK
+"Danoff, Mr Yoto",3rd,27,male,0,NY,Buffalo,US
+"Dantchoff, Mr Khristo",3rd,25,male,0,Greater London,London,UK
+"Davies, Mr Alfred",3rd,24,male,0,Moscow,Moscow,Russia
+"Davies, Mr Evan",3rd,22,male,0,Oxfordshire,Oxford,UK
+"Davies, Mr John",3rd,21,male,0,NY,Buffalo,US
+"Davies, Mr Joseph",3rd,17,male,0,Greater London,London,UK
+"Davison, Mr Thomas Henry",3rd,,male,0,Moscow,Moscow,Russia
+"Davison, Mrs Thomas Henry (Mary Finck)",3rd,,female,1,Oxfordshire,Oxford,UK
+"Dean, Mr Bertram",3rd,26,male,0,NY,Buffalo,US
+"Dean, Mrs Bertram (Eva)",3rd,33,female,1,Greater London,London,UK
+"Dean, Master Bertram Vere",3rd,1,male,1,Moscow,Moscow,Russia
+"Dean, Miss Elizabeth Gladys (Millve)",3rd,0.17,female,1,Oxfordshire,Oxford,UK
+"Delalic, Mr Regyo",3rd,25,male,0,NY,Buffalo,US
+"De Messemaeker, Mr William Joseph",3rd,36,male,1,Greater London,London,UK
+"De Messemaeker, Mrs William Joseph (An)",3rd,36,female,1,Moscow,Moscow,Russia
+"De Mulder, Mr Theo",3rd,30,male,1,Oxfordshire,Oxford,UK
+"Denkoff, Mr Mito",3rd,,male,0,NY,Buffalo,US
+"Dennis, Mr Samuel",3rd,23,male,0,Greater London,London,UK
+"Dennis, Mr William",3rd,26,male,0,Moscow,Moscow,Russia
+"Devaney, Miss Margaret",3rd,19,female,1,Oxfordshire,Oxford,UK
+"Dewan, Mr Frank",3rd,65,male,0,NY,Buffalo,US
+"Dibo, Mr Elias",3rd,,male,0,Greater London,London,UK
+"Dimic, Mr Jovan",3rd,42,male,0,Moscow,Moscow,Russia
+"Dintcheff, Mr Valtcho",3rd,43,male,0,Oxfordshire,Oxford,UK
+"Dooley, Mr Patrick",3rd,32,male,0,NY,Buffalo,US
+"Dorkings, Mr Edward Arthur",3rd,19,male,1,Greater London,London,UK
+"Dowdell, Miss Elizabeth",3rd,30,female,1,Moscow,Moscow,Russia
+"Doyle, Miss Elizabeth",3rd,24,female,0,Oxfordshire,Oxford,UK
+"Drapkin, Miss Jennie",3rd,23,female,1,NY,Buffalo,US
+"Drazonovic, Mr Josef",3rd,,male,0,Greater London,London,UK
+"Driscoll, Miss Bridget",3rd,24,female,1,Moscow,Moscow,Russia
+"Duquemin, Mr Joseph",3rd,24,male,1,Oxfordshire,Oxford,UK
+"Dyker, Mr Adolf Fredrik",3rd,23,male,0,NY,Buffalo,US
+"Dyker, Mrs Adolf Fredrik (An Elizabeth Judith Andersson)",3rd,22,female,1,Greater London,London,UK
+"Econovic, Mr Joso",3rd,,male,0,Moscow,Moscow,Russia
+"Edvardsson, Mr Gustaf Hjalmar",3rd,18,male,0,Oxfordshire,Oxford,UK
+"Eklund, Mr Hans Linus",3rd,16,male,0,NY,Buffalo,US
+"Ekstrom, Mr Johan",3rd,45,male,0,Greater London,London,UK
+"Elias, Mr Elias",3rd,,male,0,Moscow,Moscow,Russia
+"Elias, Mr John",3rd,,male,0,Oxfordshire,Oxford,UK
+"Elias, Mr Joseph",3rd,,male,0,NY,Buffalo,US
+"Elsbury, Mr James",3rd,47,male,0,Greater London,London,UK
+"Emanuel, Miss Virginia Ethel",3rd,5,female,1,Moscow,Moscow,Russia
+"Emmeth, Mr Thomas",3rd,,male,0,Oxfordshire,Oxford,UK
+"Everett, Thomas James",3rd,,male,0,NY,Buffalo,US
+"Farrell, Mr James",3rd,,male,0,Greater London,London,UK
+"Finoli, Mr Luigi",3rd,,male,1,Moscow,Moscow,Russia
+"Fischer, Mr Eberhard Telander",3rd,,male,0,Oxfordshire,Oxford,UK
+"Flynn, Mr James",3rd,,male,0,NY,Buffalo,US
+"Flynn, Mr John",3rd,,male,0,Greater London,London,UK
+"Foley, Mr Joseph",3rd,,male,0,Moscow,Moscow,Russia
+"Foley, Mr William",3rd,,male,0,Oxfordshire,Oxford,UK
+"Foo, Mr Choong",3rd,,male,1,NY,Buffalo,US
+"Ford, Mr Arthur",3rd,,male,0,Greater London,London,UK
+"Ford, Miss Dooli Margaret",3rd,21,female,0,Moscow,Moscow,Russia
+"Ford, Mr Edward Watson",3rd,18,male,0,Oxfordshire,Oxford,UK
+"Ford, Miss Maggie",3rd,9,female,0,NY,Buffalo,US
+"Ford, Mrs Edward (Margaret Ann)",3rd,48,female,0,Greater London,London,UK
+"Ford, Mr Neil Watson",3rd,16,male,0,Moscow,Moscow,Russia
+"Fox, Mr Patrick",3rd,,male,0,Oxfordshire,Oxford,UK
+"Franklin, Mr Charles",3rd,,male,0,NY,Buffalo,US
+"Gallagher, Mr Martin",3rd,25,male,0,Greater London,London,UK
+"Garfirth, Mr John",3rd,,male,0,Moscow,Moscow,Russia
+"Georges, Mrs Shahini Weappi",3rd,38,female,1,Oxfordshire,Oxford,UK
+"Gilinski, Mr Leslie",3rd,22,male,0,NY,Buffalo,US
+"Gilgh, Miss Katie",3rd,16,female,1,Greater London,London,UK
+"Glynn, Miss Mary Agatha",3rd,,female,1,Moscow,Moscow,Russia
+"Goldsmith, Mr Frank John",3rd,33,male,0,Oxfordshire,Oxford,UK
+"Goldsmith, Mrs Frank John (Emily A Brown)",3rd,,female,1,NY,Buffalo,US
+"Goldsmith, Master Frank John William",3rd,9,male,1,Greater London,London,UK
+"Goldsmith, Mr than",3rd,41,male,0,Moscow,Moscow,Russia
+"Goncalves, Mr Manuel Estanslas",3rd,38,male,0,Oxfordshire,Oxford,UK
+"Goodwin, Mr Frederick",3rd,40,male,0,NY,Buffalo,US
+"Goodwin, Mrs Frederick (Augusta)",3rd,43,female,0,Greater London,London,UK
+"Goodwin, Mr Charles E",3rd,14,male,0,Moscow,Moscow,Russia
+"Goodwin, Miss Lillian A",3rd,16,female,0,Oxfordshire,Oxford,UK
+"Goodwin, Master Harold V",3rd,9,male,0,NY,Buffalo,US
+"Goodwin, Miss Jessie A",3rd,10,female,0,Greater London,London,UK
+"Goodwin, Master Sidney L",3rd,6,male,0,Moscow,Moscow,Russia
+"Goodwin, Master William F",3rd,11,male,0,Oxfordshire,Oxford,UK
+"Green, Mr George",3rd,40,male,0,NY,Buffalo,US
+"Gronnestad, Mr Daniel Danielsen",3rd,32,male,0,Greater London,London,UK
+"Guest, Mr Robert",3rd,,male,0,Moscow,Moscow,Russia
+"Gustafsson, Mr Alfred Ossian",3rd,20,male,0,Oxfordshire,Oxford,UK
+"Gustafsson, Mr Anders Vilhelm",3rd,37,male,0,NY,Buffalo,US
+"Gustafsson, Mr Johan Birger",3rd,28,male,0,Greater London,London,UK
+"Gustafsson, Mr Karl Gideon",3rd,19,male,0,Moscow,Moscow,Russia
+"Haas, Miss Aloisia",3rd,24,female,0,Oxfordshire,Oxford,UK
+"Hagardon, Miss Kate",3rd,17,female,0,NY,Buffalo,US
+"Hagland, Mr Ingvald Olsen",3rd,,male,0,Greater London,London,UK
+"Hagland, Mr Konrad Mathias Reiersen",3rd,,male,0,Moscow,Moscow,Russia
+"Hakkarainen, Mr Pekko Pietari",3rd,28,male,0,Oxfordshire,Oxford,UK
+"Hakkarainen, Mrs Pekko Pietari",3rd,24,female,1,NY,Buffalo,US
+"Hampe, Mr Leon",3rd,20,male,0,Greater London,London,UK
+"Hansen, Mr Claus Peter",3rd,41,male,0,Moscow,Moscow,Russia
+"Hansen, Mrs Claus Peter",3rd,45,female,1,Oxfordshire,Oxford,UK
+"Hansen, Mr Henrik Juul",3rd,26,male,0,NY,Buffalo,US
+"Hansen, Mr Henry Damsgaard",3rd,21,male,0,Greater London,London,UK
+"Harknett, Miss Alice",3rd,,female,0,Moscow,Moscow,Russia
+"Harmer, Mr Abraham",3rd,,male,0,Oxfordshire,Oxford,UK
+"Hart, Mr Henry",3rd,,male,0,NY,Buffalo,US
+"Hassan, Mr M Houssein",3rd,,male,0,Greater London,London,UK
+"Healy, Miss Nora",3rd,,female,0,Moscow,Moscow,Russia
+"Hedman, Mr Oscar",3rd,27,male,1,Oxfordshire,Oxford,UK
+"Hee, Mr Ling",3rd,,male,0,NY,Buffalo,US
+"Hegarty, Miss Nora",3rd,18,female,0,Greater London,London,UK
+"Heikkinen, Miss Lai",3rd,26,female,1,Moscow,Moscow,Russia
+"Heininen, Miss Wendla Maria",3rd,23,female,0,Oxfordshire,Oxford,UK
+"Hellstrom, Hilda Maria",3rd,22,female,1,NY,Buffalo,US
+"Hemming, Miss Nora",3rd,,female,0,Greater London,London,UK
+"Hendekovic, Mr Igz",3rd,,male,0,Moscow,Moscow,Russia
+"Henery, Delia",3rd,,female,0,Oxfordshire,Oxford,UK
+"Henriksson, Jenny Lovisa",3rd,28,female,0,NY,Buffalo,US
+"Hirvonen, Mrs Alexander",3rd,22,female,1,Greater London,London,UK
+"Hirvonen, Miss Hildur E",3rd,2,female,0,Moscow,Moscow,Russia
+"Holm, Mr John Frederik Alexander",3rd,43,male,0,Oxfordshire,Oxford,UK
+"Holthen, Mr Johan Martin",3rd,,male,0,NY,Buffalo,US
+"Honkanen, Miss Elu",3rd,27,female,1,Greater London,London,UK
+"Horgan, Mr John",3rd,,male,0,Moscow,Moscow,Russia
+"Howard, Miss May",3rd,,female,1,Oxfordshire,Oxford,UK
+"Humblin, Mr Adolf Mathias Nicolai Olsen",3rd,42,male,0,NY,Buffalo,US
+"Hyman, Mr Abraham",3rd,,male,1,Greater London,London,UK
+"Ilieff, Mr Ylio",3rd,,male,0,Moscow,Moscow,Russia
+"Ilmakangas, Miss Ida Livija",3rd,27,female,0,Oxfordshire,Oxford,UK
+"Ilmakangas, Miss Pieta Sofia",3rd,25,female,0,NY,Buffalo,US
+"Ivanoff, Mr Konio",3rd,,male,0,Greater London,London,UK
+"Jansen, Mr Carl Olof",3rd,27,male,1,Moscow,Moscow,Russia
+"Jardin, Mr Jose Netto",3rd,,male,0,Oxfordshire,Oxford,UK
+"Jensen, Miss Carla Christine",3rd,19,female,1,NY,Buffalo,US
+"Jensen, Mr Hans Peder",3rd,20,male,0,Greater London,London,UK
+"Jensen, Mr Niels Peder",3rd,48,male,0,Moscow,Moscow,Russia
+"Jensen, Mr Svend Lauritz",3rd,17,male,0,Oxfordshire,Oxford,UK
+"Jermyn, Miss Annie",3rd,,female,1,NY,Buffalo,US
+"Johannesen-Bratthammer, Mr Bernt",3rd,,male,0,Greater London,London,UK
+"Johanson, Mr Jakob Alfred",3rd,34,male,0,Moscow,Moscow,Russia
+"Johansson, Mr Erik",3rd,22,male,0,Oxfordshire,Oxford,UK
+"Johansson, Mr Gustaff Joel",3rd,33,male,0,NY,Buffalo,US
+"Johansson, Mr Karl Johan",3rd,32,male,1,Greater London,London,UK
+"Johansson, Mr Nils",3rd,29,male,0,Moscow,Moscow,Russia
+"Johansson, Oscar L",3rd,26,male,1,Oxfordshire,Oxford,UK
+"Johnson, Mr Alfred",3rd,49,male,0,NY,Buffalo,US
+"Johnson, Miss Eleanor Ileen",3rd,1,female,1,Greater London,London,UK
+"Johnson, Mr Malkolm Joackim",3rd,33,male,0,Moscow,Moscow,Russia
+"Johnson, Master Harold Theodor",3rd,4,male,1,Oxfordshire,Oxford,UK
+"Johnson, Mrs Oscar W",3rd,24,female,0,NY,Buffalo,US
+"Johnson, Mr William Cahoone Jr",3rd,19,male,0,Greater London,London,UK
+"Johnston, Mr Andrew G",3rd,,male,0,Moscow,Moscow,Russia
+"Johnston, Mrs Andrew G",3rd,,female,0,Oxfordshire,Oxford,UK
+"Johnston, Miss Catherine H",3rd,,female,0,NY,Buffalo,US
+"Johnston, Master William A",3rd,,male,0,Greater London,London,UK
+"Jonkoff, Mr Lazor",3rd,,male,0,Moscow,Moscow,Russia
+"Jonsson, Mr Carl",3rd,32,male,1,Oxfordshire,Oxford,UK
+"Jonsson, Nils Hilding",3rd,27,male,0,NY,Buffalo,US
+"Jussila, Miss Ai Maria",3rd,21,female,0,Greater London,London,UK
+"Jussila, Mr Erik",3rd,32,male,1,Moscow,Moscow,Russia
+"Jussila, Miss Katrii",3rd,20,female,0,Oxfordshire,Oxford,UK
+"Kallio, Mr Nikolai Erland",3rd,17,male,0,NY,Buffalo,US
+"Kalvig, Mr Johannes K Halverson",3rd,21,male,0,Greater London,London,UK
+"Karajic, Mr Milan",3rd,30,male,0,Moscow,Moscow,Russia
+"Karlsson, Mr Eir Gervasius",3rd,21,male,1,Oxfordshire,Oxford,UK
+"Karlsson, Mr Julius Konrad Eugen",3rd,23,male,0,NY,Buffalo,US
+"Karlsson, Mr Nils August",3rd,22,male,0,Greater London,London,UK
+"Karun, Miss An Mary",3rd,4,female,1,Moscow,Moscow,Russia
+"Karun, Mr Franz",3rd,39,male,0,Oxfordshire,Oxford,UK
+"Kassem, Mr Fared",3rd,,male,0,NY,Buffalo,US
+"Keane, Mr Andrew",3rd,20,male,0,Greater London,London,UK
+"Keefe, Mr Arthur",3rd,,male,0,Moscow,Moscow,Russia
+"Kekic, Mr Tido",3rd,,male,0,Oxfordshire,Oxford,UK
+"Kelly, Miss An Kate",3rd,21,female,1,NY,Buffalo,US
+"Kelly, Mr James",3rd,44,male,0,Greater London,London,UK
+"Kelly, Mr James",3rd,42,male,0,Moscow,Moscow,Russia
+"Kelly, Miss Mary",3rd,21,female,1,Oxfordshire,Oxford,UK
+"Kennedy, Mr John",3rd,24,male,0,NY,Buffalo,US
+"Khalil, Mr Betros",3rd,,male,0,Greater London,London,UK
+"Khalil, Mrs Betros",3rd,,female,0,Moscow,Moscow,Russia
+"Khalil, Mr Saad",3rd,,male,0,Oxfordshire,Oxford,UK
+"Kiern, Mr John",3rd,25,male,0,NY,Buffalo,US
+"Kiern, Mr Philip",3rd,22,male,0,Greater London,London,UK
+"Kilgannon, Mr Thomas",3rd,22,male,0,Moscow,Moscow,Russia
+"Kink, Mr Anton",3rd,39,male,1,Oxfordshire,Oxford,UK
+"Kink, Mrs Anton (Louise Heilmann)",3rd,26,female,0,NY,Buffalo,US
+"Kink, Miss Louise Gretchen",3rd,4,female,1,Greater London,London,UK
+"Kink, Miss Maria",3rd,22,female,0,Moscow,Moscow,Russia
+"Kink, Mr Vincenz",3rd,26,male,0,Oxfordshire,Oxford,UK
+"Klasen, Miss Gertrud Emilia",3rd,1.5,female,0,NY,Buffalo,US
+"Klasen, Mrs Hulda Kristi",3rd,36,female,0,Greater London,London,UK
+"Klasen, Mr Klas Albin",3rd,18,male,0,Moscow,Moscow,Russia
+"Kraeff, Mr Theodor",3rd,,male,0,Oxfordshire,Oxford,UK
+"Krekorian, Mr Neshan",3rd,25,male,1,NY,Buffalo,US
+"Lahowd, Mr Sarkis",3rd,,male,0,Greater London,London,UK
+"Laitinen, Miss Kriti Sofia",3rd,37,female,0,Moscow,Moscow,Russia
+"Laleff, Mr Kristo",3rd,,male,0,Oxfordshire,Oxford,UK
+"Lam, Mr Ali",3rd,,male,1,NY,Buffalo,US
+"Lam, Mr Len",3rd,,male,0,Greater London,London,UK
+"Landegren, Miss Aurora Adelia",3rd,22,female,1,Moscow,Moscow,Russia
+"Lane, Mr Patrick",3rd,20,male,0,Oxfordshire,Oxford,UK
+"Lang, Mr Fang",3rd,26,male,1,NY,Buffalo,US
+"Larsson, Mr August Viktor",3rd,29,male,0,Greater London,London,UK
+"Larsson, Mr Bengt Edvin",3rd,29,male,0,Moscow,Moscow,Russia
+"Larsson-Rondberg, Mr Edvard",3rd,22,male,0,Oxfordshire,Oxford,UK
+"Leeni, Mr Fahim",3rd,,male,1,NY,Buffalo,US
+"Lefebre, Mrs Frank",3rd,,female,0,Greater London,London,UK
+"Lefebre, Master Henry",3rd,,male,0,Moscow,Moscow,Russia
+"Lefebre, Miss Ida",3rd,,female,0,Oxfordshire,Oxford,UK
+"Lefebre, Miss Jeannie",3rd,,female,0,NY,Buffalo,US
+"Lefebre, Miss Mathilde",3rd,,female,0,Greater London,London,UK
+"Leinonen, Mr Antti Gustaf",3rd,32,male,0,Moscow,Moscow,Russia
+"Lemberopolous, Mr Peter L",3rd,,male,0,Oxfordshire,Oxford,UK
+"Lemom, Mr Denis",3rd,21,male,0,NY,Buffalo,US
+"Lemon, Miss Mary",3rd,21,female,0,Greater London,London,UK
+"Leord, Mr Lionel",3rd,36,male,0,Moscow,Moscow,Russia
+"Lester, Mr James",3rd,39,male,0,Oxfordshire,Oxford,UK
+"Lindahl, Miss Agda V",3rd,25,female,0,NY,Buffalo,US
+"Lindblom, Miss Augusta Charlotta",3rd,45,female,0,Greater London,London,UK
+"Lindell, Mr Edvard Bengtsson",3rd,36,male,0,Moscow,Moscow,Russia
+"Lindell, Mrs Edvard Bengtsson",3rd,30,female,0,Oxfordshire,Oxford,UK
+"Lindqvist, Eino William",3rd,20,male,1,NY,Buffalo,US
+"Linehan, Mr Michael",3rd,,male,0,Greater London,London,UK
+"Ling, Mr Lee",3rd,,male,0,Moscow,Moscow,Russia
+"Lithman, Mr Simon",3rd,,male,0,Oxfordshire,Oxford,UK
+"Lobb, Mr William Arthur",3rd,,male,0,NY,Buffalo,US
+"Lobb, Mrs William Arthur",3rd,,female,0,Greater London,London,UK
+"Lockyer, Mr Edward",3rd,,male,0,Moscow,Moscow,Russia
+"Lovell, Mr John",3rd,,male,0,Oxfordshire,Oxford,UK
+"Lulich, Mr Nicola",3rd,,male,1,NY,Buffalo,US
+"Lundahl, Mr Johan",3rd,,male,0,Greater London,London,UK
+"Lundin, Miss Olga Elida",3rd,,female,1,Moscow,Moscow,Russia
+"Lundstrom, Mr Thure Edvin",3rd,,male,0,Oxfordshire,Oxford,UK
+"Lyntakoff, Mr Stanko",3rd,,male,0,NY,Buffalo,US
+"MacKay, Mr George William",3rd,,male,0,Greater London,London,UK
+"Madigan, Miss Margaret",3rd,,female,1,Moscow,Moscow,Russia
+"Madsen, Mr Frithiof",3rd,,male,0,Oxfordshire,Oxford,UK
+"Maenpaa, Mr Matti Alexanteri",3rd,,male,0,NY,Buffalo,US
+"Mahon, Miss Delia",3rd,,female,0,Greater London,London,UK
+"Maisner, Mr Simon",3rd,,male,0,Moscow,Moscow,Russia
+"Makinen, Mr Kalle Edvard",3rd,,male,0,Oxfordshire,Oxford,UK
+"Mamee, Mr Han",3rd,,male,1,NY,Buffalo,US
+"Mangan, Miss Mary",3rd,,female,0,Greater London,London,UK
+"Mannion, Miss Margareth",3rd,,female,1,Moscow,Moscow,Russia
+"Mansour, Mr Han",3rd,,male,0,Oxfordshire,Oxford,UK
+"Mardirosian, Mr Sarkis",3rd,,male,0,NY,Buffalo,US
+"Marinko, Mr Dmitri",3rd,,male,0,Greater London,London,UK
+"Markim, Mr Johann",3rd,,male,0,Moscow,Moscow,Russia
+"Markoff, Mr Marin",3rd,,male,0,Oxfordshire,Oxford,UK
+"Masselmany, Mrs Fatima",3rd,,female,1,NY,Buffalo,US
+"Matinoff, Mr Nicola",3rd,,male,0,Greater London,London,UK
+"McCarthy, Miss Katie",3rd,,female,1,Moscow,Moscow,Russia
+"McCormack, Mr Thomas J",3rd,,male,0,Oxfordshire,Oxford,UK
+"McCoy, Miss Agnes",3rd,,female,0,NY,Buffalo,US
+"McCoy, Miss Alice",3rd,,female,0,Greater London,London,UK
+"McCoy, Mr Berrd",3rd,,male,0,Moscow,Moscow,Russia
+"McDermott, Miss Delia",3rd,,female,0,Oxfordshire,Oxford,UK
+"McElroy, Mr Michael",3rd,,male,0,NY,Buffalo,US
+"McGovern, Mrs Hugh",3rd,,female,1,Greater London,London,UK
+"McGowan, Miss An",3rd,,female,0,Moscow,Moscow,Russia
+"McGowan, Miss Katherine",3rd,,female,0,Oxfordshire,Oxford,UK
+"McMahon, Mr Martin",3rd,,male,0,NY,Buffalo,US
+"Mcmee, Mr Neal",3rd,,male,0,Greater London,London,UK
+"Mcmee, Mrs Neal",3rd,,female,0,Moscow,Moscow,Russia
+"Meanwell, Miss Marion Ogden",3rd,,female,0,Oxfordshire,Oxford,UK
+"Mechen, Mr John",3rd,,male,0,NY,Buffalo,US
+"Meek, Mrs Thomas",3rd,,female,0,Greater London,London,UK
+"Melkebuk, Mrs Philemon",3rd,23,female,0,Moscow,Moscow,Russia
+"Meo, Mr Alfonso",3rd,,male,0,Oxfordshire,Oxford,UK
+"Midtsjo, Mr Karl Albert",3rd,,male,1,NY,Buffalo,US
+"Mihoff, Mr Stoytcho",3rd,,male,0,Greater London,London,UK
+"Miles, Mr Frank",3rd,,male,0,Moscow,Moscow,Russia
+"Mineff, Mr Ivan",3rd,,male,0,Oxfordshire,Oxford,UK
+"Minkoff, Mr Lazar",3rd,,male,0,NY,Buffalo,US
+"Mirko, Mr Dika",3rd,,male,0,Greater London,London,UK
+"Mitkoff, Mr Mito",3rd,,male,0,Moscow,Moscow,Russia
+"Mocklare, Miss Helen Mary",3rd,,female,1,Oxfordshire,Oxford,UK
+"Moen, Mr Sigurd H",3rd,,male,0,NY,Buffalo,US
+"Moor, Mrs Beila",3rd,,female,1,Greater London,London,UK
+"Moor, Master Meier",3rd,,male,0,Moscow,Moscow,Russia
+"Moore, Mr Leord Charles",3rd,,male,0,Oxfordshire,Oxford,UK
+"Moran, Miss Bertha",3rd,,female,1,NY,Buffalo,US
+"Moran, Mr Daniel J",3rd,,male,0,Greater London,London,UK
+"Moran, Mr James",3rd,,male,0,Moscow,Moscow,Russia
+"Morley, Mr Henry Samuel",3rd,,male,0,Oxfordshire,Oxford,UK
+"Morrow, Mr Thomas Rowan",3rd,,male,0,NY,Buffalo,US
+"Moubarek (Borak), Mr Han (John)",3rd,,male,1,Greater London,London,UK
+"Moubarek, Mrs George",3rd,,female,0,Moscow,Moscow,Russia
+"Moubarek, Master George",3rd,,male,0,Oxfordshire,Oxford,UK
+"Moubarek, Master William George",3rd,,male,0,NY,Buffalo,US
+"Moss, Albert Johan",3rd,,male,0,Greater London,London,UK
+"Moussa, Mrs Mantoura Baloics",3rd,,female,0,Moscow,Moscow,Russia
+"Moutal, Mr Rahamin",3rd,,male,0,Oxfordshire,Oxford,UK
+"Mullins, Miss Katie",3rd,,female,1,NY,Buffalo,US
+"Mulvihill, Miss Bertha E",3rd,,female,0,Greater London,London,UK
+"Murdlin, Mr Joseph",3rd,,male,0,Moscow,Moscow,Russia
+"Murphy, Miss Katherine",3rd,,female,0,Oxfordshire,Oxford,UK
+"Murphy, Miss Margaret",3rd,,female,0,NY,Buffalo,US
+"Murphy, Miss Nora",3rd,,female,0,Greater London,London,UK
+"Myhrman, Mr Pehr Fabian Oliver Malkolm",3rd,,male,0,Moscow,Moscow,Russia
+"ckid, Miss Maria",3rd,,female,1,Oxfordshire,Oxford,UK
+"ckid, Mr Said",3rd,,male,0,NY,Buffalo,US
+"ckid, Mrs Said",3rd,,female,0,Greater London,London,UK
+"hill, Mr Toufik",3rd,,male,0,Moscow,Moscow,Russia
+"idenoff, Mr Penko",3rd,,male,0,Oxfordshire,Oxford,UK
+"ncarrow, W H",3rd,,male,0,NY,Buffalo,US
+"Niklasen, Sander",3rd,,male,0,Greater London,London,UK
+"Nosworthy, Richard C",3rd,,male,0,Moscow,Moscow,Russia
+"jib, Miss Adele Kiamie",3rd,,female,1,Oxfordshire,Oxford,UK
+"ncarrow, Mr William Henry",3rd,,male,0,NY,Buffalo,US
+"nkoff, Mr Minko",3rd,,male,0,Greater London,London,UK
+"sr, Mr Mustafa",3rd,,male,0,Moscow,Moscow,Russia
+"ssr, Mr Saade Jean",3rd,,male,0,Oxfordshire,Oxford,UK
+"ughton, Miss Hanh",3rd,,female,0,NY,Buffalo,US
+"Nemaugh, Mr Robert",3rd,,male,0,Greater London,London,UK
+"Nenkoff, Mr Christo",3rd,,male,0,Moscow,Moscow,Russia
+"Nicola-Yarred, Miss Jamila",3rd,,female,1,Oxfordshire,Oxford,UK
+"Nicola-Yarred, Master Elias",3rd,,male,0,NY,Buffalo,US
+"Nieminen, Miss Manta Josefi",3rd,,female,0,Greater London,London,UK
+"Niklasson, Mr Samuel",3rd,,male,0,Moscow,Moscow,Russia
+"Nilsson, Mr August Ferdind",3rd,,male,0,Oxfordshire,Oxford,UK
+"Nilsson, Miss Berta Olivia",3rd,,female,1,NY,Buffalo,US
+"Nilsson, Miss Helmi Josefi",3rd,,female,0,Greater London,London,UK
+"Niskanen, Mr Johan",3rd,,male,0,Moscow,Moscow,Russia
+"Nosworthy, Mr Richard Cater",3rd,,male,0,Oxfordshire,Oxford,UK
+"Novel, Mansouer",3rd,,male,1,NY,Buffalo,US
+"Nysten, Miss An",3rd,,female,0,Greater London,London,UK
+"Nysveen, Mr Johan H",3rd,,male,0,Moscow,Moscow,Russia
+"O'Brien, Mr Denis",3rd,,male,0,Oxfordshire,Oxford,UK
+"O'Brien, Mr Thomas",3rd,,male,0,NY,Buffalo,US
+"O'Brien, Mrs Thomas",3rd,,female,1,Greater London,London,UK
+"O'Connell, Mr Patrick D",3rd,,male,0,Moscow,Moscow,Russia
+"O'Connor, Mr Maurice",3rd,,male,0,Oxfordshire,Oxford,UK
+"O'Connor, Mr Patrick",3rd,,male,0,NY,Buffalo,US
+"Odahl, Mr Nils Martin",3rd,,male,1,Greater London,London,UK
+"O'Dwyer, Miss Nellie",3rd,,female,0,Moscow,Moscow,Russia
+"Ohman, Miss Velin",3rd,,female,0,Oxfordshire,Oxford,UK
+"O'Keefe, Mr Patrick",3rd,,male,0,NY,Buffalo,US
+"OLeary, Miss Norah",3rd,,female,0,Greater London,London,UK
+"Olsen, Master Arthur",3rd,,male,0,Moscow,Moscow,Russia
+"Olsen, Mr Charlie (Carl)",3rd,,male,0,Oxfordshire,Oxford,UK
+"Olsen, Mr Henry Margido",3rd,,male,0,NY,Buffalo,US
+"Olsen, Mr Ole M",3rd,,male,0,Greater London,London,UK
+"Olsson, Miss Elida",3rd,,female,0,Moscow,Moscow,Russia
+"Olsson, Mr Nils Johan",3rd,,male,0,Oxfordshire,Oxford,UK
+"Olsson, Mr Oscar Johansson",3rd,,male,1,NY,Buffalo,US
+"O'Neill, Miss Bridget",3rd,,female,0,Greater London,London,UK
+"Oreskovic, Mr Jeko",3rd,,male,0,Moscow,Moscow,Russia
+"Oreskovic, Mr Luka",3rd,,male,0,Oxfordshire,Oxford,UK
+"Oreskovic, Mr Maria",3rd,,male,0,NY,Buffalo,US
+"Osen, Mr Olof Elon",3rd,,male,0,Greater London,London,UK
+"Osman, Miss Maria",3rd,,female,1,Moscow,Moscow,Russia
+"O'Sullivan, Miss Bridget",3rd,,female,0,Oxfordshire,Oxford,UK
+"Panula, Mr Ernesti Arvid",3rd,,male,0,NY,Buffalo,US
+"Panula, Mr Jaako Arnold",3rd,,male,0,Greater London,London,UK
+"Panula, Master Juha Niilo",3rd,,male,0,Moscow,Moscow,Russia
+"Panula, Mrs John",3rd,,female,0,Oxfordshire,Oxford,UK
+"Panula, Master Urho Abraham",3rd,,male,0,NY,Buffalo,US
+"Panula, Master William",3rd,,male,0,Greater London,London,UK
+"Pasic, Mr Jakob",3rd,,male,0,Moscow,Moscow,Russia
+"Paulner, Mr Uscher",3rd,,male,0,Oxfordshire,Oxford,UK
+"Paulsson, Master Gosta Leord",3rd,,male,0,NY,Buffalo,US
+"Paulsson, Mrs Nils",3rd,,female,0,Greater London,London,UK
+"Paulsson, Master Paul Folke",3rd,,male,0,Moscow,Moscow,Russia
+"Paulsson, Miss Sti Viola",3rd,,female,0,Oxfordshire,Oxford,UK
+"Paulsson, Miss Torborg Danira",3rd,,female,0,NY,Buffalo,US
+"Pavlovic, Mr Stefo",3rd,,male,0,Greater London,London,UK
+"Peacock, Master Alfred Edward",3rd,,male,0,Moscow,Moscow,Russia
+"Peacock, Mrs Benjamin",3rd,,female,0,Oxfordshire,Oxford,UK
+"Peacock, Miss Treasteall",3rd,,female,0,NY,Buffalo,US
+"Pearce, Mr Ernest",3rd,,male,0,Greater London,London,UK
+"Pecruic, Mr Mate",3rd,,male,0,Moscow,Moscow,Russia
+"Pecruic, Mr Tome",3rd,,male,0,Oxfordshire,Oxford,UK
+"Pedersen, Mr Olaf",3rd,,male,0,NY,Buffalo,US
+"Peduzzi, Mr Joseph",3rd,,male,0,Greater London,London,UK
+"Pekoniemi, Mr Edvard",3rd,,male,1,Moscow,Moscow,Russia
+"Peltomaki, Nikolai Johannes",3rd,,male,0,Oxfordshire,Oxford,UK
+"Perkin, Mr John Henry",3rd,,male,0,NY,Buffalo,US
+"Persson, Mr Ernst Ulrik",3rd,,male,1,Greater London,London,UK
+"Peter (Joseph), Miss Mary",3rd,,female,0,Moscow,Moscow,Russia
+"Peter (Joseph), Mrs Catherine",3rd,,female,0,Oxfordshire,Oxford,UK
+"Peter (Joseph), Master Michael J",3rd,,male,0,NY,Buffalo,US
+"Peters, Miss Katie",3rd,,female,0,Greater London,London,UK
+"Petersen, Mr Marius",3rd,,male,0,Moscow,Moscow,Russia
+"Petranec, Miss Matilda",3rd,,female,0,Oxfordshire,Oxford,UK
+"Petroff, Mr Nedeca",3rd,,male,0,NY,Buffalo,US
+"Petroff, Mr Pentcho",3rd,,male,0,Greater London,London,UK
+"Pettersson, Miss Ellen talia",3rd,,female,0,Moscow,Moscow,Russia
+"Peterson, Mr Johan Emil",3rd,,male,0,Oxfordshire,Oxford,UK
+"Pickard (Trembisky), Mr Berk",3rd,,male,1,NY,Buffalo,US
+"Plotcharsky, Mr Vasil",3rd,,male,0,Greater London,London,UK
+"Potchett, Mr George",3rd,,male,0,Moscow,Moscow,Russia
+"Radeff, Mr Alexander",3rd,,male,0,Oxfordshire,Oxford,UK
+"Raibid, Mr Razi",3rd,,male,0,NY,Buffalo,US
+"Reed, Mr James George",3rd,,male,0,Greater London,London,UK
+"Reynolds, Mr Harold",3rd,,male,0,Moscow,Moscow,Russia
+"Rice, Master Albert",3rd,,male,0,Oxfordshire,Oxford,UK
+"Rice, Master Arthur",3rd,,male,0,NY,Buffalo,US
+"Rice, Master George",3rd,,male,0,Greater London,London,UK
+"Rice, Master Eric",3rd,,male,0,Moscow,Moscow,Russia
+"Rice, Master Eugene",3rd,,male,0,Oxfordshire,Oxford,UK
+"Rice, Mrs William",3rd,,female,0,NY,Buffalo,US
+"Riihiivouri, Miss Sanni",3rd,,female,0,Greater London,London,UK
+"Rintamaki, Mr Matti",3rd,,male,0,Moscow,Moscow,Russia
+"Riordan, Miss Hanh",3rd,,female,1,Oxfordshire,Oxford,UK
+"Risien, Mr Samuel",3rd,,male,0,NY,Buffalo,US
+"Risien, Mrs Samuel",3rd,,female,0,Greater London,London,UK
+"Robins, Mr Alexander A",3rd,,male,0,Moscow,Moscow,Russia
+"Robins, Mrs Alexander A",3rd,,female,0,Oxfordshire,Oxford,UK
+"Rommetvedt, Mr Karl Kristian Knut",3rd,,male,0,NY,Buffalo,US
+"Rogers, Mr William John",3rd,,male,0,Greater London,London,UK
+"Rosblom, Mrs Viktor",3rd,,female,0,Moscow,Moscow,Russia
+"Rosblom, Miss Salli Hele",3rd,,female,0,Oxfordshire,Oxford,UK
+"Rosblom, Mr Viktor Rickard",3rd,,male,0,NY,Buffalo,US
+"Roth, Miss Sarah",3rd,,female,1,Greater London,London,UK
+"Rouse, Mr Richard Henry",3rd,,male,0,Moscow,Moscow,Russia
+"Rush, Mr Alfred George John",3rd,,male,0,Oxfordshire,Oxford,UK
+"Ryan, Mr Edward Ryan",3rd,,male,1,NY,Buffalo,US
+"Ryan, Mr Patrick",3rd,,male,0,Greater London,London,UK
+"Saad, Mr Amin",3rd,,male,0,Moscow,Moscow,Russia
+"Saad, Khalil",3rd,,male,1,Oxfordshire,Oxford,UK
+"Sadlier, Mr Matthew",3rd,,male,0,NY,Buffalo,US
+"Sadowitz, Mr Harry",3rd,,male,0,Greater London,London,UK
+"Sage, Miss Ada",3rd,,female,0,Moscow,Moscow,Russia
+"Sage, Miss Constance",3rd,,female,0,Oxfordshire,Oxford,UK
+"Sage, Miss Dorothy",3rd,,female,0,NY,Buffalo,US
+"Sage, Mr Douglas",3rd,,male,0,Greater London,London,UK
+"Sage, Mr Frederick",3rd,,male,0,Moscow,Moscow,Russia
+"Sage, Mr George",3rd,,male,0,Oxfordshire,Oxford,UK
+"Sage, Mr John",3rd,,male,0,NY,Buffalo,US
+"Sage, Mrs John",3rd,,female,0,Greater London,London,UK
+"Sage, Miss Stella",3rd,,female,0,Moscow,Moscow,Russia
+"Sage, Thomas (child)",3rd,,male,0,Oxfordshire,Oxford,UK
+"Sage, Master William",3rd,,male,0,NY,Buffalo,US
+"Salander, Mr Karl Johan",3rd,21,male,0,Greater London,London,UK
+"Salkjelsvik, Miss An",3rd,,female,1,Moscow,Moscow,Russia
+"Salonen, Mr Johan Werner",3rd,,male,0,Oxfordshire,Oxford,UK
+"Samaan, Mr Elias",3rd,,male,0,NY,Buffalo,US
+"Samaan, Mr Han",3rd,,male,0,Greater London,London,UK
+"Samaan, Mr Youssef",3rd,,male,0,Moscow,Moscow,Russia
+"Sandstrom, Miss Hjalmar",3rd,,female,1,Oxfordshire,Oxford,UK
+"Sandstrom, Miss Beatrice Irene",3rd,1.5,female,0,NY,Buffalo,US
+"Sandstrom, Miss Marguerite Rut",3rd,,female,0,Greater London,London,UK
+"Sather, Simon Sivertsen",3rd,,male,0,Moscow,Moscow,Russia
+"Saundercock, William Henry",3rd,,male,0,Oxfordshire,Oxford,UK
+"Sawyer, Mr Frederick",3rd,,male,0,NY,Buffalo,US
+"Scanlan, Mr James",3rd,,male,0,Greater London,London,UK
+"Sdycoff, Mr Todor",3rd,,male,0,Moscow,Moscow,Russia
+Seman Master Betros,3rd,,male,0,Oxfordshire,Oxford,UK
+"Serota, Mr Maurice",3rd,,male,0,NY,Buffalo,US
+"Shaughnesay, Mr Patrick",3rd,,male,0,Greater London,London,UK
+"Shedid (Sitik), Mr Daher (Docart)",3rd,,male,0,Moscow,Moscow,Russia
+"Sheerlinck, Mr Jean",3rd,,male,1,Oxfordshire,Oxford,UK
+"Shellard, Mr Frederick B",3rd,,male,0,NY,Buffalo,US
+"Shine, Miss Ellen",3rd,,female,1,Greater London,London,UK
+"Shorney, Mr Charles",3rd,,male,0,Moscow,Moscow,Russia
+"Simmons, Mr John",3rd,,male,0,Oxfordshire,Oxford,UK
+"Sirayanian, Mr Arsun",3rd,,male,0,NY,Buffalo,US
+"Sivic, Mr Husen",3rd,,male,0,Greater London,London,UK
+"Sivola, Mr Antti",3rd,,male,0,Moscow,Moscow,Russia
+"Sjoblom, Miss An Sofia",3rd,,female,1,Oxfordshire,Oxford,UK
+"Sholt, Mr Peter Andreas Lauritz Andersen",3rd,,male,0,NY,Buffalo,US
+"Skinner, Mr Henry John",3rd,,male,0,Greater London,London,UK
+"Skoog, Master Harald",3rd,,male,0,Moscow,Moscow,Russia
+"Skoog, Master Karl",3rd,,male,0,Oxfordshire,Oxford,UK
+"Skoog, Miss Mabel",3rd,,female,0,NY,Buffalo,US
+"Skoog, Miss Margit",3rd,,female,0,Greater London,London,UK
+"Skoog, Mr William",3rd,,male,0,Moscow,Moscow,Russia
+"Skoog, Mrs William",3rd,,female,0,Oxfordshire,Oxford,UK
+"Slabenoff, Mr Petco",3rd,,male,0,NY,Buffalo,US
+"Slocovski, Mr Selman",3rd,,male,0,Greater London,London,UK
+"Smiljanovic, Mr Mile",3rd,,male,0,Moscow,Moscow,Russia
+"Smyth, Miss Julia",3rd,,female,1,Oxfordshire,Oxford,UK
+"Solvang, Mrs Le Jacobsen",3rd,,female,0,NY,Buffalo,US
+"Somerton, Mr Francis William",3rd,,male,0,Greater London,London,UK
+"Sop, Mr Jules",3rd,,male,1,Moscow,Moscow,Russia
+"Spector, Mr Woolf",3rd,,male,0,Oxfordshire,Oxford,UK
+"Staneff, Mr Ivan",3rd,,male,0,NY,Buffalo,US
+"Stankovic, Mr Jovan",3rd,,male,0,Greater London,London,UK
+"Stanley, Miss Amy Zilla Elsie",3rd,,female,1,Moscow,Moscow,Russia
+"Stanley, Mr Edward Roland",3rd,,male,0,Oxfordshire,Oxford,UK
+"Storey, Mr Thomas",3rd,,male,0,NY,Buffalo,US
+"Stoyehoff, Mr Ilia",3rd,,male,0,Greater London,London,UK
+"Strandberg, Miss Ida Sofia",3rd,,female,0,Moscow,Moscow,Russia
+"Stranden, Mr Juho",3rd,,male,1,Oxfordshire,Oxford,UK
+"Strilic, Mr Ivan",3rd,,male,0,NY,Buffalo,US
+"Strom, Mrs Wilhelm",3rd,,female,0,Greater London,London,UK
+"Strom, Miss Telma (Selma) Matilda",3rd,,female,0,Moscow,Moscow,Russia
+"Sunderland, Mr Victor Francis",3rd,,male,1,Oxfordshire,Oxford,UK
+"Sundman, Mr Johan Julian",3rd,,male,0,NY,Buffalo,US
+"Sutehall, Mr Henry, Jr",3rd,,male,0,Greater London,London,UK
+"Svensson, Mr Johan",3rd,,male,0,Moscow,Moscow,Russia
+"Svensson, Mr Johan Cervin",3rd,,male,1,Oxfordshire,Oxford,UK
+"Svensson, Mr Olof",3rd,,male,0,NY,Buffalo,US
+"Tannous, Mr Thomas",3rd,,male,0,Greater London,London,UK
+"Tenglin, Mr Gunr Isidor",3rd,,male,1,Moscow,Moscow,Russia
+"Theobald, Mr Thomas Leord",3rd,,male,0,Oxfordshire,Oxford,UK
+"Thomas, Mrs Alexander",3rd,,female,1,NY,Buffalo,US
+"Thomas, Master Assad Alexander",3rd,,male,0,Greater London,London,UK
+"Thomas, Mr Charles",3rd,,male,0,Moscow,Moscow,Russia
+"Thomas, Mr John, Jr",3rd,,male,0,Oxfordshire,Oxford,UK
+"Thomas, Mr John (? 1st/2nd class)",3rd,,male,0,NY,Buffalo,US
+"Thomson, Mr Alexander",3rd,,male,0,Greater London,London,UK
+"Thorneycroft, Mr Percival",3rd,,male,0,Moscow,Moscow,Russia
+"Thorneycroft, Mrs Percival",3rd,,female,1,Oxfordshire,Oxford,UK
+"Tikkanen, Mr Juho",3rd,,male,0,NY,Buffalo,US
+"Tobin, Mr Roger",3rd,,male,0,Greater London,London,UK
+"Todoroff, Mr Lalio",3rd,,male,0,Moscow,Moscow,Russia
+"Toerber, Mr Ernest William",3rd,,male,0,Oxfordshire,Oxford,UK
+"Tomlin, Mr Ernest Portage",3rd,,male,0,NY,Buffalo,US
+"Torfa, Mr Assad",3rd,,male,0,Greater London,London,UK
+"Tornquist, Mr William Henry",3rd,25,male,1,Moscow,Moscow,Russia
+"Touma (Thomas), Mrs Darwin",3rd,,female,0,Oxfordshire,Oxford,UK
+"Touma (Thomas), Master George",3rd,,male,0,NY,Buffalo,US
+"Touma (Thomas), Miss Hanh",3rd,,female,0,Greater London,London,UK
+"Turcin, Mr Stefan",3rd,,male,0,Moscow,Moscow,Russia
+"Turja, Miss An Sofia",3rd,18,female,1,Oxfordshire,Oxford,UK
+"Turkula, Mrs Hedvig",3rd,63,female,1,NY,Buffalo,US
+"Uzelas, Mr Joso",3rd,,male,0,Greater London,London,UK
+"Van Billiard, Mr Austin Blyler",3rd,,male,0,Moscow,Moscow,Russia
+"Van Billiard, Master James William",3rd,,male,0,Oxfordshire,Oxford,UK
+"Van Billiard, Master Walter John",3rd,,male,0,NY,Buffalo,US
+"Van der Planke, Miss Augusta",3rd,18,female,0,Greater London,London,UK
+"Van der Planke, Mr Jules",3rd,31,male,0,Moscow,Moscow,Russia
+"Van der Planke, Mrs Jules",3rd,31,female,0,Oxfordshire,Oxford,UK
+"Van der Planke, Mr Leon",3rd,15,male,0,NY,Buffalo,US
+"Van der Steen, Mr Leo Peter",3rd,28,male,0,Greater London,London,UK
+"Van de Velde, Mr John Joseph",3rd,36,male,0,Moscow,Moscow,Russia
+"Vandewalle, Mr Nestor Cyriel",3rd,28,male,0,Oxfordshire,Oxford,UK
+"Van Impe, Miss Catharine",3rd,10,female,0,NY,Buffalo,US
+"Van Impe, Mr Jean Baptiste",3rd,36,male,0,Greater London,London,UK
+"Van Impe, Mrs Jean Baptiste",3rd,30,female,0,Moscow,Moscow,Russia
+"Vartunian, Mr David",3rd,22,male,1,Oxfordshire,Oxford,UK
+"Vassilios, Mr Catavelas",3rd,,male,0,NY,Buffalo,US
+"Vendel, Mr Olof Wdvin",3rd,29,male,0,Greater London,London,UK
+"Vereruysse, Mr Victor",3rd,47,male,0,Moscow,Moscow,Russia
+"Vestrom, Miss Hulda Amanda Adolfi",3rd,14,female,0,Oxfordshire,Oxford,UK
+"Vonk, Mr Jenko",3rd,22,male,0,NY,Buffalo,US
+"Ware, Mr Frederick",3rd,,male,0,Greater London,London,UK
+"Warren, Mr Charles William",3rd,,male,0,Moscow,Moscow,Russia
+"Wazli, Mr Yousif",3rd,,male,0,Oxfordshire,Oxford,UK
+"Webber, Mr James",3rd,,male,0,NY,Buffalo,US
+"Wennerstrom, Mr August Edvard",3rd,,male,1,Greater London,London,UK
+"Wenzel, Mr Linhart",3rd,,male,0,Moscow,Moscow,Russia
+"Widegren, Mr Charles Peter",3rd,51,male,0,Oxfordshire,Oxford,UK
+"Wiklund, Mr Jacob Alfred",3rd,18,male,0,NY,Buffalo,US
+"Wilkes, Mrs Ellen",3rd,45,female,1,Greater London,London,UK
+"Willer, Mr Aaron",3rd,,male,0,Moscow,Moscow,Russia
+"Willey, Mr Edward",3rd,,male,0,Oxfordshire,Oxford,UK
+"Williams, Mr Howard Hugh",3rd,,male,0,NY,Buffalo,US
+"Williams, Mr Leslie",3rd,28,male,0,Greater London,London,UK
+"Windelov, Mr Eir",3rd,21,male,0,Moscow,Moscow,Russia
+"Wirz, Mr Albert",3rd,27,male,0,Oxfordshire,Oxford,UK
+"Wiseman, Mr Phillippe",3rd,,male,0,NY,Buffalo,US
+"Wittevrongel, Mr Camiel",3rd,36,male,0,Greater London,London,UK
+"Yalsevac, Mr Ivan",3rd,,male,1,Moscow,Moscow,Russia
+"Yasbeck, Mr Antoni",3rd,27,male,0,Oxfordshire,Oxford,UK
+"Yasbeck, Mrs Antoni",3rd,15,female,1,NY,Buffalo,US
+"Youssef, Mr Gerios",3rd,,male,0,Greater London,London,UK
+"Zabour, Miss Hileni",3rd,,female,0,Moscow,Moscow,Russia
+"Zabour, Miss Tamini",3rd,,female,0,Oxfordshire,Oxford,UK
+"Zakarian, Mr Artun",3rd,27,male,0,NY,Buffalo,US
+"Zakarian, Mr Maprieder",3rd,26,male,0,Greater London,London,UK
+"Zenni, Mr Philip",3rd,22,male,0,Moscow,Moscow,Russia
+"Lievens, Mr Rene",3rd,24,male,0,Oxfordshire,Oxford,UK
+"Zimmerman, Leo",3rd,29,male,0,NY,Buffalo,US

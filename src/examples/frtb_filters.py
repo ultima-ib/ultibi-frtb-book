@@ -2,7 +2,7 @@ import ultibi as ul
 import polars as pl
 
 pl.Config.set_tbl_rows(100)
-ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml", prepare=True)
+ds = ul.FRTBDataSet.from_config_path("./data/frtb/datasource_config.toml")
 
 
 request = dict(
