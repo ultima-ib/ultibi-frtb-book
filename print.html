@@ -3,13 +3,13 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Python FRTB User Guide</title>
+        <title>Ultibi Python FRTB Cube User Guide</title>
         <meta name="robots" content="noindex" />
 
 
         <!-- Custom HTML head -->
         
-        <meta name="description" content="ultibi python developer&#x27;s frtb user guide. Filtering, overriding, what if.">
+        <meta name="description" content="ultibi python developer&#x27;s user guide. PivotUI, Cube, FRTB.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -87,16 +87,38 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">2.</strong> Quickstart</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fx.html"><strong aria-hidden="true">2.1.</strong> FX</a></li></ol></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">3.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html"><strong aria-hidden="true">3.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">4.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">4.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">4.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">5.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">5.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">5.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">5.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="ui.html"><strong aria-hidden="true">6.</strong> UI</a></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">7.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">8.</strong> Contacts and Feedback</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="quickstart/quickstart.html"><strong aria-hidden="true">2.</strong> Quickstart</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="quickstart/ui_quick.html"><strong aria-hidden="true">2.1.</strong> with UI</a></li><li class="chapter-item expanded "><a href="quickstart/fx.html"><strong aria-hidden="true">2.2.</strong> FRTB FX</a></li></ol></li><li class="chapter-item expanded "><a href="inputs/inputs_intro.html"><strong aria-hidden="true">3.</strong> Input, DataSource and DataSet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="inputs/datasources.html"><strong aria-hidden="true">3.1.</strong> Data Sources</a></li><li class="chapter-item expanded "><a href="inputs/input.html"><strong aria-hidden="true">3.2.</strong> Config file</a></li><li class="chapter-item expanded "><a href="inputs/format.html"><strong aria-hidden="true">3.3.</strong> FRTB Input Format</a></li><li class="chapter-item expanded "><a href="inputs/bespoke_measures.html"><strong aria-hidden="true">3.4.</strong> Define your own Measures</a></li></ol></li><li class="chapter-item expanded "><a href="calculation/calc_intro.html"><strong aria-hidden="true">4.</strong> Calculation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="calculation/weights.html"><strong aria-hidden="true">4.1.</strong> Prepare (FRTB Assign Weights)</a></li><li class="chapter-item expanded "><a href="calculation/calculate.html"><strong aria-hidden="true">4.2.</strong> Calculation (FRTB Capital)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="calculation/frtb_measures.html"><strong aria-hidden="true">4.2.1.</strong> FRTB Supported measures</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">5.</strong> WhatIf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">5.1.</strong> Filters</a></li><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">5.2.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">5.3.</strong> Add Rows(Trades)</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">5.4.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="ui.html"><strong aria-hidden="true">6.</strong> UI</a></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">7.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">8.</strong> Contacts and Feedback</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -116,7 +138,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Python FRTB User Guide</h1>
+                    <h1 class="menu-title">Ultibi Python FRTB Cube User Guide</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -149,18 +171,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><strong><code>ultibi</code></strong> is a free python library by <strong>Ultima</strong>.</p>
-<p>This user guide's primary focus is a very specific case - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong>. For a general usecase refer to the general user guide(TBA). Here we will focus on FRTB only. In general <strong><code>ultibi</code></strong> is a python interface of <strong>Ultima</strong>, a service which allows you to define, compute and breakdown the key metrics for your data.</p>
+<p><strong><code>ultibi</code></strong> is a free python library by <strong><a href="https://github.com/ultima-ib/ultima">Ultima</a></strong>. <strong><code>ultibi</code></strong> is a framework for building Pivot Tables and Cubes, to display and drill through the key metrics for your data.</p>
+<p>This userguide will provide examples of the functionality. We pick - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong> to serve as a great usecase example.</p>
 <h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
 <ul>
 <li>
-<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> (Note: <code>ultibi</code> is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation) and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
-</li>
-<li>
 <p>You can breakdown and drillthrough your computation</p>
-</li>
-<li>
-<p><code>ultibi</code> is very flexible and allows you to override any of the prescribed parameters (such as <code>girr_delta_rho_infl_base_low</code>) via <code>calc_params</code> argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can <strong>stress test</strong> against changes in the values of the prescribed (aka hard coded by ISDA) parameters.</p>
 </li>
 <li>
 <p>Everything you need for analysis: <a href="./filters.html">Filtering</a>, <a href="./override.html">Overriding</a>, <a href="./add_row.html">Adding Trades</a> and so on.</p>
@@ -169,350 +185,15 @@
 <p>Blazingly <a href="./performace.html">fast</a>.</p>
 </li>
 </ul>
-<h3 id="supported-measures"><a class="header" href="#supported-measures">Supported measures</a></h3>
-<p>CSR Sec CTP CVRdown</p>
-<p>CSR Sec CTP CVRup</p>
-<p>CSR Sec CTP Curvature Kb High</p>
-<p>CSR Sec CTP Curvature Kb Low</p>
-<p>CSR Sec CTP Curvature Kb Medium</p>
-<p>CSR Sec CTP Curvature KbMinus High</p>
-<p>CSR Sec CTP Curvature KbMinus Low</p>
-<p>CSR Sec CTP Curvature KbMinus Medium</p>
-<p>CSR Sec CTP Curvature KbPlus High</p>
-<p>CSR Sec CTP Curvature KbPlus Low</p>
-<p>CSR Sec CTP Curvature KbPlus Medium</p>
-<p>CSR Sec CTP Curvature Sb High</p>
-<p>CSR Sec CTP Curvature Sb Low</p>
-<p>CSR Sec CTP Curvature Sb Medium</p>
-<p>CSR Sec CTP CurvatureCharge High</p>
-<p>CSR Sec CTP CurvatureCharge Low</p>
-<p>CSR Sec CTP CurvatureCharge MAX</p>
-<p>CSR Sec CTP CurvatureCharge Medium</p>
-<p>CSR Sec CTP CurvatureDelta</p>
-<p>CSR Sec CTP CurvatureDelta_Weighted</p>
-<p>CSR Sec CTP DeltaCharge High</p>
-<p>CSR Sec CTP DeltaCharge Low</p>
-<p>CSR Sec CTP DeltaCharge MAX</p>
-<p>CSR Sec CTP DeltaCharge Medium</p>
-<p>CSR Sec CTP DeltaKb High</p>
-<p>CSR Sec CTP DeltaKb Low</p>
-<p>CSR Sec CTP DeltaKb Medium</p>
-<p>CSR Sec CTP DeltaSb</p>
-<p>CSR Sec CTP DeltaSens</p>
-<p>CSR Sec CTP DeltaSens Weighted</p>
-<p>CSR Sec CTP PnLdown</p>
-<p>CSR Sec CTP PnLup</p>
-<p>CSR Sec CTP VegaCharge High</p>
-<p>CSR Sec CTP VegaCharge Low</p>
-<p>CSR Sec CTP VegaCharge MAX</p>
-<p>CSR Sec CTP VegaCharge Medium</p>
-<p>CSR Sec CTP VegaKb High</p>
-<p>CSR Sec CTP VegaKb Low</p>
-<p>CSR Sec CTP VegaKb Medium</p>
-<p>CSR Sec CTP VegaSb</p>
-<p>CSR Sec CTP VegaSens</p>
-<p>CSR Sec CTP VegaSens Weighted</p>
-<p>CSR Sec nonCTP CVRdown</p>
-<p>CSR Sec nonCTP CVRup</p>
-<p>CSR Sec nonCTP Curvature Kb High</p>
-<p>CSR Sec nonCTP Curvature Kb Low</p>
-<p>CSR Sec nonCTP Curvature Kb Medium</p>
-<p>CSR Sec nonCTP Curvature KbMinus High</p>
-<p>CSR Sec nonCTP Curvature KbMinus Low</p>
-<p>CSR Sec nonCTP Curvature KbMinus Medium</p>
-<p>CSR Sec nonCTP Curvature KbPlus High</p>
-<p>CSR Sec nonCTP Curvature KbPlus Low</p>
-<p>CSR Sec nonCTP Curvature KbPlus Medium</p>
-<p>CSR Sec nonCTP Curvature Sb High</p>
-<p>CSR Sec nonCTP Curvature Sb Low</p>
-<p>CSR Sec nonCTP Curvature Sb Medium</p>
-<p>CSR Sec nonCTP CurvatureCharge High</p>
-<p>CSR Sec nonCTP CurvatureCharge Low</p>
-<p>CSR Sec nonCTP CurvatureCharge MAX</p>
-<p>CSR Sec nonCTP CurvatureCharge Medium</p>
-<p>CSR Sec nonCTP CurvatureDelta</p>
-<p>CSR Sec nonCTP CurvatureDelta Weighted</p>
-<p>CSR Sec nonCTP DeltaCharge High</p>
-<p>CSR Sec nonCTP DeltaCharge Low</p>
-<p>CSR Sec nonCTP DeltaCharge MAX</p>
-<p>CSR Sec nonCTP DeltaCharge Medium</p>
-<p>CSR Sec nonCTP DeltaKb High</p>
-<p>CSR Sec nonCTP DeltaKb Low</p>
-<p>CSR Sec nonCTP DeltaKb Medium</p>
-<p>CSR Sec nonCTP DeltaSb</p>
-<p>CSR Sec nonCTP DeltaSens</p>
-<p>CSR Sec nonCTP DeltaSens Weighted</p>
-<p>CSR Sec nonCTP PnLdown</p>
-<p>CSR Sec nonCTP PnLup</p>
-<p>CSR Sec nonCTP TotalCharge High</p>
-<p>CSR Sec nonCTP TotalCharge Low</p>
-<p>CSR Sec nonCTP TotalCharge MAX</p>
-<p>CSR Sec nonCTP TotalCharge Medium</p>
-<p>CSR Sec nonCTP VegaCharge High</p>
-<p>CSR Sec nonCTP VegaCharge Low</p>
-<p>CSR Sec nonCTP VegaCharge MAX</p>
-<p>CSR Sec nonCTP VegaCharge Medium</p>
-<p>CSR Sec nonCTP VegaKb High</p>
-<p>CSR Sec nonCTP VegaKb Low</p>
-<p>CSR Sec nonCTP VegaKb Medium</p>
-<p>CSR Sec nonCTP VegaSb</p>
-<p>CSR Sec nonCTP VegaSens</p>
-<p>CSR Sec nonCTP VegaSens Weighted</p>
-<p>CSR nonSec CVRdown</p>
-<p>CSR nonSec CVRup</p>
-<p>CSR nonSec Curvature Kb High</p>
-<p>CSR nonSec Curvature Kb Low</p>
-<p>CSR nonSec Curvature Kb Medium</p>
-<p>CSR nonSec Curvature KbMinus High</p>
-<p>CSR nonSec Curvature KbMinus Low</p>
-<p>CSR nonSec Curvature KbMinus Medium</p>
-<p>CSR nonSec Curvature KbPlus High</p>
-<p>CSR nonSec Curvature KbPlus Low</p>
-<p>CSR nonSec Curvature KbPlus Medium</p>
-<p>CSR nonSec Curvature Sb High</p>
-<p>CSR nonSec Curvature Sb Low</p>
-<p>CSR nonSec Curvature Sb Medium</p>
-<p>CSR nonSec CurvatureCharge High</p>
-<p>CSR nonSec CurvatureCharge Low</p>
-<p>CSR nonSec CurvatureCharge MAX</p>
-<p>CSR nonSec CurvatureCharge Medium</p>
-<p>CSR nonSec CurvatureDelta</p>
-<p>CSR nonSec CurvatureDeltaWeighted</p>
-<p>CSR nonSec DeltaCharge High</p>
-<p>CSR nonSec DeltaCharge Low</p>
-<p>CSR nonSec DeltaCharge MAX</p>
-<p>CSR nonSec DeltaCharge Medium</p>
-<p>CSR nonSec DeltaKb High</p>
-<p>CSR nonSec DeltaKb Low</p>
-<p>CSR nonSec DeltaKb Medium</p>
-<p>CSR nonSec DeltaSb</p>
-<p>CSR nonSec DeltaSens</p>
-<p>CSR nonSec DeltaSens Weighted</p>
-<p>CSR nonSec PnLdown</p>
-<p>CSR nonSec PnLup</p>
-<p>CSR nonSec TotalCharge High</p>
-<p>CSR nonSec TotalCharge Low</p>
-<p>CSR nonSec TotalCharge MAX</p>
-<p>CSR nonSec TotalCharge Medium</p>
-<p>CSR nonSec VegaCharge High</p>
-<p>CSR nonSec VegaCharge Low</p>
-<p>CSR nonSec VegaCharge MAX</p>
-<p>CSR nonSec VegaCharge Medium</p>
-<p>CSR nonSec VegaKb High</p>
-<p>CSR nonSec VegaKb Low</p>
-<p>CSR nonSec VegaKb Medium</p>
-<p>CSR nonSec VegaSb</p>
-<p>CSR nonSec VegaSens</p>
-<p>CSR nonSec VegaSens Weighted</p>
-<p>CSR_secCTP_TotalCharge_High</p>
-<p>CSR_secCTP_TotalCharge_Low</p>
-<p>CSR_secCTP_TotalCharge_Medium</p>
-<p>Commodity CVRdown</p>
-<p>Commodity CVRup</p>
-<p>Commodity Curvature Kb High</p>
-<p>Commodity Curvature Kb Low</p>
-<p>Commodity Curvature Kb Medium</p>
-<p>Commodity Curvature KbMinus High</p>
-<p>Commodity Curvature KbMinus Low</p>
-<p>Commodity Curvature KbMinus Medium</p>
-<p>Commodity Curvature KbPlus High</p>
-<p>Commodity Curvature KbPlus Low</p>
-<p>Commodity Curvature KbPlus Medium</p>
-<p>Commodity Curvature Sb High</p>
-<p>Commodity Curvature Sb Low</p>
-<p>Commodity Curvature Sb Medium</p>
-<p>Commodity CurvatureCharge High</p>
-<p>Commodity CurvatureCharge Low</p>
-<p>Commodity CurvatureCharge MAX</p>
-<p>Commodity CurvatureCharge Medium</p>
-<p>Commodity CurvatureDelta</p>
-<p>Commodity CurvatureDelta Weighted</p>
-<p>Commodity DeltaCharge High</p>
-<p>Commodity DeltaCharge Low</p>
-<p>Commodity DeltaCharge MAX</p>
-<p>Commodity DeltaCharge Medium</p>
-<p>Commodity DeltaKb High</p>
-<p>Commodity DeltaKb Low</p>
-<p>Commodity DeltaKb Medium</p>
-<p>Commodity DeltaSb</p>
-<p>Commodity DeltaSens</p>
-<p>Commodity DeltaSens Weighted</p>
-<p>Commodity PnLdown</p>
-<p>Commodity PnLup</p>
-<p>Commodity TotalCharge High</p>
-<p>Commodity TotalCharge Low</p>
-<p>Commodity TotalCharge MAX</p>
-<p>Commodity TotalCharge Medium</p>
-<p>Commodity VegaCharge High</p>
-<p>Commodity VegaCharge Low</p>
-<p>Commodity VegaCharge MAX</p>
-<p>Commodity VegaCharge Medium</p>
-<p>Commodity VegaKb High</p>
-<p>Commodity VegaKb Low</p>
-<p>Commodity VegaKb Medium</p>
-<p>Commodity VegaSb</p>
-<p>Commodity VegaSens</p>
-<p>Commodity VegaSens Weighted</p>
-<p>DRC Charge</p>
-<p>DRC Sec nonCTP CapitalCharge</p>
-<p>DRC Sec nonCTP GrossJTD</p>
-<p>DRC Sec nonCTP GrossJTD Scaled</p>
-<p>DRC Sec nonCTP HBR</p>
-<p>DRC Sec nonCTP NetLongJTD</p>
-<p>DRC Sec nonCTP NetLongJTD Weighted</p>
-<p>DRC Sec nonCTP NetShortJTD</p>
-<p>DRC Sec nonCTP NetShortJTD Weighted</p>
-<p>DRC nonSec CapitalCharge</p>
-<p>DRC nonSec GrossJTD</p>
-<p>DRC nonSec GrossJTD Scaled</p>
-<p>DRC nonSec HBR</p>
-<p>DRC nonSec NetAbsShortJTD Weighted</p>
-<p>DRC nonSec NetLongJTD</p>
-<p>DRC nonSec NetLongJTD Weighted</p>
-<p>DRC nonSec NetShortJTD</p>
-<p>EQ CVRdown</p>
-<p>EQ CVRup</p>
-<p>EQ Curvature Kb High</p>
-<p>EQ Curvature Kb Low</p>
-<p>EQ Curvature Kb Medium</p>
-<p>EQ Curvature KbMinus High</p>
-<p>EQ Curvature KbMinus Low</p>
-<p>EQ Curvature KbMinus Medium</p>
-<p>EQ Curvature KbPlus High</p>
-<p>EQ Curvature KbPlus Low</p>
-<p>EQ Curvature KbPlus Medium</p>
-<p>EQ Curvature Sb High</p>
-<p>EQ Curvature Sb Low</p>
-<p>EQ Curvature Sb Medium</p>
-<p>EQ CurvatureCharge High</p>
-<p>EQ CurvatureCharge Low</p>
-<p>EQ CurvatureCharge MAX</p>
-<p>EQ CurvatureCharge Medium</p>
-<p>EQ CurvatureDelta</p>
-<p>EQ CurvatureDelta_Weighted</p>
-<p>EQ DeltaCharge High</p>
-<p>EQ DeltaCharge Low</p>
-<p>EQ DeltaCharge MAX</p>
-<p>EQ DeltaCharge Medium</p>
-<p>EQ DeltaKb High</p>
-<p>EQ DeltaKb Low</p>
-<p>EQ DeltaKb Medium</p>
-<p>EQ DeltaSb</p>
-<p>EQ DeltaSens</p>
-<p>EQ DeltaSens Weighted</p>
-<p>EQ PnLdown</p>
-<p>EQ PnLup</p>
-<p>EQ TotalCharge High</p>
-<p>EQ TotalCharge Low</p>
-<p>EQ TotalCharge Medium</p>
-<p>EQ VegaCharge High</p>
-<p>EQ VegaCharge Low</p>
-<p>EQ VegaCharge MAX</p>
-<p>EQ VegaCharge Medium</p>
-<p>EQ VegaKb High</p>
-<p>EQ VegaKb Low</p>
-<p>EQ VegaKb Medium</p>
-<p>EQ VegaSb</p>
-<p>EQ VegaSens</p>
-<p>EQ VegaSens Weighted</p>
-<p>Exotic RRAO Charge</p>
-<p>Exotic RRAO Notional</p>
-<p>FX CVRdown</p>
-<p>FX CVRup</p>
-<p>FX Curvature Kb</p>
-<p>FX Curvature KbMinus</p>
-<p>FX Curvature KbPlus</p>
-<p>FX Curvature Sb</p>
-<p>FX CurvatureCharge High</p>
-<p>FX CurvatureCharge Low</p>
-<p>FX CurvatureCharge MAX</p>
-<p>FX CurvatureCharge Medium</p>
-<p>FX CurvatureDelta</p>
-<p>FX CurvatureDelta Weighted</p>
-<p>FX DeltaCharge High</p>
-<p>FX DeltaCharge Low</p>
-<p>FX DeltaCharge MAX</p>
-<p>FX DeltaCharge Medium</p>
-<p>FX DeltaKb</p>
-<p>FX DeltaSb</p>
-<p>FX DeltaSens</p>
-<p>FX DeltaSens Weighted</p>
-<p>FX PnLdown</p>
-<p>FX PnLup</p>
-<p>FX TotalCharge High</p>
-<p>FX TotalCharge Low</p>
-<p>FX TotalCharge Medium</p>
-<p>FX VegaCharge High</p>
-<p>FX VegaCharge Low</p>
-<p>FX VegaCharge MAX</p>
-<p>FX VegaCharge Medium</p>
-<p>FX VegaKb High</p>
-<p>FX VegaKb Low</p>
-<p>FX VegaKb Medium</p>
-<p>FX VegaSb</p>
-<p>FX VegaSens</p>
-<p>FX VegaSens Weighted</p>
-<p>GIRR CVRdown</p>
-<p>GIRR CVRup</p>
-<p>GIRR Curvature Kb</p>
-<p>GIRR Curvature KbMinus</p>
-<p>GIRR Curvature KbPlus</p>
-<p>GIRR Curvature Sb</p>
-<p>GIRR CurvatureCharge High</p>
-<p>GIRR CurvatureCharge Low</p>
-<p>GIRR CurvatureCharge MAX</p>
-<p>GIRR CurvatureCharge Medium</p>
-<p>GIRR CurvatureDelta</p>
-<p>GIRR CurvatureDelta Weighted</p>
-<p>GIRR DeltaCharge High</p>
-<p>GIRR DeltaCharge Low</p>
-<p>GIRR DeltaCharge MAX</p>
-<p>GIRR DeltaCharge Medium</p>
-<p>GIRR DeltaKb High</p>
-<p>GIRR DeltaKb Low</p>
-<p>GIRR DeltaKb Medium</p>
-<p>GIRR DeltaSb</p>
-<p>GIRR DeltaSens</p>
-<p>GIRR DeltaSens Weighted</p>
-<p>GIRR PnLdown</p>
-<p>GIRR PnLup</p>
-<p>GIRR TotalCharge High</p>
-<p>GIRR TotalCharge Low</p>
-<p>GIRR TotalCharge Medium</p>
-<p>GIRR VegaCharge High</p>
-<p>GIRR VegaCharge Low</p>
-<p>GIRR VegaCharge MAX</p>
-<p>GIRR VegaCharge Medium</p>
-<p>GIRR VegaKb High</p>
-<p>GIRR VegaKb Low</p>
-<p>GIRR VegaKb Medium</p>
-<p>GIRR VegaSb</p>
-<p>GIRR VegaSens</p>
-<p>GIRR VegaSens Weighted</p>
-<p>GrossJTD</p>
-<p>Notional</p>
-<p>Other RRAO Charge</p>
-<p>Other RRAO Notional</p>
-<p>PnL_Down</p>
-<p>PnL_Up</p>
-<p>RRAO Charge</p>
-<p>RiskWeights</p>
-<p>SA Charge</p>
-<p>SBM Charge</p>
-<p>SBM Charge High</p>
-<p>SBM Charge Low</p>
-<p>SBM Charge Medium</p>
-<p>SensitivitySpot</p>
-<p>Sensitivity_025Y</p>
-<p>Sensitivity_05Y</p>
-<p>Sensitivity_10Y</p>
-<p>Sensitivity_15Y</p>
-<p>Sensitivity_1Y</p>
-<p>Sensitivity_20Y</p>
-<p>Sensitivity_2Y</p>
-<p>Sensitivity_30Y</p>
-<p>Sensitivity_3Y</p>
-<p>Sensitivity_5Y</p>
+<h1 id="why-to-use-ultibi-for-frtb"><a class="header" href="#why-to-use-ultibi-for-frtb">Why to use <code>ultibi</code> for <strong>FRTB</strong></a></h1>
+<ul>
+<li>
+<p>The calculation goes as per <strong><a href="https://www.bis.org/bcbs/publ/d457.pdf">FRTB SA Paper</a></strong> (Note: <code>ultibi</code> is not (yet) certified by ISDA. Always check the output against your own interpretation of the regulation) and aims to be fully compliant(although not certified). <strong><code>ultibi</code></strong> supports <strong><a href="https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/108255">CRR2</a></strong> parameter set out of the box. Switch between the two is as easy as setting <code>jurisdiction</code> to <code>CRR2</code> or <code>BCBS</code>.</p>
+</li>
+<li>
+<p><code>ultibi</code> is very flexible and allows you to override any of the prescribed parameters (such as <code>girr_delta_rho_infl_base_low</code>) via <code>calc_params</code> argument. This essentually means that you can define your own parameter sets as per any regulatory requirements (eg non BCBS/CRR2). This also means that you can <strong>stress test</strong> against changes in the values of the prescribed (aka hard coded by ISDA) parameters.</p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
 <p>If you are downloading from a software repository</p>
 <pre><code class="language-console">pip install ultibi
@@ -522,6 +203,28 @@
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tldr"><a class="header" href="#tldr">TL;DR</a></h1>
 <p>Although it is strongly advised to read all the chapters, this chapter consists of reproducible examples if you are looking to get up and running instantaneously.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="with-ui"><a class="header" href="#with-ui">with UI</a></h1>
+<p>To spin up the Cube/Pivot UI</p>
+<pre><code class="language-python">import ultibi as ul
+import polars as pl
+import os
+
+os.environ[&quot;RUST_LOG&quot;] = &quot;info&quot;  # enable logs
+os.environ[&quot;ADDRESS&quot;] = &quot;0.0.0.0:8000&quot;  # host on this address
+
+# Read Data
+# for more details: https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.read_csv.html
+df = pl.read_csv(&quot;data/titanic.csv&quot;)
+
+# Convert it into an Ultibi DataSet
+ds = ul.DataSet.from_frame(df)
+
+# By default (might change in the future)
+# Fields are Utf8 (non numerics) and integers, but you can configure it
+# through the config. See `Input and Data Sources` section.
+# Measures are numeric columns.
+ds.ui()
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fx-example"><a class="header" href="#fx-example">FX Example</a></h1>
 <pre><code class="language-python">import polars as pl
 import ultibi as ul
@@ -606,8 +309,75 @@ request = dict(
 result = ds.compute(request)
 print(result)
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="input-and-data-sources"><a class="header" href="#input-and-data-sources">Input and Data Sources</a></h1>
+<p>Any calculation/function needs an input and our <code>ultibi DataSet</code> is no exception. In this chapter we go through various ways to feed data into <code>ultibi</code>, their pros and cons.</p>
+<h2 id="ultima-dataset"><a class="header" href="#ultima-dataset">Ultima DataSet</a></h2>
+<p>First step is to create a DataSet from your data. Your data could be your portfolio for example. Think of a DataSet as a DataFrame with some special pre defined functions (eg &quot;FX Delta Capital Charge&quot;).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="input-and-data-sources-1"><a class="header" href="#input-and-data-sources-1">Input and Data Sources</a></h1>
+<h2 id="in-memory"><a class="header" href="#in-memory">In Memory</a></h2>
+<p>If your data fits into process memory - use that. It's fast.</p>
+<pre><code class="language-python">import ultibi as ul
+import polars as pl
+
+in_mem_frame = pl.read_csv(
+    &quot;./data/frtb/Delta.csv&quot;, dtypes={&quot;SensitivitySpot&quot;: pl.Float64}
+)
+dsource = ul.DataSource.inmemory(in_mem_frame)
+ds = ul.DataSet.from_source(dsource)
+ds.prepare()  # .prepare() is only relevant to FRTB dataset currently
+
+ds.ui()
+</code></pre>
+<p>Same would be achieved with a <code>.from_frame()</code> shortcut.</p>
+<p>Your data must be a <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported, or using a <a href="inputs/./input.html">config</a>. Note polars also supports <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="inputs/datasources.html#data-source-config">config</a>.</p>
+<pre><code class="language-python">{{#include ../examples/frtb_input.py:0:8}}
+print(ds.frame(None))
+</code></pre>
+<h2 id="scan"><a class="header" href="#scan">Scan</a></h2>
+<p>If you can't hold all your data in the process memory, you can sacrifise performance for a Scan.</p>
+<pre><code class="language-python">import polars as pl
+import ultibi as ul
+
+# Note that the LazyFrame query must start with scan_
+# and must've NOT been collected
+scan = pl.scan_csv(&quot;./data/frtb/Delta.csv&quot;, dtypes={&quot;SensitivitySpot&quot;: pl.Float64})
+dsource = ul.DataSource.scan(scan)
+ds = ul.DataSet.from_source(dsource)
+
+ds.ui()
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>Naturally this option will be slower, because prior to computing your measures we will need to read the relevant bits of the data into the process memory, and if relevant, call .prepare().</li>
+<li>Scanning involves serialisation of the Lazy Frame, and hence the python version of your <code>polars</code> lib must be aligned to what we expect. At the time of writing it has to be <code>&gt;=0.18.7</code>.</li>
+</ul>
+<h2 id="database---work-in-progress"><a class="header" href="#database---work-in-progress">DataBase - Work in Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="data-source-config"><a class="header" href="#data-source-config">Data Source Config</a></h2>
+<p>In principle, you are free to enrich this structure with as many columns as you want (for example Desk, Legal Entity etc). You can either do this manually or use <code>from_config</code>. Check out an example with explanations of each field: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml">datasource_config.toml</a>.</p>
+<pre><code class="language-python">import ultibi as ul
+
+# You can set up a config and we will take care of
+# castings, joins etc
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
+print(ds.frame(None))
+</code></pre>
+<h2 id="validate-work-in-progress"><a class="header" href="#validate-work-in-progress">Validate (work in progress)</a></h2>
+<p>If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call `.validate()`` on your dataset. It checks if every required column for every availiable calculation is present. Note: If you <strong>can</strong> guarantee your particular calculation would not require the missing columns you can proceed at your own risk!</p>
+<pre><code class="language-python">import ultibi as ul
+
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
+try:
+    ds.validate()
+except ul.NoDataError as e:
+    print(
+        &quot;One of key columns is missing. Be carefull if you wish to proceed &quot;
+        &quot;without it. Error: &quot;,
+        e,
+    )
+print(&quot;Complete&quot;)
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---input-format"><a class="header" href="#frtb-sa---input-format">FRTB SA - Input format</a></h1>
-<p>Any calculation/function needs inputs. In case of FRTB SA the <strong>input is your portfolio sensitivities at trade level</strong>. Currently expected format for the sensitivities is like this: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv">Delta.csv</a>. This format is very similar to the industry standard <a href="https://www.isda.org/a/aBzTE/The-Future-of-Risk-Capital-and-Margin.pdf">CRIF</a>. Coming soon full CRIF support. As you can see, this file is your Sensitivities at Trade-RiskFactor-Tenor level.</p>
+<p>In case of FRTB SA the <strong>input is your portfolio sensitivities at trade level</strong>. Currently expected format for the sensitivities is like this: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/Delta.csv">Delta.csv</a>. This format is very similar to the industry standard <a href="https://www.isda.org/a/aBzTE/The-Future-of-Risk-Capital-and-Margin.pdf">CRIF</a>. Coming soon full CRIF support. As you can see, this file is your Sensitivities at Trade-RiskFactor-Tenor level.</p>
 <p>In our examples we will also be using an optional <code>hierarchies</code> file <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/hms.csv">hms.csv</a>. Hierarchies simply define which <code>Book</code> belongs to where in terms of Business and/or Legal structure (eg which Desk or Legal Entity).</p>
 <p>Finally, we need <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/TradeAttributes.csv">TradeAttributes.csv</a>. It is similar to our Delta Sensis but the data here is at Trade level only. Ie Notional, Product/Derivative Type, RRAO Flags etc etc.</p>
 <h1 id="defenitions"><a class="header" href="#defenitions">Defenitions</a></h1>
@@ -811,11 +581,115 @@ print(result)
 <tr><td>NORATING</td><td>0.15</td></tr>
 <tr><td>DEFAULTED</td><td>1</td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><h2 id="ultima-dataset"><a class="header" href="#ultima-dataset">Ultima DataSet</a></h2>
-<p>First step is to create a DataSet from your portfolio data. Think of a DataSet as a DataFrame with some special pre defined functions (eg &quot;FX Delta Capital Charge&quot;).</p>
-<h2 id="from-frame"><a class="header" href="#from-frame">From Frame</a></h2>
-<p>In order to use our library you need to convert your portfolio into <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported. Note polars also supports <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="input.html#data-source-config">config</a>.</p>
-<pre><code class="language-python">import polars as pl
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="define-your-own-measures"><a class="header" href="#define-your-own-measures">Define your own Measures</a></h1>
+<p>One of the most powerful features of this Cube is the fact that you can define you own measures/calculations.</p>
+<p>Please read the <strong><a href="https://medium.com/@anatoly.bugakov/ultibi-perform-custom-bespoke-dataframe-operation-through-a-ui-44eb10bbef2b">this article</a></strong> for details.</p>
+<p>There are two kinds of <strong>Calculators</strong>:</p>
+<ol>
+<li>
+<p><em>Standard Calculator</em> returns a polars expression. Use this when you can.</p>
+</li>
+<li>
+<p><em>Custom Calculator</em> returns a Polars Series. It's flexible but is slower due to the code executing in <code>Python</code> and therefore locking the GIL.</p>
+</li>
+</ol>
+<p>There are two kinds of <strong>Measures</strong>:</p>
+<ol>
+<li><em>BaseMeasure</em> executed within .filter().groupby().agg() context.</li>
+<li><em>DependantMeasure</em> executed within .with_columns() context, but after underlying BaseMeasures were executed (in their respective context).</li>
+</ol>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p><strong>Note 1:</strong> In this example the <code>kwargs</code> are <code>parameters</code> will be passed to your function through the <a href="inputs/./calculation/calculate.html">request</a>. See the chapter on <a href="inputs/./calc_params.html">Calc Params</a></p>
+<p><strong>Note 2:</strong> make sure your function signatures are exactly as per the example</p>
+<pre><code class="language-python">import ultibi as ul
+import polars as pl
+import os
+
+os.environ[&quot;RUST_LOG&quot;] = &quot;info&quot;  # enable logs
+os.environ[&quot;ADDRESS&quot;] = &quot;0.0.0.0:8000&quot;  # host on this address
+
+# Read Data
+# for more details: https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.read_csv.html
+df = pl.read_csv(&quot;./data/titanic.csv&quot;)
+
+# Let's add some Custom/Bespoke Calculations to our UI
+
+
+# Standard Calculator
+def survival_mean_age(kwargs: dict[str, str]) -&gt; pl.Expr:
+    &quot;&quot;&quot;Mean Age of Survivals
+    pl.col(&quot;survived&quot;) is 0 or 1
+    pl.col(&quot;age&quot;) * pl.col(&quot;survived&quot;) - age of survived person, otherwise 0
+    pl.col(&quot;survived&quot;).sum() - number of survived
+    &quot;&quot;&quot;
+    return pl.col(&quot;age&quot;) * pl.col(&quot;survived&quot;) / pl.col(&quot;survived&quot;).sum()
+
+
+# Also a Standard Calculator
+def example_dep_calc(kwargs: dict[str, str]) -&gt; pl.Expr:
+    return pl.col(&quot;SurvivalMeanAge_sum&quot;) + pl.col(&quot;SouthamptonFareDivAge_sum&quot;)
+
+
+# When we need more involved calculations we go for a Custom Calculator
+def custom_calculator(srs: list[pl.Series], kwargs: dict[str, str]) -&gt; pl.Series:
+    &quot;&quot;&quot;
+    Southampton Fare/Age*multiplier
+    &quot;&quot;&quot;
+    df = pl.DataFrame({&quot;age&quot;: srs[0], &quot;fare&quot;: srs[1], &quot;e&quot;: srs[2]})
+    # Add Indicator Column for Southampton
+    df = df.with_columns(pl.when(pl.col(&quot;e&quot;) == &quot;S&quot;).then(1).otherwise(0).alias(&quot;S&quot;))
+    multiplier = float(kwargs.get(&quot;multiplier&quot;, 1))
+    res = df[&quot;S&quot;] * df[&quot;fare&quot;] / df[&quot;age&quot;] * multiplier
+    return res
+
+
+# inputs for the custom_calculator srs param
+inputs = [&quot;age&quot;, &quot;fare&quot;, &quot;embarked&quot;]
+# We return Floats
+res_type = pl.Float64
+# We return a Series, not a scalar (which otherwise would be auto exploded)
+returns_scalar = False
+
+measures = [
+    ul.BaseMeasure(
+        &quot;SouthamptonFareDivAge&quot;,
+        ul.CustomCalculator(custom_calculator, res_type, inputs, returns_scalar),
+        # (Optional) - we are only interested in Southampton, so
+        # unless other measures requested we might as well filter
+        # for Southampton only
+        # However, if if multiple measures requested, their
+        # precompute_filters will be joined as OR.
+        [[ul.EqFilter(&quot;embarked&quot;, &quot;S&quot;)]],
+        # PARAMS tab of the UI
+        calc_params=[ul.CalcParam(&quot;mltplr&quot;, &quot;1&quot;, &quot;float&quot;)],
+    ),
+    ul.BaseMeasure(
+        &quot;SurvivalMeanAge&quot;,
+        ul.StandardCalculator(survival_mean_age),
+        aggregation_restriction=&quot;sum&quot;,
+    ),
+    ul.DependantMeasure(
+        &quot;A_Dependant_Measure&quot;,
+        ul.StandardCalculator(example_dep_calc),
+        [(&quot;SurvivalMeanAge&quot;, &quot;sum&quot;), (&quot;SouthamptonFareDivAge&quot;, &quot;sum&quot;)],
+    ),
+]
+
+# Convert it into an Ultibi DataSet
+ds = ul.DataSet.from_frame(df, bespoke_measures=measures)
+
+ds.ui()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backend-calculation"><a class="header" href="#backend-calculation">Backend Calculation</a></h1>
+<p>In the following chapter we describe what's happening under the hood of our UI Pivot table. <strong>If you are only using the UI, then you don't really need to understand this.</strong> Yet, we recommend you go through it.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="assign-weightsprepare"><a class="header" href="#assign-weightsprepare">Assign Weights/Prepare</a></h1>
+<p><strong>Currently this section only applies to FRTBDataSet</strong>. In the future <code>python</code> users will be able to define their own, custom <code>prepare</code> functions too.</p>
+<p>Prepare is a <strong>fixed</strong> calculation which happens with every request for scans/db DataSources. For InMemory it happens only when you call <code>.prepare()</code>.</p>
+<p><code>from_config()</code> call <code>.prepare()</code> depending on <code>source_type</code>.</p>
+<p>A good usecase for that is to assign weights column to your data, as per FRTB regulation for example. <strong>Make sure you assign weights before doing any computations</strong>:</p>
+<pre><code class="language-python"># TODO scan here to demonstrate prepare
+
+import polars as pl
 import ultibi as ul
 
 # Note: sometimes Polars needs abit of help to determine the correct datatype for your
@@ -823,46 +697,14 @@ import ultibi as ul
 exposures = pl.read_csv(&quot;./data/frtb/Delta.csv&quot;, dtypes={&quot;SensitivitySpot&quot;: pl.Float64})
 # Feel free to join other attributes such as Hierarchy here ...
 ds = ul.FRTBDataSet.from_frame(exposures)
-print(ds.frame())
-</code></pre>
-<h2 id="data-source-config"><a class="header" href="#data-source-config">Data Source Config</a></h2>
-<p>In principle, you are free to enrich this structure with as many columns as you want (for example Desk, Legal Entity etc). You can either do this manually or use <code>from_config</code>. Check out an example with explanations of each field: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml">datasource_config.toml</a>.</p>
-<pre><code class="language-python"># You can also set up a config and we will take care of
-# castings, joins etc
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
 
-print(ds.frame())
-</code></pre>
-<h2 id="validate"><a class="header" href="#validate">Validate</a></h2>
-<p>If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call .validate() on your dataset. It checks if every required column for every availiable calculation is present. Note: If you <strong>can</strong> guarantee your particular calculation would not require the missing columns you can proceed at your own risk!</p>
-<pre><code class="language-python">import ultibi as ul
+original = ds.frame()  # keep the old value for comparison
 
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-try:
-    ds.validate()
-except ul.NoDataError as e:
-    print(
-        &quot;One of key columns is missing. Be carefull if you wish to proceed &quot;
-        &quot;without it. Error: &quot;,
-        e,
-    )
-print(&quot;Complete&quot;)
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---capital"><a class="header" href="#frtb-sa---capital">FRTB SA - Capital</a></h1>
-<p>This chapter shows how to calculate your capital</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="prepare"><a class="header" href="#prepare">Prepare</a></h1>
-<p>First, lets save the original table. You can get your data like this:</p>
-<pre><code class="language-python">original = ds.frame()  # keep the old value for comparison
-</code></pre>
-<h2 id="assign-weights"><a class="header" href="#assign-weights">Assign Weights</a></h2>
-<p>First part of the calculation(assuming you've got your exposures/sensitivities) is to assign weights to them as per the regulation. <strong><code>ultibi</code> assigns weights (and few other parameters) to your exposures as per the regulation</strong>. Make sure you <strong>assign weights before doing any computations</strong>:</p>
-<pre><code class="language-python"># Prepare assigns weights and other columns to the FRTBDataSet.
-# If you call it twice you will get an error
 ds.prepare()
-print(ds.frame())
-</code></pre>
-<p>You will get an error if you try to assign twice. Now, let's see what happened. We will need a little helper function:</p>
-<pre><code class="language-python">
+
+prepared = ds.frame()
+
+
 # Let's see what happened
 def diff(df1: pl.DataFrame, df2: pl.DataFrame) -&gt; pl.DataFrame:
     &quot;&quot;&quot;Columns in df1 which are not in df2
@@ -874,8 +716,13 @@ def diff(df1: pl.DataFrame, df2: pl.DataFrame) -&gt; pl.DataFrame:
     Returns:
         pl.DataFrame: _description_
     &quot;&quot;&quot;
-print(diff(ds.frame(), original))
+    return df1.select([c for c in df1 if c.name not in df2])
+
+
+diff_frame = diff(prepared, original)
+print(diff_frame.columns)
 </code></pre>
+<p>You will get an error if you try to assign twice. Now, let's see what happened. We will need a little helper function:</p>
 <p>At the time of writing this returns 6 new columns(names of the columns might change slightly but the meaning will always be the same):</p>
 <div class="table-wrapper"><table><thead><tr><th>Column Name</th><th>Explanation</th></tr></thead><tbody>
 <tr><td>SensWeights</td><td>List of weights, one for each tenor. Eg [1,1,1,1,1] for any Vega risk.</td></tr>
@@ -918,7 +765,7 @@ request = dict(
     },
 )
 </code></pre>
-<p>Note: if you don't care about level of aggregation and just want a total say DRC Capital Charge for your portfolio, just provide an extra column to your portfolio, name it <code>&quot;Total&quot;</code>(for exmaple) and set all values in the columns as <code>&quot;Total&quot;</code>. Then do <code>groupby=[&quot;Total&quot;]</code>. Above request has two <strong>optional</strong> parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows <strong>from the result</strong> where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="./whatif.html">analysis</a> chapter) etc.</p>
+<p>Note: if you don't care about level of aggregation and just want a total say DRC Capital Charge for your portfolio, just provide an extra column to your portfolio, name it <code>&quot;Total&quot;</code>(for exmaple) and set all values in the columns as <code>&quot;Total&quot;</code>. Then do <code>groupby=[&quot;Total&quot;]</code>. Above request has two <strong>optional</strong> parameters which we haven't talked about yet: <code>hide_zeros</code> and <code>calc_params</code>. <code>hide_zeros</code> simply removes rows <strong>from the result</strong> where each measure is 0, and <code>calc_params</code> allows you to override default parameters such as <code>jurisdiction</code>, <code>reporting_ccy</code>, <code>girr_delta_rho_diff_curve_base</code> (and many many others. We will talk about in <a href="calculation/./whatif.html">analysis</a> chapter) etc.</p>
 <p>Valide that you've formed a legitimate request (ie no compulsory field is missing, datatypes are correct etc):</p>
 <pre><code class="language-python">aggrequest = ul.AggRequest(request)
 print(request)
@@ -929,6 +776,355 @@ print(result)
 print(&quot;Type: &quot;, type(result))
 </code></pre>
 <p>Notice the returned object is a polars DataFrame. You can then do whatever you want with it. Print (to set how many columns you want to print make sure to use polars <a href="https://pola-rs.github.io/polars/py-polars/html/reference/config.html">config</a>), or any on the <a href="https://pola-rs.github.io/polars/py-polars/html/reference/io.html">I/O</a>: save to csv, parquet, database etc.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-supported-measures"><a class="header" href="#frtb-supported-measures">FRTB Supported measures</a></h1>
+<p>At the time of writing:</p>
+<pre><code class="language-python">ds = ul.FRTBDataSet.from_frame(df)
+for m in ds.measures.keys():
+    print(m)
+</code></pre>
+<p>CSR Sec CTP CVRdown</p>
+<p>CSR Sec CTP CVRup</p>
+<p>CSR Sec CTP Curvature Kb High</p>
+<p>CSR Sec CTP Curvature Kb Low</p>
+<p>CSR Sec CTP Curvature Kb Medium</p>
+<p>CSR Sec CTP Curvature KbMinus High</p>
+<p>CSR Sec CTP Curvature KbMinus Low</p>
+<p>CSR Sec CTP Curvature KbMinus Medium</p>
+<p>CSR Sec CTP Curvature KbPlus High</p>
+<p>CSR Sec CTP Curvature KbPlus Low</p>
+<p>CSR Sec CTP Curvature KbPlus Medium</p>
+<p>CSR Sec CTP Curvature Sb High</p>
+<p>CSR Sec CTP Curvature Sb Low</p>
+<p>CSR Sec CTP Curvature Sb Medium</p>
+<p>CSR Sec CTP CurvatureCharge High</p>
+<p>CSR Sec CTP CurvatureCharge Low</p>
+<p>CSR Sec CTP CurvatureCharge MAX</p>
+<p>CSR Sec CTP CurvatureCharge Medium</p>
+<p>CSR Sec CTP CurvatureDelta</p>
+<p>CSR Sec CTP CurvatureDelta_Weighted</p>
+<p>CSR Sec CTP DeltaCharge High</p>
+<p>CSR Sec CTP DeltaCharge Low</p>
+<p>CSR Sec CTP DeltaCharge MAX</p>
+<p>CSR Sec CTP DeltaCharge Medium</p>
+<p>CSR Sec CTP DeltaKb High</p>
+<p>CSR Sec CTP DeltaKb Low</p>
+<p>CSR Sec CTP DeltaKb Medium</p>
+<p>CSR Sec CTP DeltaSb</p>
+<p>CSR Sec CTP DeltaSens</p>
+<p>CSR Sec CTP DeltaSens Weighted</p>
+<p>CSR Sec CTP PnLdown</p>
+<p>CSR Sec CTP PnLup</p>
+<p>CSR Sec CTP TotalCharge High</p>
+<p>CSR Sec CTP TotalCharge Low</p>
+<p>CSR Sec CTP TotalCharge Medium</p>
+<p>CSR Sec CTP VegaCharge High</p>
+<p>CSR Sec CTP VegaCharge Low</p>
+<p>CSR Sec CTP VegaCharge MAX</p>
+<p>CSR Sec CTP VegaCharge Medium</p>
+<p>CSR Sec CTP VegaKb High</p>
+<p>CSR Sec CTP VegaKb Low</p>
+<p>CSR Sec CTP VegaKb Medium</p>
+<p>CSR Sec CTP VegaSb</p>
+<p>CSR Sec CTP VegaSens</p>
+<p>CSR Sec CTP VegaSens Weighted</p>
+<p>CSR Sec nonCTP CVRdown</p>
+<p>CSR Sec nonCTP CVRup</p>
+<p>CSR Sec nonCTP Curvature Kb High</p>
+<p>CSR Sec nonCTP Curvature Kb Low</p>
+<p>CSR Sec nonCTP Curvature Kb Medium</p>
+<p>CSR Sec nonCTP Curvature KbMinus High</p>
+<p>CSR Sec nonCTP Curvature KbMinus Low</p>
+<p>CSR Sec nonCTP Curvature KbMinus Medium</p>
+<p>CSR Sec nonCTP Curvature KbPlus High</p>
+<p>CSR Sec nonCTP Curvature KbPlus Low</p>
+<p>CSR Sec nonCTP Curvature KbPlus Medium</p>
+<p>CSR Sec nonCTP Curvature Sb High</p>
+<p>CSR Sec nonCTP Curvature Sb Low</p>
+<p>CSR Sec nonCTP Curvature Sb Medium</p>
+<p>CSR Sec nonCTP CurvatureCharge High</p>
+<p>CSR Sec nonCTP CurvatureCharge Low</p>
+<p>CSR Sec nonCTP CurvatureCharge MAX</p>
+<p>CSR Sec nonCTP CurvatureCharge Medium</p>
+<p>CSR Sec nonCTP CurvatureDelta</p>
+<p>CSR Sec nonCTP CurvatureDelta Weighted</p>
+<p>CSR Sec nonCTP DeltaCharge High</p>
+<p>CSR Sec nonCTP DeltaCharge Low</p>
+<p>CSR Sec nonCTP DeltaCharge MAX</p>
+<p>CSR Sec nonCTP DeltaCharge Medium</p>
+<p>CSR Sec nonCTP DeltaKb High</p>
+<p>CSR Sec nonCTP DeltaKb Low</p>
+<p>CSR Sec nonCTP DeltaKb Medium</p>
+<p>CSR Sec nonCTP DeltaSb</p>
+<p>CSR Sec nonCTP DeltaSens</p>
+<p>CSR Sec nonCTP DeltaSens Weighted</p>
+<p>CSR Sec nonCTP PnLdown</p>
+<p>CSR Sec nonCTP PnLup</p>
+<p>CSR Sec nonCTP TotalCharge High</p>
+<p>CSR Sec nonCTP TotalCharge Low</p>
+<p>CSR Sec nonCTP TotalCharge Medium</p>
+<p>CSR Sec nonCTP VegaCharge High</p>
+<p>CSR Sec nonCTP VegaCharge Low</p>
+<p>CSR Sec nonCTP VegaCharge MAX</p>
+<p>CSR Sec nonCTP VegaCharge Medium</p>
+<p>CSR Sec nonCTP VegaKb High</p>
+<p>CSR Sec nonCTP VegaKb Low</p>
+<p>CSR Sec nonCTP VegaKb Medium</p>
+<p>CSR Sec nonCTP VegaSb</p>
+<p>CSR Sec nonCTP VegaSens</p>
+<p>CSR Sec nonCTP VegaSens Weighted</p>
+<p>CSR nonSec CVRdown</p>
+<p>CSR nonSec CVRup</p>
+<p>CSR nonSec Curvature Kb High</p>
+<p>CSR nonSec Curvature Kb Low</p>
+<p>CSR nonSec Curvature Kb Medium</p>
+<p>CSR nonSec Curvature KbMinus High</p>
+<p>CSR nonSec Curvature KbMinus Low</p>
+<p>CSR nonSec Curvature KbMinus Medium</p>
+<p>CSR nonSec Curvature KbPlus High</p>
+<p>CSR nonSec Curvature KbPlus Low</p>
+<p>CSR nonSec Curvature KbPlus Medium</p>
+<p>CSR nonSec Curvature Sb High</p>
+<p>CSR nonSec Curvature Sb Low</p>
+<p>CSR nonSec Curvature Sb Medium</p>
+<p>CSR nonSec CurvatureCharge High</p>
+<p>CSR nonSec CurvatureCharge Low</p>
+<p>CSR nonSec CurvatureCharge MAX</p>
+<p>CSR nonSec CurvatureCharge Medium</p>
+<p>CSR nonSec CurvatureDelta</p>
+<p>CSR nonSec CurvatureDeltaWeighted</p>
+<p>CSR nonSec DeltaCharge High</p>
+<p>CSR nonSec DeltaCharge Low</p>
+<p>CSR nonSec DeltaCharge MAX</p>
+<p>CSR nonSec DeltaCharge Medium</p>
+<p>CSR nonSec DeltaKb High</p>
+<p>CSR nonSec DeltaKb Low</p>
+<p>CSR nonSec DeltaKb Medium</p>
+<p>CSR nonSec DeltaSb</p>
+<p>CSR nonSec DeltaSens</p>
+<p>CSR nonSec DeltaSens Weighted</p>
+<p>CSR nonSec PnLdown</p>
+<p>CSR nonSec PnLup</p>
+<p>CSR nonSec TotalCharge High</p>
+<p>CSR nonSec TotalCharge Low</p>
+<p>CSR nonSec TotalCharge MAX</p>
+<p>CSR nonSec TotalCharge Medium</p>
+<p>CSR nonSec VegaCharge High</p>
+<p>CSR nonSec VegaCharge Low</p>
+<p>CSR nonSec VegaCharge MAX</p>
+<p>CSR nonSec VegaCharge Medium</p>
+<p>CSR nonSec VegaKb High</p>
+<p>CSR nonSec VegaKb Low</p>
+<p>CSR nonSec VegaKb Medium</p>
+<p>CSR nonSec VegaSb</p>
+<p>CSR nonSec VegaSens</p>
+<p>CSR nonSec VegaSens Weighted</p>
+<p>Commodity CVRdown</p>
+<p>Commodity CVRup</p>
+<p>Commodity Curvature Kb High</p>
+<p>Commodity Curvature Kb Low</p>
+<p>Commodity Curvature Kb Medium</p>
+<p>Commodity Curvature KbMinus High</p>
+<p>Commodity Curvature KbMinus Low</p>
+<p>Commodity Curvature KbMinus Medium</p>
+<p>Commodity Curvature KbPlus High</p>
+<p>Commodity Curvature KbPlus Low</p>
+<p>Commodity Curvature KbPlus Medium</p>
+<p>Commodity Curvature Sb High</p>
+<p>Commodity Curvature Sb Low</p>
+<p>Commodity Curvature Sb Medium</p>
+<p>Commodity CurvatureCharge High</p>
+<p>Commodity CurvatureCharge Low</p>
+<p>Commodity CurvatureCharge MAX</p>
+<p>Commodity CurvatureCharge Medium</p>
+<p>Commodity CurvatureDelta</p>
+<p>Commodity CurvatureDelta Weighted</p>
+<p>Commodity DeltaCharge High</p>
+<p>Commodity DeltaCharge Low</p>
+<p>Commodity DeltaCharge MAX</p>
+<p>Commodity DeltaCharge Medium</p>
+<p>Commodity DeltaKb High</p>
+<p>Commodity DeltaKb Low</p>
+<p>Commodity DeltaKb Medium</p>
+<p>Commodity DeltaSb</p>
+<p>Commodity DeltaSens</p>
+<p>Commodity DeltaSens Weighted</p>
+<p>Commodity PnLdown</p>
+<p>Commodity PnLup</p>
+<p>Commodity TotalCharge High</p>
+<p>Commodity TotalCharge Low</p>
+<p>Commodity TotalCharge MAX</p>
+<p>Commodity TotalCharge Medium</p>
+<p>Commodity VegaCharge High</p>
+<p>Commodity VegaCharge Low</p>
+<p>Commodity VegaCharge MAX</p>
+<p>Commodity VegaCharge Medium</p>
+<p>Commodity VegaKb High</p>
+<p>Commodity VegaKb Low</p>
+<p>Commodity VegaKb Medium</p>
+<p>Commodity VegaSb</p>
+<p>Commodity VegaSens</p>
+<p>Commodity VegaSens Weighted</p>
+<p>DRC Charge</p>
+<p>DRC Sec nonCTP CapitalCharge</p>
+<p>DRC Sec nonCTP GrossJTD</p>
+<p>DRC Sec nonCTP GrossJTD Scaled</p>
+<p>DRC Sec nonCTP HBR</p>
+<p>DRC Sec nonCTP NetLongJTD</p>
+<p>DRC Sec nonCTP NetLongJTD Weighted</p>
+<p>DRC Sec nonCTP NetShortJTD</p>
+<p>DRC Sec nonCTP NetShortJTD Weighted</p>
+<p>DRC nonSec CapitalCharge</p>
+<p>DRC nonSec GrossJTD</p>
+<p>DRC nonSec GrossJTD Scaled</p>
+<p>DRC nonSec HBR</p>
+<p>DRC nonSec NetAbsShortJTD Weighted</p>
+<p>DRC nonSec NetLongJTD</p>
+<p>DRC nonSec NetLongJTD Weighted</p>
+<p>DRC nonSec NetShortJTD</p>
+<p>EQ CVRdown</p>
+<p>EQ CVRup</p>
+<p>EQ Curvature Kb High</p>
+<p>EQ Curvature Kb Low</p>
+<p>EQ Curvature Kb Medium</p>
+<p>EQ Curvature KbMinus High</p>
+<p>EQ Curvature KbMinus Low</p>
+<p>EQ Curvature KbMinus Medium</p>
+<p>EQ Curvature KbPlus High</p>
+<p>EQ Curvature KbPlus Low</p>
+<p>EQ Curvature KbPlus Medium</p>
+<p>EQ Curvature Sb High</p>
+<p>EQ Curvature Sb Low</p>
+<p>EQ Curvature Sb Medium</p>
+<p>EQ CurvatureCharge High</p>
+<p>EQ CurvatureCharge Low</p>
+<p>EQ CurvatureCharge MAX</p>
+<p>EQ CurvatureCharge Medium</p>
+<p>EQ CurvatureDelta</p>
+<p>EQ CurvatureDelta_Weighted</p>
+<p>EQ DeltaCharge High</p>
+<p>EQ DeltaCharge Low</p>
+<p>EQ DeltaCharge MAX</p>
+<p>EQ DeltaCharge Medium</p>
+<p>EQ DeltaKb High</p>
+<p>EQ DeltaKb Low</p>
+<p>EQ DeltaKb Medium</p>
+<p>EQ DeltaSb</p>
+<p>EQ DeltaSens</p>
+<p>EQ DeltaSens Weighted</p>
+<p>EQ PnLdown</p>
+<p>EQ PnLup</p>
+<p>EQ TotalCharge High</p>
+<p>EQ TotalCharge Low</p>
+<p>EQ TotalCharge Medium</p>
+<p>EQ VegaCharge High</p>
+<p>EQ VegaCharge Low</p>
+<p>EQ VegaCharge MAX</p>
+<p>EQ VegaCharge Medium</p>
+<p>EQ VegaKb High</p>
+<p>EQ VegaKb Low</p>
+<p>EQ VegaKb Medium</p>
+<p>EQ VegaSb</p>
+<p>EQ VegaSens</p>
+<p>EQ VegaSens Weighted</p>
+<p>Exotic RRAO Charge</p>
+<p>Exotic RRAO Notional</p>
+<p>FX CVRdown</p>
+<p>FX CVRup</p>
+<p>FX Curvature Kb</p>
+<p>FX Curvature KbMinus</p>
+<p>FX Curvature KbPlus</p>
+<p>FX Curvature Sb</p>
+<p>FX CurvatureCharge High</p>
+<p>FX CurvatureCharge Low</p>
+<p>FX CurvatureCharge MAX</p>
+<p>FX CurvatureCharge Medium</p>
+<p>FX CurvatureDelta</p>
+<p>FX CurvatureDelta Weighted</p>
+<p>FX DeltaCharge High</p>
+<p>FX DeltaCharge Low</p>
+<p>FX DeltaCharge MAX</p>
+<p>FX DeltaCharge Medium</p>
+<p>FX DeltaKb</p>
+<p>FX DeltaSb</p>
+<p>FX DeltaSens</p>
+<p>FX DeltaSens Weighted</p>
+<p>FX PnLdown</p>
+<p>FX PnLup</p>
+<p>FX TotalCharge High</p>
+<p>FX TotalCharge Low</p>
+<p>FX TotalCharge Medium</p>
+<p>FX VegaCharge High</p>
+<p>FX VegaCharge Low</p>
+<p>FX VegaCharge MAX</p>
+<p>FX VegaCharge Medium</p>
+<p>FX VegaKb High</p>
+<p>FX VegaKb Low</p>
+<p>FX VegaKb Medium</p>
+<p>FX VegaSb</p>
+<p>FX VegaSens</p>
+<p>FX VegaSens Weighted</p>
+<p>GIRR CVRdown</p>
+<p>GIRR CVRup</p>
+<p>GIRR Curvature Kb</p>
+<p>GIRR Curvature KbMinus</p>
+<p>GIRR Curvature KbPlus</p>
+<p>GIRR Curvature Sb</p>
+<p>GIRR CurvatureCharge High</p>
+<p>GIRR CurvatureCharge Low</p>
+<p>GIRR CurvatureCharge MAX</p>
+<p>GIRR CurvatureCharge Medium</p>
+<p>GIRR CurvatureDelta</p>
+<p>GIRR CurvatureDelta Weighted</p>
+<p>GIRR DeltaCharge High</p>
+<p>GIRR DeltaCharge Low</p>
+<p>GIRR DeltaCharge MAX</p>
+<p>GIRR DeltaCharge Medium</p>
+<p>GIRR DeltaKb High</p>
+<p>GIRR DeltaKb Low</p>
+<p>GIRR DeltaKb Medium</p>
+<p>GIRR DeltaSb</p>
+<p>GIRR DeltaSens</p>
+<p>GIRR DeltaSens Weighted</p>
+<p>GIRR PnLdown</p>
+<p>GIRR PnLup</p>
+<p>GIRR TotalCharge High</p>
+<p>GIRR TotalCharge Low</p>
+<p>GIRR TotalCharge Medium</p>
+<p>GIRR VegaCharge High</p>
+<p>GIRR VegaCharge Low</p>
+<p>GIRR VegaCharge MAX</p>
+<p>GIRR VegaCharge Medium</p>
+<p>GIRR VegaKb High</p>
+<p>GIRR VegaKb Low</p>
+<p>GIRR VegaKb Medium</p>
+<p>GIRR VegaSb</p>
+<p>GIRR VegaSens</p>
+<p>GIRR VegaSens Weighted</p>
+<p>GrossJTD</p>
+<p>Other RRAO Charge</p>
+<p>Other RRAO Notional</p>
+<p>PnL_Down</p>
+<p>PnL_Up</p>
+<p>RRAO Charge</p>
+<p>RiskWeights</p>
+<p>SA Charge</p>
+<p>SBM Charge</p>
+<p>SBM Charge High</p>
+<p>SBM Charge Low</p>
+<p>SBM Charge Medium</p>
+<p>SensitivitySpot</p>
+<p>Sensitivity_025Y</p>
+<p>Sensitivity_05Y</p>
+<p>Sensitivity_10Y</p>
+<p>Sensitivity_1Y</p>
+<p>Sensitivity_3Y</p>
+<p>Sensitivity_5Y</p>
+<p>Total Sens</p>
+<p>TradeId</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-if"><a class="header" href="#what-if">What If</a></h1>
+<p>This chapter demonstrates all the rich feature selection <code>ultibi</code> offers for your analysis. For instance, you can <strong>override</strong> risk weights, inner/across bucket correlation parameters, trade attributes.</p>
+<p>You can instantly <strong>add rows(trades)</strong> to your portfolio to analyse the impact it has on the cpaital charge.</p>
+<p>We also provide a wide range of optional <strong>calculation parameters</strong>(such as jurisdiction, etc) which you could chose when performing calculation.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="filtering"><a class="header" href="#filtering">Filtering</a></h1>
 <p>Often, one would want <strong>filter</strong> their data. May be you are just interested in number of one particular subset (eg a Book). Or, if you are investigating an issue, this can be very useful to narrow down the potential underlying root cause.</p>
 <p>Note: you specify type of filter with <code>&quot;op&quot;</code> argument.</p>
@@ -938,7 +1134,7 @@ print(&quot;Type: &quot;, type(result))
 import polars as pl
 
 pl.Config.set_tbl_rows(100)
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;, prepare=True)
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
 
 
 request = dict(
@@ -1035,10 +1231,6 @@ request = dict(
 result = ds.compute(request)
 print(result)
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="frtb-sa---what-if"><a class="header" href="#frtb-sa---what-if">FRTB SA - What If</a></h1>
-<p>This chapter demonstrates all the rich feature selection <code>ultibi</code> offers for your analysis. For instance, you can <strong>override</strong> risk weights, inner/across bucket correlation parameters, trade attributes.</p>
-<p>You can instantly <strong>add trades</strong> to your portfolio to analyse the impact it has on the cpaital charge.</p>
-<p>We also provide a wide range of optional <strong>calculation parameters</strong>(such as jurisdiction, etc) which you could chose when performing calculation.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="overrides"><a class="header" href="#overrides">Overrides</a></h1>
 <p>You can temporarily override any value in your dataset. This can be very useful to perform analysis. An override consists of three fields:</p>
 <ol>
@@ -1097,7 +1289,7 @@ print(result)
 <pre><code class="language-python">import ultibi as ul
 import json
 
-ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;, prepare=True)
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
 
 added_rows = dict(
     prepare=True,
@@ -1190,9 +1382,9 @@ print(result2)
 import json
 
 ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-ds.prepare()
+
 for calc_param in ds.calc_params:
-    if &quot;com_delta_&quot; in calc_param[&quot;name&quot;]:
+    if &quot;com_delta_&quot; in calc_param[0]:
         # print(calc_param) #&lt;-- uncomment to see
         pass
 # fmt: off
@@ -1270,9 +1462,7 @@ os.environ[&quot;RUST_LOG&quot;] = &quot;info&quot;
 os.environ[&quot;ADDRESS&quot;] = &quot;0.0.0.0:8000&quot;
 
 start_time = time.time()
-ds = ul.FRTBDataSet.from_config_path(
-    &quot;./data/frtb/datasource_config.toml&quot;, collect=True, prepare=True
-)
+ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
 print(&quot;--- Read DF time: %s seconds ---&quot; % (time.time() - start_time))
 ds.ui()
 </code></pre>

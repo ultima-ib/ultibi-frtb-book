@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Define your own Measures - Ultibi Python FRTB Cube User Guide</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="ultibi python developer&#x27;s user guide. PivotUI, Cube, FRTB.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../tabbed-code-blocks.css">
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../quickstart/quickstart.html"><strong aria-hidden="true">2.</strong> Quickstart</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../quickstart/ui_quick.html"><strong aria-hidden="true">2.1.</strong> with UI</a></li><li class="chapter-item expanded "><a href="../quickstart/fx.html"><strong aria-hidden="true">2.2.</strong> FRTB FX</a></li></ol></li><li class="chapter-item expanded "><a href="../inputs/inputs_intro.html"><strong aria-hidden="true">3.</strong> Input, DataSource and DataSet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../inputs/datasources.html"><strong aria-hidden="true">3.1.</strong> Data Sources</a></li><li class="chapter-item expanded "><a href="../inputs/input.html"><strong aria-hidden="true">3.2.</strong> Config file</a></li><li class="chapter-item expanded "><a href="../inputs/format.html"><strong aria-hidden="true">3.3.</strong> FRTB Input Format</a></li><li class="chapter-item expanded "><a href="../inputs/bespoke_measures.html" class="active"><strong aria-hidden="true">3.4.</strong> Define your own Measures</a></li></ol></li><li class="chapter-item expanded "><a href="../calculation/calc_intro.html"><strong aria-hidden="true">4.</strong> Calculation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../calculation/weights.html"><strong aria-hidden="true">4.1.</strong> Prepare (FRTB Assign Weights)</a></li><li class="chapter-item expanded "><a href="../calculation/calculate.html"><strong aria-hidden="true">4.2.</strong> Calculation (FRTB Capital)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../calculation/frtb_measures.html"><strong aria-hidden="true">4.2.1.</strong> FRTB Supported measures</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../whatif.html"><strong aria-hidden="true">5.</strong> WhatIf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../filters.html"><strong aria-hidden="true">5.1.</strong> Filters</a></li><li class="chapter-item expanded "><a href="../override.html"><strong aria-hidden="true">5.2.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="../add_row.html"><strong aria-hidden="true">5.3.</strong> Add Rows(Trades)</a></li><li class="chapter-item expanded "><a href="../calc_params.html"><strong aria-hidden="true">5.4.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="../ui.html"><strong aria-hidden="true">6.</strong> UI</a></li><li class="chapter-item expanded "><a href="../performance.html"><strong aria-hidden="true">7.</strong> Performance</a></li><li class="chapter-item expanded "><a href="../feedback.html"><strong aria-hidden="true">8.</strong> Contacts and Feedback</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Ultibi Python FRTB Cube User Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="define-your-own-measures"><a class="header" href="#define-your-own-measures">Define your own Measures</a></h1>
+<p>One of the most powerful features of this Cube is the fact that you can define you own measures/calculations.</p>
+<p>Please read the <strong><a href="https://medium.com/@anatoly.bugakov/ultibi-perform-custom-bespoke-dataframe-operation-through-a-ui-44eb10bbef2b">this article</a></strong> for details.</p>
+<p>There are two kinds of <strong>Calculators</strong>:</p>
+<ol>
+<li>
+<p><em>Standard Calculator</em> returns a polars expression. Use this when you can.</p>
+</li>
+<li>
+<p><em>Custom Calculator</em> returns a Polars Series. It's flexible but is slower due to the code executing in <code>Python</code> and therefore locking the GIL.</p>
+</li>
+</ol>
+<p>There are two kinds of <strong>Measures</strong>:</p>
+<ol>
+<li><em>BaseMeasure</em> executed within .filter().groupby().agg() context.</li>
+<li><em>DependantMeasure</em> executed within .with_columns() context, but after underlying BaseMeasures were executed (in their respective context).</li>
+</ol>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p><strong>Note 1:</strong> In this example the <code>kwargs</code> are <code>parameters</code> will be passed to your function through the <a href="./calculation/calculate.html">request</a>. See the chapter on <a href="./calc_params.html">Calc Params</a></p>
+<p><strong>Note 2:</strong> make sure your function signatures are exactly as per the example</p>
+<pre><code class="language-python">import ultibi as ul
+import polars as pl
+import os
+
+os.environ[&quot;RUST_LOG&quot;] = &quot;info&quot;  # enable logs
+os.environ[&quot;ADDRESS&quot;] = &quot;0.0.0.0:8000&quot;  # host on this address
+
+# Read Data
+# for more details: https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.read_csv.html
+df = pl.read_csv(&quot;./data/titanic.csv&quot;)
+
+# Let's add some Custom/Bespoke Calculations to our UI
+
+
+# Standard Calculator
+def survival_mean_age(kwargs: dict[str, str]) -&gt; pl.Expr:
+    &quot;&quot;&quot;Mean Age of Survivals
+    pl.col(&quot;survived&quot;) is 0 or 1
+    pl.col(&quot;age&quot;) * pl.col(&quot;survived&quot;) - age of survived person, otherwise 0
+    pl.col(&quot;survived&quot;).sum() - number of survived
+    &quot;&quot;&quot;
+    return pl.col(&quot;age&quot;) * pl.col(&quot;survived&quot;) / pl.col(&quot;survived&quot;).sum()
+
+
+# Also a Standard Calculator
+def example_dep_calc(kwargs: dict[str, str]) -&gt; pl.Expr:
+    return pl.col(&quot;SurvivalMeanAge_sum&quot;) + pl.col(&quot;SouthamptonFareDivAge_sum&quot;)
+
+
+# When we need more involved calculations we go for a Custom Calculator
+def custom_calculator(srs: list[pl.Series], kwargs: dict[str, str]) -&gt; pl.Series:
+    &quot;&quot;&quot;
+    Southampton Fare/Age*multiplier
+    &quot;&quot;&quot;
+    df = pl.DataFrame({&quot;age&quot;: srs[0], &quot;fare&quot;: srs[1], &quot;e&quot;: srs[2]})
+    # Add Indicator Column for Southampton
+    df = df.with_columns(pl.when(pl.col(&quot;e&quot;) == &quot;S&quot;).then(1).otherwise(0).alias(&quot;S&quot;))
+    multiplier = float(kwargs.get(&quot;multiplier&quot;, 1))
+    res = df[&quot;S&quot;] * df[&quot;fare&quot;] / df[&quot;age&quot;] * multiplier
+    return res
+
+
+# inputs for the custom_calculator srs param
+inputs = [&quot;age&quot;, &quot;fare&quot;, &quot;embarked&quot;]
+# We return Floats
+res_type = pl.Float64
+# We return a Series, not a scalar (which otherwise would be auto exploded)
+returns_scalar = False
+
+measures = [
+    ul.BaseMeasure(
+        &quot;SouthamptonFareDivAge&quot;,
+        ul.CustomCalculator(custom_calculator, res_type, inputs, returns_scalar),
+        # (Optional) - we are only interested in Southampton, so
+        # unless other measures requested we might as well filter
+        # for Southampton only
+        # However, if if multiple measures requested, their
+        # precompute_filters will be joined as OR.
+        [[ul.EqFilter(&quot;embarked&quot;, &quot;S&quot;)]],
+        # PARAMS tab of the UI
+        calc_params=[ul.CalcParam(&quot;mltplr&quot;, &quot;1&quot;, &quot;float&quot;)],
+    ),
+    ul.BaseMeasure(
+        &quot;SurvivalMeanAge&quot;,
+        ul.StandardCalculator(survival_mean_age),
+        aggregation_restriction=&quot;sum&quot;,
+    ),
+    ul.DependantMeasure(
+        &quot;A_Dependant_Measure&quot;,
+        ul.StandardCalculator(example_dep_calc),
+        [(&quot;SurvivalMeanAge&quot;, &quot;sum&quot;), (&quot;SouthamptonFareDivAge&quot;, &quot;sum&quot;)],
+    ),
+]
+
+# Convert it into an Ultibi DataSet
+ds = ul.DataSet.from_frame(df, bespoke_measures=measures)
+
+ds.ui()
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../inputs/format.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../calculation/calc_intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../inputs/format.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../calculation/calc_intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../tabbed-code-blocks.js"></script>
+
+
+    </div>
+    </body>
+</html>

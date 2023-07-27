@@ -2,74 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.620Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/add_row</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.640Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/calc_params</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/calculate</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/capital</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.644Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/feedback</loc>
-        <lastmod>2023-03-20T16:43:38.700Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.648Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/filters</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/format</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/fx</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/input</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.640Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/installation</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.620Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/intro</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.620Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/override</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.640Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/performance</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/quickstart</loc>
-        <lastmod>2023-03-20T16:43:38.692Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.648Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/ui</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
-    </url>
-    <url>
-        <loc>https://ultimabi.uk/ultibi-frtb-book/weights</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.644Z</lastmod>
     </url>
     <url>
         <loc>https://ultimabi.uk/ultibi-frtb-book/whatif</loc>
-        <lastmod>2023-03-20T16:43:38.696Z</lastmod>
+        <lastmod>2023-07-27T13:22:31.636Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/calculation/calc_intro</loc>
+        <lastmod>2023-07-27T13:22:31.632Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/calculation/calculate</loc>
+        <lastmod>2023-07-27T13:22:31.636Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/calculation/frtb_measures</loc>
+        <lastmod>2023-07-27T13:22:31.636Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/calculation/weights</loc>
+        <lastmod>2023-07-27T13:22:31.632Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/inputs/bespoke_measures</loc>
+        <lastmod>2023-07-27T13:22:31.632Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/inputs/datasources</loc>
+        <lastmod>2023-07-27T13:22:31.628Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/inputs/format</loc>
+        <lastmod>2023-07-27T13:22:31.628Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/inputs/input</loc>
+        <lastmod>2023-07-27T13:22:31.628Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/inputs/inputs_intro</loc>
+        <lastmod>2023-07-27T13:22:31.624Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/quickstart/fx</loc>
+        <lastmod>2023-07-27T13:22:31.624Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/quickstart/quickstart</loc>
+        <lastmod>2023-07-27T13:22:31.620Z</lastmod>
+    </url>
+    <url>
+        <loc>https://ultimabi.uk/ultibi-frtb-book/quickstart/ui_quick</loc>
+        <lastmod>2023-07-27T13:22:31.624Z</lastmod>
     </url>
 </urlset>

@@ -3,33 +3,33 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Loading Input - Python FRTB User Guide</title>
+        <title>Config file - Ultibi Python FRTB Cube User Guide</title>
 
 
         <!-- Custom HTML head -->
         
-        <meta name="description" content="ultibi python developer&#x27;s frtb user guide. Filtering, overriding, what if.">
+        <meta name="description" content="ultibi python developer&#x27;s user guide. PivotUI, Cube, FRTB.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="tabbed-code-blocks.css">
+        <link rel="stylesheet" href="../tabbed-code-blocks.css">
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -38,7 +38,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
         </script>
 
@@ -86,16 +86,38 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">2.</strong> Quickstart</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fx.html"><strong aria-hidden="true">2.1.</strong> FX</a></li></ol></li><li class="chapter-item expanded "><a href="format.html"><strong aria-hidden="true">3.</strong> FRTB SA - Input(Exposures)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="input.html" class="active"><strong aria-hidden="true">3.1.</strong> Loading Input</a></li></ol></li><li class="chapter-item expanded "><a href="capital.html"><strong aria-hidden="true">4.</strong> FRTB SA - Capital</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weights.html"><strong aria-hidden="true">4.1.</strong> Assign Weights</a></li><li class="chapter-item expanded "><a href="calculate.html"><strong aria-hidden="true">4.2.</strong> Calculation</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.3.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="whatif.html"><strong aria-hidden="true">5.</strong> FRTB SA - What If</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="override.html"><strong aria-hidden="true">5.1.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="add_row.html"><strong aria-hidden="true">5.2.</strong> Add Trades/Books</a></li><li class="chapter-item expanded "><a href="calc_params.html"><strong aria-hidden="true">5.3.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="ui.html"><strong aria-hidden="true">6.</strong> UI</a></li><li class="chapter-item expanded "><a href="performance.html"><strong aria-hidden="true">7.</strong> Performance</a></li><li class="chapter-item expanded "><a href="feedback.html"><strong aria-hidden="true">8.</strong> Contacts and Feedback</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../quickstart/quickstart.html"><strong aria-hidden="true">2.</strong> Quickstart</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../quickstart/ui_quick.html"><strong aria-hidden="true">2.1.</strong> with UI</a></li><li class="chapter-item expanded "><a href="../quickstart/fx.html"><strong aria-hidden="true">2.2.</strong> FRTB FX</a></li></ol></li><li class="chapter-item expanded "><a href="../inputs/inputs_intro.html"><strong aria-hidden="true">3.</strong> Input, DataSource and DataSet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../inputs/datasources.html"><strong aria-hidden="true">3.1.</strong> Data Sources</a></li><li class="chapter-item expanded "><a href="../inputs/input.html" class="active"><strong aria-hidden="true">3.2.</strong> Config file</a></li><li class="chapter-item expanded "><a href="../inputs/format.html"><strong aria-hidden="true">3.3.</strong> FRTB Input Format</a></li><li class="chapter-item expanded "><a href="../inputs/bespoke_measures.html"><strong aria-hidden="true">3.4.</strong> Define your own Measures</a></li></ol></li><li class="chapter-item expanded "><a href="../calculation/calc_intro.html"><strong aria-hidden="true">4.</strong> Calculation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../calculation/weights.html"><strong aria-hidden="true">4.1.</strong> Prepare (FRTB Assign Weights)</a></li><li class="chapter-item expanded "><a href="../calculation/calculate.html"><strong aria-hidden="true">4.2.</strong> Calculation (FRTB Capital)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../calculation/frtb_measures.html"><strong aria-hidden="true">4.2.1.</strong> FRTB Supported measures</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../whatif.html"><strong aria-hidden="true">5.</strong> WhatIf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../filters.html"><strong aria-hidden="true">5.1.</strong> Filters</a></li><li class="chapter-item expanded "><a href="../override.html"><strong aria-hidden="true">5.2.</strong> Overrides</a></li><li class="chapter-item expanded "><a href="../add_row.html"><strong aria-hidden="true">5.3.</strong> Add Rows(Trades)</a></li><li class="chapter-item expanded "><a href="../calc_params.html"><strong aria-hidden="true">5.4.</strong> Calc Params and Params Sets</a></li></ol></li><li class="chapter-item expanded "><a href="../ui.html"><strong aria-hidden="true">6.</strong> UI</a></li><li class="chapter-item expanded "><a href="../performance.html"><strong aria-hidden="true">7.</strong> Performance</a></li><li class="chapter-item expanded "><a href="../feedback.html"><strong aria-hidden="true">8.</strong> Contacts and Feedback</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -115,10 +137,10 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Python FRTB User Guide</h1>
+                    <h1 class="menu-title">Ultibi Python FRTB Cube User Guide</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -147,30 +169,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="ultima-dataset"><a class="header" href="#ultima-dataset">Ultima DataSet</a></h2>
-<p>First step is to create a DataSet from your portfolio data. Think of a DataSet as a DataFrame with some special pre defined functions (eg &quot;FX Delta Capital Charge&quot;).</p>
-<h2 id="from-frame"><a class="header" href="#from-frame">From Frame</a></h2>
-<p>In order to use our library you need to convert your portfolio into <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported. Note polars also supports <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="#data-source-config">config</a>.</p>
-<pre><code class="language-python">import polars as pl
-import ultibi as ul
-
-# Note: sometimes Polars needs abit of help to determine the correct datatype for your
-# columns. This is because Polars scans first N rows to determine correct dtype
-exposures = pl.read_csv(&quot;./data/frtb/Delta.csv&quot;, dtypes={&quot;SensitivitySpot&quot;: pl.Float64})
-# Feel free to join other attributes such as Hierarchy here ...
-ds = ul.FRTBDataSet.from_frame(exposures)
-print(ds.frame())
-</code></pre>
-<h2 id="data-source-config"><a class="header" href="#data-source-config">Data Source Config</a></h2>
+                        <h2 id="data-source-config"><a class="header" href="#data-source-config">Data Source Config</a></h2>
 <p>In principle, you are free to enrich this structure with as many columns as you want (for example Desk, Legal Entity etc). You can either do this manually or use <code>from_config</code>. Check out an example with explanations of each field: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml">datasource_config.toml</a>.</p>
-<pre><code class="language-python"># You can also set up a config and we will take care of
+<pre><code class="language-python">import ultibi as ul
+
+# You can set up a config and we will take care of
 # castings, joins etc
 ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
-
-print(ds.frame())
+print(ds.frame(None))
 </code></pre>
-<h2 id="validate"><a class="header" href="#validate">Validate</a></h2>
-<p>If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call .validate() on your dataset. It checks if every required column for every availiable calculation is present. Note: If you <strong>can</strong> guarantee your particular calculation would not require the missing columns you can proceed at your own risk!</p>
+<h2 id="validate-work-in-progress"><a class="header" href="#validate-work-in-progress">Validate (work in progress)</a></h2>
+<p>If you are missing a required column you will get a runtime error during the execuiton of your request. Alternatively, call `.validate()`` on your dataset. It checks if every required column for every availiable calculation is present. Note: If you <strong>can</strong> guarantee your particular calculation would not require the missing columns you can proceed at your own risk!</p>
 <pre><code class="language-python">import ultibi as ul
 
 ds = ul.FRTBDataSet.from_config_path(&quot;./data/frtb/datasource_config.toml&quot;)
@@ -189,11 +198,11 @@ print(&quot;Complete&quot;)
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="format.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../inputs/datasources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="capital.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../inputs/format.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -203,11 +212,11 @@ print(&quot;Complete&quot;)
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="format.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../inputs/datasources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="capital.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../inputs/format.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -222,16 +231,16 @@ print(&quot;Complete&quot;)
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="tabbed-code-blocks.js"></script>
+        <script src="../tabbed-code-blocks.js"></script>
 
 
     </div>
