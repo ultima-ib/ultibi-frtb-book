@@ -5,8 +5,8 @@
 --prefer-binary
 
 # Dependencies
-polars
-#pyarrow
+# polars
+pyarrow
 ultibi
 
 # Tooling
