@@ -96,3 +96,7 @@ request = dict(
 Compute time is almost identical to that of `request2`. This is because `SBM Charge` is a simple max of `SBM Charge Low`, `SBM Charge Medium`, `SBM Charge High` and therefore almost no additional compute is required.
 
 **DataSet cache stores results of basic measures such as `EQ DeltaCharge Medium`. Therefore the next request will reuse them**.
+
+# Standing on the shoulders of a giant: `Polars`
+
+We use `Polars` in the backend, one of the fastest DataBase/DataFrame like ops solutions out there. Read more about the [benchmarks here](https://duckdblabs.github.io/db-benchmark/) to get a feel for how much data we can process and how fast.
