@@ -248,6 +248,8 @@
 <p><strong>--- Compute No Deps time: 0.010367870330810547 seconds ---</strong></p>
 <p>Compute time is almost identical to that of <code>request2</code>. This is because <code>SBM Charge</code> is a simple max of <code>SBM Charge Low</code>, <code>SBM Charge Medium</code>, <code>SBM Charge High</code> and therefore almost no additional compute is required.</p>
 <p><strong>DataSet cache stores results of basic measures such as <code>EQ DeltaCharge Medium</code>. Therefore the next request will reuse them</strong>.</p>
+<h1 id="standing-on-the-shoulders-of-a-giant-polars"><a class="header" href="#standing-on-the-shoulders-of-a-giant-polars">Standing on the shoulders of a giant: <code>Polars</code></a></h1>
+<p>We use <code>Polars</code> in the backend, one of the fastest DataBase/DataFrame like ops solutions out there. Read more about the <a href="https://duckdblabs.github.io/db-benchmark/">benchmarks here</a> to get a feel for how much data we can process and how fast.</p>
 
                     </main>
 
