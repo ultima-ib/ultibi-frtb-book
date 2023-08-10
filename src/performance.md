@@ -99,4 +99,4 @@ Compute time is almost identical to that of `request2`. This is because `SBM Cha
 
 # Standing on the shoulders of a giant: `Polars`
 
-We use `Polars` in the backend, one of the fastest DataBase/DataFrame like ops solutions out there. Read more about the [benchmarks here](https://duckdblabs.github.io/db-benchmark/) to get a feel for how much data we can process and how fast. 
+We use `Polars` in the backend, one of the fastest DataBase/DataFrame like ops solutions out there. Read more about the [benchmarks here](https://duckdblabs.github.io/db-benchmark/) to get a feel for how much data we can process and how fast.
