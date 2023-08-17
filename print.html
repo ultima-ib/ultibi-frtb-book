@@ -171,7 +171,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p><strong><code>ultibi</code></strong> is a free python library by <strong><a href="https://github.com/ultima-ib/ultima">Ultima</a></strong>. <strong><code>ultibi</code></strong> is a framework for building Pivot Tables and Cubes, to display and drill through the key metrics for your data.</p>
+<p><strong><code>ultibi</code></strong> is a free(subject to license agreement) python library by <strong><a href="https://github.com/ultima-ib/ultima">Ultima</a></strong>. <strong><code>ultibi</code></strong> is a framework for building Pivot Tables and Cubes, to display and drill through the key metrics for your data.</p>
 <p>This userguide will provide examples of the functionality. We pick - <strong><a href="https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book">Fundamental Review of the Trading Book's Standardised Approach</a></strong> to serve as a great usecase example.</p>
 <h1 id="why-to-use-ultibi"><a class="header" href="#why-to-use-ultibi">Why to use <code>ultibi</code></a></h1>
 <ul>
@@ -329,10 +329,7 @@ ds.prepare()  # .prepare() is only relevant to FRTB dataset currently
 ds.ui()
 </code></pre>
 <p>Same would be achieved with a <code>.from_frame()</code> shortcut.</p>
-<p>Your data must be a <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported, or using a <a href="inputs/./input.html">config</a>. Note polars also supports <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="inputs/datasources.html#data-source-config">config</a>.</p>
-<pre><code class="language-python">{{#include ../examples/frtb_input.py:0:8}}
-print(ds.frame(None))
-</code></pre>
+<p>Your data must be a <a href="https://pola-rs.github.io/polars-book/user-guide/">polars</a> <a href="https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html">Dataframe</a>. You can either do this yourself(using any of the countless <a href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html">IO</a> operations supported including <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html">from_pandas</a> and <a href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html">from_arrow</a>) or use a <a href="inputs/(./input.html">config</a>.</p>
 <h2 id="scan"><a class="header" href="#scan">Scan</a></h2>
 <p>If you can't hold all your data in the process memory, you can sacrifise performance for a Scan.</p>
 <pre><code class="language-python">import polars as pl
@@ -351,7 +348,82 @@ ds.ui()
 <li>Naturally this option will be slower, because prior to computing your measures we will need to read the relevant bits of the data into the process memory, and if relevant, call .prepare().</li>
 <li>Scanning involves serialisation of the Lazy Frame, and hence the python version of your <code>polars</code> lib must be aligned to what we expect. At the time of writing it has to be <code>&gt;=0.18.7</code>.</li>
 </ul>
-<h2 id="database---work-in-progress"><a class="header" href="#database---work-in-progress">DataBase - Work in Progress</a></h2>
+<h2 id="database"><a class="header" href="#database">DataBase</a></h2>
+<p>Ultibi leverages on <a href="https://github.com/sfu-db/connector-x"><code>connectorx</code></a>. As such all of their <code>Sources</code> will work <em>eventually</em> (Postgres, <strong>Mysql</strong>, Mariadb (through mysql protocol), Sqlite, Redshift (through postgres protocol), Clickhouse (through mysql protocol), SQL Server, Azure SQL Database (through mssql protocol), Oracle, Big Query).</p>
+<p>Currently, <strong>Mysql</strong> has been tested to work and other DataBases will be supported in the nearest future.</p>
+<pre><code class="language-python">import ultibi as ul
+import polars as pl
+from polars.type_aliases import PolarsDataType
+
+# SQL is not very good in preserving and communicating back the schema
+# Best to provide the expected schema to the cube Data Set
+schema: list[tuple[str, PolarsDataType]] = [
+    (&quot;COB&quot;, pl.Utf8),
+    (&quot;TradeId&quot;, pl.Utf8),
+    (&quot;SensitivitySpot&quot;, pl.Float64),
+    (&quot;Sensitivity_025Y&quot;, pl.Float64),
+    (&quot;EXOTIC_RRAO&quot;, pl.Boolean),
+    (&quot;OTHER_RRAO&quot;, pl.Boolean),
+    (&quot;Sensitivity_05Y&quot;, pl.Float64),
+    (&quot;Sensitivity_1Y&quot;, pl.Float64),
+    (&quot;Sensitivity_2Y&quot;, pl.Float64),
+    (&quot;Sensitivity_3Y&quot;, pl.Float64),
+    (&quot;Sensitivity_5Y&quot;, pl.Float64),
+    (&quot;Sensitivity_10Y&quot;, pl.Float64),
+    (&quot;Sensitivity_15Y&quot;, pl.Float64),
+    (&quot;Sensitivity_20Y&quot;, pl.Float64),
+    (&quot;Sensitivity_30Y&quot;, pl.Float64),
+    (&quot;SensitivityCcy&quot;, pl.Utf8),
+    (&quot;CoveredBondReducedWeight&quot;, pl.Utf8),
+    (&quot;Sector&quot;, pl.Utf8),
+    (&quot;FxCurvDivEligibility&quot;, pl.Boolean),
+    (&quot;BookId&quot;, pl.Utf8),
+    (&quot;Product&quot;, pl.Utf8),
+    (&quot;Notional&quot;, pl.Float64),
+    (&quot;Desk&quot;, pl.Utf8),
+    (&quot;Country&quot;, pl.Utf8),
+    (&quot;LegalEntity&quot;, pl.Utf8),
+    (&quot;Group&quot;, pl.Utf8),
+    (&quot;RiskCategory&quot;, pl.Utf8),
+    (&quot;RiskClass&quot;, pl.Utf8),
+    (&quot;RiskFactor&quot;, pl.Utf8),
+    (&quot;RiskFactorType&quot;, pl.Utf8),
+    (&quot;CreditQuality&quot;, pl.Utf8),
+    (&quot;MaturityDate&quot;, pl.Utf8),
+    (&quot;Tranche&quot;, pl.Utf8),
+    (&quot;CommodityLocation&quot;, pl.Utf8),
+    (&quot;GirrVegaUnderlyingMaturity&quot;, pl.Utf8),
+    (&quot;BucketBCBS&quot;, pl.Utf8),
+    (&quot;BucketCRR2&quot;, pl.Utf8),
+    (&quot;GrossJTD&quot;, pl.Float64),
+    (&quot;PnL_Up&quot;, pl.Float64),
+    (&quot;PnL_Down&quot;, pl.Float64),
+]
+
+conn_uri = &quot;mysql://%s:%s@%s:%d/%s?cxprotocol=binary&quot; % (
+    &quot;root&quot;,
+    &quot;mysql&quot;,
+    &quot;localhost&quot;,
+    3306,
+    &quot;ultima&quot;,
+)
+
+db = ul.DbInfo(&quot;frtb&quot;, &quot;MySQL&quot;, conn_uri, schema)
+
+source = ul.DataSource.db(db)
+
+build_params = dict(
+    fx_sqrt2_div=&quot;true&quot;,
+    girr_sqrt2_div=&quot;true&quot;,
+    csrnonsec_covered_bond_15=&quot;true&quot;,
+    DayCountConvention=&quot;2&quot;,
+    DateFormat=&quot;DateFormat&quot;,
+)
+
+ds = ul.FRTBDataSet.from_source(source, build_params=build_params)
+
+ds.ui()
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="data-source-config"><a class="header" href="#data-source-config">Data Source Config</a></h2>
 <p>In principle, you are free to enrich this structure with as many columns as you want (for example Desk, Legal Entity etc). You can either do this manually or use <code>from_config</code>. Check out an example with explanations of each field: <a href="https://ultima-bi.s3.eu-west-2.amazonaws.com/frtb/datasource_config.toml">datasource_config.toml</a>.</p>
 <pre><code class="language-python">import ultibi as ul
