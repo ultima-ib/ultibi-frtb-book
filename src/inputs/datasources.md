@@ -12,8 +12,7 @@ ds.ui()
 
 Same would be achieved with a `.from_frame()` shortcut.
 
-Your data must be a [polars](https://pola-rs.github.io/polars-book/user-guide/) [Dataframe](https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html). You can either do this yourself(using any of the countless [IO](https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html) operations supported including [from_pandas](https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html) and [from_arrow](https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html)) or use a [config]((./input.md)).
-
+Your data must be a [polars](https://pola-rs.github.io/polars-book/user-guide/) [Dataframe](https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html). You can either do this yourself(using any of the countless [IO](https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html) operations supported including [from_pandas](https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_pandas.html) and [from_arrow](https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.from_arrow.html)) or use a [config](<(./input.md)>).
 
 ## Scan
 
@@ -31,10 +30,10 @@ Note:
 - Scanning involves serialisation of the Lazy Frame, and hence the python version of your `polars` lib must be aligned to what we expect. At the time of writing it has to be `>=0.18.7`.
 
 ## DataBase
+
 Ultibi leverages on [`connectorx`](https://github.com/sfu-db/connector-x). As such all of their `Sources` will work *eventually* (Postgres, **Mysql**, Mariadb (through mysql protocol), Sqlite, Redshift (through postgres protocol), Clickhouse (through mysql protocol), SQL Server, Azure SQL Database (through mssql protocol), Oracle, Big Query).
 
 Currently, **Mysql** has been tested to work and other DataBases will be supported in the nearest future.
-
 
 ```python
 {{#include ../examples/inputs/datasource_mysql.py}}
