@@ -1,12 +1,12 @@
 # Introduction
 
-**`ultibi`** is a free(subject to license agreement) python library by **[Ultima](https://github.com/ultima-ib/ultima)**. **`ultibi`** is a framework for building Pivot Tables and Cubes, to display and drill through the key metrics for your data.
+**`ultibi`** is a free(subject to license agreement) python library by **[Ultima](https://github.com/ultima-ib/ultima)**. **`ultibi`** is a framework for building Pivot Tables and Cubes to display and drill through the key metrics for your data.
 
-This userguide will provide examples of the functionality. We pick - **[Fundamental Review of the Trading Book's Standardised Approach](https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book)** to serve as a great usecase example.
+This userguide will provide examples of the functionality. We pick - **[Fundamental Review of the Trading Book's Standardised Approach](https://en.wikipedia.org/wiki/Fundamental_Review_of_the_Trading_Book)** to serve as a great usecase example due to it's intense compute and memory demands.
 
 # Why to use `ultibi`
 
-- You can breakdown and drillthrough your computation
+- Breakdown and drillthrough your computation
 
 - Everything you need for analysis: [Filtering](./filters.md), [Overriding](./override.md), [Adding Trades](./add_row.md) and so on.
 

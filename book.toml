@@ -3,8 +3,8 @@ authors = ["Anatoly Bugakov"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Ultibi Python FRTB Cube User Guide"
-description = "ultibi python developer's user guide. PivotUI, Cube, FRTB."
+title = "Ultibi Python Pivot Table UI and Cube User Guide(incl FRTB)"
+description = "ultibi python user guide: Pivot Table, UI, Cube, FRTB"
 
 [output.html]
 default-theme   = "Ayu"
