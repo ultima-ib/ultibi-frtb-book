@@ -22,11 +22,11 @@
   - [Prepare (FRTB Assign Weights)](./calculation/weights.md)
   - [Calculation (FRTB Capital)](./calculation/calculate.md)
     - [FRTB Supported measures](./calculation/frtb_measures.md)
-  - [WhatIf](./whatif.md)
-    - [Filters](./filters.md)
-    - [Overrides](./override.md)
-    - [Add Rows(Trades)](./add_row.md)
-    - [Calc Params and Params Sets](./calc_params.md)
+  - [WhatIf](./calculation/whatif/whatif.md)
+    - [Filters](./calculation/whatif/filters.md)
+    - [Overrides](./calculation/whatif/override.md)
+    - [Add Rows(Trades)](./calculation/whatif/add_row.md)
+    - [Calc Params and Params Sets](./calculation/whatif/calc_params.md)
 
 - [UI](./ui.md)
 

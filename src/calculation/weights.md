@@ -1,4 +1,4 @@
-# Assign Weights/Prepare
+# Prepare (eg Assign Weights)
 
 **Currently this section only applies to FRTBDataSet**. In the future `python` users will be able to define their own, custom `prepare` functions too.
 
