@@ -15,8 +15,9 @@
   - [Config file](./inputs/input.md)
   - [FRTB Input Format](./inputs/format.md)
   
-- [Measures](./inputs/measures.md)
-  - [Define your own Measures](./inputs/bespoke_measures.md)
+- [Measures](./measures/measures.md)
+  - [Define your own Measures in Python](./measures/bespoke_measures.md)
+  - [Define your own Measures in Rust and expose to Python API](./measures/bespoke_rustpy_measures.md)
 
 - [Calculation](./calculation/calc_intro.md)
   - [Prepare (FRTB Assign Weights)](./calculation/weights.md)
