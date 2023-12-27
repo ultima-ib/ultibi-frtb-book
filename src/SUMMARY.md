@@ -20,8 +20,8 @@
   - [Define your own Measures in Rust and expose to Python API](./measures/bespoke_rustpy_measures.md)
 
 - [Calculation](./calculation/calc_intro.md)
-  - [Prepare (FRTB Assign Weights)](./calculation/weights.md)
-  - [Calculation (FRTB Capital)](./calculation/calculate.md)
+  - [Prepare (eg FRTB Assign Weights)](./calculation/weights.md)
+  - [Calculation (eg FRTB Capital)](./calculation/calculate.md)
     - [FRTB Supported measures](./calculation/frtb_measures.md)
   - [WhatIf](./calculation/whatif/whatif.md)
     - [Filters](./calculation/whatif/filters.md)
